@@ -1,0 +1,161 @@
+/* --------------------NAVBAR-------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
+
+a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+ul {
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+
+header{
+    font-family: 'Advent Pro',sans-serif;
+    padding: 0;
+    margin: 0;
+}
+nav{
+    overflow: hidden;
+    background-color: #121212;
+    position: fixed top center;
+    width: 100%;
+    opacity: 0.9;
+}
+header li{
+    float: right;
+    font-size: 1.2em;
+}
+header a{
+    color:#fffae1;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 18px 16px;
+}
+header a:hover{
+
+    color: #aaa396;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1,1.1);
+}
+#logo{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    float: left;
+}
+/* --------------------Galerie PHOTOS------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 80vh;
+    width: 100vw;
+    padding: 20px; 
+    background-color: #121212;
+    position: relative;
+    overflow: hidden;
+}
+#grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-auto-rows: 400px;
+    gap: 5px;
+    height: 100vh;
+    overflow-y: scroll;
+    padding-right: 10px;
+    grid-auto-flow: dense;
+}
+#grid::-webkit-scrollbar{
+    background-color: #dedede;
+    width: 10px;
+}
+#grid::-webkit-scrollbar-thumb{
+    background-color: #757575;
+}
+
+.grid-item{
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.grid-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.2s ease ;
+}
+.grid-item:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    
+}
+.grid-img:hover{
+    transform: scale(1.2);
+}
+#pano-1,
+#pano-2,
+#pano-10,
+#pano-11{grid-column: span 2;}
+
+#pano-7,
+#pano-8{grid-row: span 2;}
+
+
+#popup-bg{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 3;
+    align-items: center;
+    justify-content: center;
+
+}
+#popup-bg.active{
+    display: flex;
+}
+#popup-content{
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+}
+#popup-img{
+    width: 100%;
+    height: auto;
+}
+#popup-close{
+    position: absolute;
+    top: 0ch;
+    right: 0%;
+    transform: translate(50%, -50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+#popup-close:hover{
+    background-color: orange;
+}

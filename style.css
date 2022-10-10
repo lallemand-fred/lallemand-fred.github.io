@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Advent Pro',sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+h1{
+    text-align: center;
+}
+h2{
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 30px;
+    font-size: 2em;
+}
+h3{
+    text-align: center;        
+}
+h4{
+    text-align: center;
+}
+h5{
+    text-align: center;
+}
+h6{
+    text-align: center;
+}
+/* --------------------NAVBAR-------------------------- */
+nav{
+    overflow: hidden;
+    background-color: #16120f;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
+}
+header li{
+    float: right;
+    font-size: 1.3em;
+}
+header a{
+    color: #fffae1;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    padding: 18px 16px;
+}
+header a:hover{
+
+    color: #aaa396;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+    transform: scale(1.1,1.1);
+}
+#logo{
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold;
+    float: left;
+}
+/* ------------------IMAGE PRINCIPALE--------------------- */
+#imagePrincipale{
+    padding-top: 60px;
+    background: url(media/images/PeintureImage/horizon_paysage_peinture.jpg) no-repeat fixed 50% 50%;
+    background-size: cover;
+    height: 700px;
+}
+#imagePrincipale h1 {
+    font-family: 'Dancing Script', cursive;
+    color:#ffffff;
+    font-size: 6em;
+    margin-top: 120px;
+    text-shadow: 5px 4px 8px rgb(107, 13, 35);
+}
+#premierTrait{
+    height: 1px;
+    width: 35%;
+    margin: -3px auto;
+    background-color: #ffffff;
+    box-shadow: 3px 3px 4px rgb(107, 13, 35);
+}
+h3{
+    text-align: center;
+    color: #ffffff;
+    font-size: 3em;
+    text-shadow: 5px 4px 8px rgb(107, 13, 35);
+}
+/* -------------------PRESENTATION---------------------- */
+#presentation{
+    background-color: #16120f;
+    padding: 10px 0px 100px 0px;
+}
+#textIntro{
+    text-align: center;
+    color: #fffae1;
+    padding: 0px 20%;
+}
+#photos{
+    color: #fffae1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 3% ;
+}
+
+.imagesPhotos h4 {
+    font-family: 'Dancing Script', cursive;
+    text-align: center;
+    font-size: 2em;
+    margin: 15px;
+    font-weight: 300;
+}
+.imagesPhotos img{
+    border-radius: 10px;
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.64);
+}
+.imagesPhotos img:hover{
+    opacity: 0.5;
+    transform: scale(1.05);
+    transition: 0.6s ease-in-out;
+}
+/* ------------------------VIDEOS---------------------- */
+#youtube{
+    height: 1450px;
+    background-color: #221c17;
+    padding-top: 1px;
+}
+#youtube h2{
+    color: #fffae1;
+    padding-top: 60px;
+}
+
+#moyen{
+    background: url(media/videos/images_liens_Youtube/Moyen_metrages_PetiteImage01.png);
+    background-size: 460px;
+    background-position: center;
+    border-radius: 10px 0px 0px 10px;
+
+
+}
+#court{
+    background: url(media/videos/images_liens_Youtube/Court_metrages_PetiteImage01.png);   
+    background-size: 479px;
+    background-position: top center;
+    border-radius: 0px 10px 10px 0px;
+}
+#serie{
+    background: url(media/videos/images_liens_Youtube/SerieJoli_bois01PetiteImage.PNG);
+    border-radius: 10px 0px 0px 10px;
+}
+#animation{
+    background: url(media/videos/images_liens_Youtube/Animations_PtiteteImage01.PNG);
+    background-size: 455px;
+    background-position: center;
+    border-radius: 0px 10px 10px 0px;
+}
+#youtube li{
+    
+    margin: 50px 20% 0 20%;
+    height: 256px;
+    width: 55%;
+    max-width: 420px;
+    float: left;
+    box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.7);
+}
+
+#youtube p{
+    color: #fffae1;
+    height: 45px;
+    width: 235px;
+    background-color: #ab956fdb;
+    float: right;
+    margin: 100px -230px 0 0px;
+    font-size: 1.7em;
+    text-align: center;
+    padding-top: 15px;
+    box-shadow: 4px 4px 8px 1px rgba(232, 156, 5, 0.387);
+    border-radius: 10px;
+}
+#youtube #court, #youtube #animation{
+    float: right;
+}
+#court p, #animation p{
+    float: left;
+    margin-left: -230px;
+    border-radius: 10px 0px 0px 10px;
+    box-shadow: -4px 4px 8px 1px rgba(232, 156, 5, 0.38);
+}
+#moyen p, #serie p{
+    border-radius: 0px 10px 10px 0px;
+}
+/* #youtube #moyen p:hover{
+    opacity: 0.9;
+    transform: scale(1.20);
+    transition: 0.9s ease-in-out;
+} */
+#youtube #moyen:hover{
+    opacity: 0.9;
+    transform: scale(1.20);
+    transition: 0.9s ease-in-out;
+}
+#youtube #court:hover{
+    opacity: 0.9;
+    transform: scale(1.20);
+    transition: 0.9s ease-in-out;
+}
+#youtube #serie:hover{
+    opacity: 0.9;
+    transform: scale(1.20);
+    transition: 0.9s ease-in-out;
+}
+#youtube #animation:hover{
+    opacity: 0.9;
+    transform: scale(1.20);
+    transition: 0.9s ease-in-out;
+}
+/* --------------FOOTER-------------------- */
+
+footer{
+    background-color: #524A3A;
+    color: #fffae1;
+    padding: 20px 0 10px 0;
+    text-align: center;
+}
+form{
+    margin: 0 auto;
+    max-width: 900px;
+}
+input, textarea, button{
+    border: none;
+    width: 55%;
+    padding: 15px 10px;
+    margin: 1px 0;
+    font-size: 1.2em;
+    font-family: 'Advent Pro', sans-serif;
+    border-radius: 8px;
+}
+textarea{
+    height: 120px;
+}
+button{
+    font-size: 1.5em;
+    background-color: #fffae1;
+}
+button:hover{
+    background-color: #aaa396;
+    color: #fffae1;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+#deuxiemeTrait{
+    height: 1px;
+    width: 75%;
+    background-color: #fffae1;
+    margin: 60px auto;
+}
+#copyrightEtIcons{
+    color: #fffae1;
+    margin: 5px 0;
+    font-size: 1.2em;
+    font-family: 'Advent Pro', sans-serif;
+}
+
+#copyrightEtIcons a {
+    color: #fffae1;
+    font-size: 1.2em;
+    font-family: 'Advent Pro', sans-serif;    
+}
+#espaceFin{
+    padding: 30px;
+}
