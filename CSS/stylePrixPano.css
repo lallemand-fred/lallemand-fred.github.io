@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
 *{
-    font-family: 'Advent Pro',sans-serif;
+    
     padding: 0;
     margin: 0;  
     list-style: none;
@@ -16,6 +16,7 @@
 }
 html{
     scroll-behavior: smooth;
+    font-family: 'Advent Pro',sans-serif;
 }
 body {
     padding: 0;

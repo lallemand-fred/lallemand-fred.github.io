@@ -38,7 +38,6 @@ header a{
     padding: 18px 16px;
 }
 header a:hover{
-
     color: #aaa396;
     cursor: pointer;
     transition: 0.4s ease-in-out;
