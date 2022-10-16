@@ -1,53 +1,6 @@
 /* --------------------NAVBAR-------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
 
-a{
-    text-align: center;
-    text-decoration: none;
-    color: black;
-}
-ul {
-    margin: 0;
-    padding: 0;
-}
-li{
-    list-style: none;
-}
-
-header{
-    font-family: 'Advent Pro',sans-serif;
-    padding: 0;
-    margin: 0;
-}
-nav{
-    overflow: hidden;
-    background-color: #121212;
-    position: fixed top center;
-    width: 100%;
-    opacity: 0.9;
-}
-header li{
-    float: right;
-    font-size: 1.2em;
-}
-header a{
-    color:#fffae1;
-    text-decoration: none;
-    display: block;
-    text-align: center;
-    padding: 18px 16px;
-}
-header a:hover{
-    color: #aaa396;
-    cursor: pointer;
-    transition: 0.4s ease-in-out;
-    transform: scale(1.1,1.1);
-}
-#logo{
-    font-family: 'Dancing Script', cursive;
-    font-weight: bold;
-    float: left;
-}
 /* --------------------Galerie PHOTOS------------------- */
 *{
     margin: 0;

@@ -6,20 +6,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>MINI PLANETES</title>
         <link rel="shortcut icon" href="logo_LF.png">
-        <link rel="stylesheet" href="./CSS/stylePlanet.css">
+        <link rel="stylesheet" href="./CSS/stylePlanet.css">*
+        <link rel="stylesheet" href="./CSS/styleNavBar.css">
     </head>
     <header>
         <nav>
-            <ul>
-                <li id="logo"><a href="index.html">Lallemand Frédéric</a></li>
-                <li><a href="index.html#youtube">Videos</a></li>
-                <li><a href="#">Mini-planètes</a></li>
-                <li><a href="PANO.html">Panoramiques</a></li>
-                <li><a href="PHOTOS.html">Photos</a></li>
+            <ul class="liste-items">
+                <li class="items"><a id=logo href="index.html">Lallemand Frédéric</a></li>
+    
+                <li class="items"><a href="index.html#photos">Photos</a>
+                    <ul class="sous-liste">
+                        <li class="items-sous-liste"><a href="PHOTOS.html">Galerie images</a></li>
+                        <li class="items-sous-liste"><a href="PrixPhotos.html">Format & prix</a></li>
+                    </ul>
+                </li>
+    
+                <li class="items"><a href="index.html#photos">Panoramiques</a>
+                    <ul class="sous-liste">
+                        <li class="items-sous-liste"><a href="PANO.html">Galerie d'images</a></li>
+                        <li class="items-sous-liste"><a href="PrixPano.html">Format & prix</a></li>
+                    </ul>
+                </li>
+    
+                <li class="items"><a href="index.html#photos">Mini-planètes</a>
+                    <ul class="sous-liste">
+                        <li class="items-sous-liste"><a href="PLANETE.html">Galerie d'images</a></li>
+                        <li class="items-sous-liste"><a href="PrixPlanete.html">Format & prix</a></li>
+                    </ul>
+                </li>
+    
+                <li class="items"><a href="index.html#youtube">Vidéos</a>
+                    <ul class="sous-liste">
+                        <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBOrHa1A2UJIgRqGAxNNYeWh" target="_blank" target="_blank">Animations 2D & 3D</a></li> 
+                        <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBNEHPLyGaUdB5JX2rWB3O8c" target="_blank">Série Joli-bois</a></li> 
+                        <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBOdEYYaGexdyuHuv08tY47f" target="_blank">Courts métrages</a></li> 
+                        <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBMMxBF-VS7SY5GFOFMjLENm" target="_blank">Moyens métrages</a></li>
+                    </ul>
+                </li>
+    
+                <li class="items"><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-
     <body>
         <div id="popup-bg">
             <div id="popup-content">
