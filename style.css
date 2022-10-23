@@ -202,6 +202,21 @@ p.TitreV{
     text-align: center;
     padding: 0;
 }
+#liensTravail{
+    color: #fffae1 ;
+    background: #221c17;
+    height: 300px ;
+}
+.LIEN{
+    font-size: 1.6rem;
+    color: #fffae1
+}
+.liens{
+    padding-top: 40px;
+    
+    text-align: center;
+    color: #fffae1 ;
+}
 /* --------------FOOTER-------------------- */
 
 footer{
