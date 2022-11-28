@@ -21,7 +21,7 @@ ul li{
 
     position: relative;
     list-style: none;
-    width: 120px;
+    width: 150px;
     background: #3e3f46;
     padding: 15px;
     z-index: var(--i);

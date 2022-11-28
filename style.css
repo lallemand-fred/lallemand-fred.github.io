@@ -82,9 +82,11 @@ h3{
 #photos{
     color: #fffae1;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 20px 3% ;
+    justify-items: center;
 }
 
 .imagesPhotos h4 {
@@ -95,6 +97,7 @@ h3{
     font-weight: 300;
 }
 .imagesPhotos img{
+    width: clamp(250px, 90%, 700px);
     border-radius: 10px;
     box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.64);
 }
@@ -105,7 +108,7 @@ h3{
 }
 /* ------------------------VIDEOS---------------------- */
 #youtube{
-    height: 1450px;
+    height: 1499px;
     background-color: #221c17;
     padding-top: 1px;
 }
@@ -140,7 +143,7 @@ h3{
 }
 #youtube li{
     
-    margin: 50px 20% 0 20%;
+    margin: 80px 20% 0 20%;
     height: 256px;
     width: 55%;
     max-width: 420px;
@@ -276,4 +279,39 @@ button:hover{
     opacity: 0.7;
     transition: 0.3s;
     transform: scale(1.20);
+}
+@media (max-width: 1000px){
+    #photos{
+        flex-direction: column;
+        flex-wrap:nowrap;
+        justify-content: space-between;
+        padding: 20px 0 ;
+        justify-items: center;
+        text-align: center;
+    }
+    #court p, #animation p{
+        float: center;
+        margin-left: 0;
+        border-radius: 10px
+    }
+    #youtube p{
+        color: #fffae1;
+        height: 45px;
+        width: 235px;
+        float: center;
+        margin: 255px auto;
+        text-align: center;
+        padding-top: 15px;
+        border-radius: 10px;
+    }
+    #youtube #court, #youtube #animation{
+        float: center;
+    }
+    #moyen, #court, #serie, #animation{
+        border-radius: 10px;
+        margin: 0;
+        padding: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
 }

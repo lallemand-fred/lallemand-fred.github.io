@@ -21,6 +21,7 @@ nav{
 .liste-items{
     display: flex;
     justify-content: center;
+    flex-direction: row;
     color: #fffae1;
     list-style-type: none;
     height: 100%;
@@ -67,5 +68,29 @@ nav a:hover{
 }
 
 .items:hover > ul {
-    display: block;   
+    display: block; 
+  
+}
+@media (max-width: 1000px){
+    .liste-items{
+        flex-direction: column;
+        height: auto;
+        align-items: flex-start;       
+    }
+    .items{
+        height: 60px;
+        float: left;
+    }
+    .items-sous-liste{
+        text-align: right;
+        width: 160px;
+        margin-left: 50%;
+        background: #16120f9d;
+    }
+    nav{
+        width: 100%;
+        height: auto;
+        position: relative;
+        background-color: #16120f;
+    }
 }
