@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2? family= Bungee+Spice & display=swap');
+html{
+    scroll-behavior: smooth;
+}
+body, *{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-family: 'Bungee Spice', sans-serif;
+}
+li{
+    list-style-type:none ;
+}
+/* -----------------------NAVBAR---------------------------- */
+nav{
+    position: fixed;
+    z-index: 4;
+    overflow: hidden;
+    background-color: #d1d4cd;
+    width: 100%;
+    height: 50px;
+    display: block;
+}
+nav a{
+    color: black;
+}
+#faceB{
+    float: right;
+    text-align: center;
+    padding: 10px 20px;
+}
+header li{
+    padding: 12.5px 20px;
+    float: right;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+}
+#logo{
+    float: left;
+    padding: 0px 20px;
+}
+.navLinks a :hover{
+    opacity: 0.5;
+    transition: 0.2s;
+    border-radius: 10px;
+    background-color: #222222;
+}
+.navLinks li :hover{
+    color: beige;
+    opacity: 0.5;
+    border-radius: 10px;
+    background-color: #222222;
+    padding: 8px;
+    transition: 0.2s;
+}
+/* --------------------section_1------------------- */
+section{
+    height: 100vh;
+}
+.sec1{
+    background: url(./Media/Logo01.png)no-repeat 50% 50% fixed;
+    z-index: 1;
+    background-color: #d1d4cd;
+    position: relative;
+    height: 110vh;
+    background-size: 50%;
+}
+.SVG1 {
+    position: absolute;
+    bottom: 0;
+}
+/* -------------------------section_2---------------------------- */
+.sec2{
+    z-index: 3;
+    background-color: #222222;
+    position: relative;
+    height: 100%;
+    padding-bottom: 8vh;
+}
+#titre{
+    color: #d1d4cd;
+    display: flex;
+    z-index: 3;
+    justify-content: center;
+    font-size: 2em;      
+}
+.equipe{
+    z-index: 3;
+    display: flex;
+    padding: 20px 10px 200px 10px;
+    flex: row;
+    text-align: center;
+    line-height: 1.3em;
+    color: #d1d4cd;
+}
+h2, h3{
+    margin: 20px;
+}
+h1{
+    padding: 70px 1px;
+    text-align: center;
+}
+.vertical{
+    display: inline-block;
+    border-right: 4px solid #d1d4cd;
+    height: 4/4;
+    opacity: 0.5;
+    margin: 10px;
+    border-radius: 100%; 
+}
+
+.Michael img{
+    transform:scaleX(-1);
+    border-radius: 100%;
+    box-shadow: 5px 5px 30px 0px ;
+    color: black;
+}
+.Julie img{
+    border-radius: 100%;
+    box-shadow: 5px 5px 30px 0px ;
+    color: black;
+}
+/* -------------------------section_3---------------------------- */
+.sec3{
+    z-index: 4;
+    position: relative;
+    background-color: #4bb7be;
+    height: 2vh;
+}
+.SVG3{
+    z-index: 4;
+    position: absolute;
+    bottom: 0 ;
+}
+/* --------------------------FOOTER------------------------------ */
+
+footer{
+    z-index: 4;
+    overflow: hidden;
+    text-align: center;
+    background-color: #4bb7be;
+    height: 100%;
+
+}
+.titreContact{
+    padding:  0px 0 30px 0;
+    z-index: 4;
+}
+#contact {
+    z-index: 4;
+    display: grid;
+    grid-template-columns: 50% 10% 40%;
+    grid-template-rows: 20% 20% 20% 20%;
+}
+
+footer a{
+    color: black;
+}
+footer h5 {
+    font-size: 1.5em;
+}
+footer h6{
+
+    font-size: 0.9em;
+}
+
+.h51{
+    z-index: 4;
+    align-content: center;
+    display: grid;
+    grid-column-start:1 ;
+    grid-column-end: 2;
+    grid-row: 1;
+}
+.h52{
+    align-content: center;
+    display: grid;
+    grid-column-start:1 ;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+
+}
+.h53{
+    align-content: center;
+    display: grid;
+    grid-column-start:1 ;
+    grid-column-end: 2;
+    grid-row: 4;
+}
+
+#gMap{
+    overflow: hidden;
+    align-content: center;
+    grid-column-start:2 ;
+    grid-column-end: 4;
+    grid-row-start:1 ;
+    grid-row-end:5 ;
+}
+#ligneFin{
+    display: block;    
+    height: 3px;
+    opacity: 25%;
+    background-color: black;
+    width:50%;
+    margin-left:25% ;
+    margin-right:25% ;
+    border-radius: 100%;
+    margin-bottom: 20px;
+    margin-top: -30px;
+
+}
+.copyrightEtIcons{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: 100vw;
+    padding-bottom: 10px;
+}
+#iconeF{
+    padding: 30px;
+}
+#iconeF img:hover{
+    background-color: beige;
+    opacity: 0.7;
+    transition: 0.3s;
+}
+.lienLallemand:hover{
+    opacity: 0.7;
+    color: beige;
+    transition: 0.3s;
+}
+
+
