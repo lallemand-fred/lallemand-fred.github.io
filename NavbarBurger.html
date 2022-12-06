@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar Burger</title>
+    <link rel="stylesheet" href="./CSS/styleNavBurger.css">
+</head>
+<body>
+    <div class="navigation">
+        <div class="toggle"><span></span></div>
+        <ul>
+            <li style="--i:0;"><a href="./index.html">Accueille</a></li>
+            <li style="--i:1;"><a href="./PHOTOS.html">Photos</a></li>
+            <li style="--i:2;"><a href="./PANO.html">Panoramiques</a></li>
+            <li style="--i:3;"><a href="./PLANETE.html">Mini-planètes</a></li>
+            <li style="--i:4;"><a href="./VIDEO.html">Vidéos</a></li>
+            <li style="--i:5;"><a href="./index.html#contact">Contact</a></li>
+        </ul>
+    </div>
+    <script>
+        let navigation = document.querySelector('.navigation');
+        document.querySelector('.toggle').onclick = function 
+        (){
+            this.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>
