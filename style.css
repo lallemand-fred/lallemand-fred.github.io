@@ -230,26 +230,35 @@ p.TitreV{
     color: #fffae1 ;
     background: #221c17;
     height: auto ;
-    padding-bottom: 50px;
+    padding-bottom: 0;
 }
 .LIEN{
     font-size: 1.6rem;
     color: #fffae1
 }
 .liens{
-    padding-top: 40px;
+    padding-top: 30px;
     
     text-align: center;
     color: #fffae1 ;
 }
+#svgSec1{
+    z-index: 100;
+    position:relative;
+    background-color: #524A3A;
+}
 /* --------------FOOTER-------------------- */
+footer h2{
+    padding: 0;
+    margin: 0;
+}
 
 #contact{
     position: relative;
     width: 100%;
     background-color: #524A3A;
     color: #fffae1;
-    padding: 20px 0 10px 0;
+    padding: 0 0 10px 0;
     text-align: center;
 }
 form{
