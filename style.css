@@ -70,22 +70,33 @@ h3{
     text-shadow: 5px 4px 8px rgb(107, 13, 35);
 }
 /* -------------------PRESENTATION---------------------- */
+#presentation::before{
+    content: '';
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #16120f, transparent);
+}
 #presentation{
+    position: relative;
+    width: 100%;
     background-color: #16120f;
     padding: 10px 0px 100px 0px;
 }
 #textIntro{
     text-align: center;
     color: #fffae1;
-    padding: 0px 20%;
+    padding: 0px 15%;
 }
 #photos{
     color: #fffae1;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 20px 3% ;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 0px;
     justify-items: center;
 }
 
@@ -107,14 +118,24 @@ h3{
     transition: 0.6s ease-in-out;
 }
 /* ------------------------VIDEOS---------------------- */
+#youtube::before{
+    content: '';
+    position: absolute;
+    top: -100px;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #221c17, transparent);
+}
 #youtube{
+    position: relative;
+    width: 100%;
     height: 1499px;
     background-color: #221c17;
-    padding-top: 1px;
+    padding: 0px 0 10px 0;
 }
 #youtube h2{
     color: #fffae1;
-    padding-top: 60px;
+    padding-top: 1px;
 }
 
 #moyen{
@@ -209,7 +230,7 @@ p.TitreV{
     color: #fffae1 ;
     background: #221c17;
     height: auto ;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
 }
 .LIEN{
     font-size: 1.6rem;
@@ -223,7 +244,9 @@ p.TitreV{
 }
 /* --------------FOOTER-------------------- */
 
-footer{
+#contact{
+    position: relative;
+    width: 100%;
     background-color: #524A3A;
     color: #fffae1;
     padding: 20px 0 10px 0;
