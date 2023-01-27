@@ -265,7 +265,7 @@ form{
     margin: 0 auto;
     max-width: 900px;
 }
-input, textarea, button{
+input, .field, button{
     border: none;
     width: 55%;
     padding: 15px 10px;
@@ -274,7 +274,7 @@ input, textarea, button{
     font-family: 'Advent Pro', sans-serif;
     border-radius: 8px;
 }
-textarea{
+.field{
     height: 120px;
 }
 button{

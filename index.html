@@ -120,12 +120,14 @@
     </section>
     <footer id="contact">
         <h2>Contact</h2>
-        <form>
-            <input type = "text" class="field" placeholder="Nom">
-            <input type = "email" class="field" placeholder="E-mail">
-            <textarea class= "field" placeholder="Tapez votre message ici..."></textarea>
-            <button class="btn">Envoyer</button>
+        <form action="https://formsubmit.co/tit_pitchou@hotmail.com" method="POST">
+            <input type="hidden" name="_subject" value="Nouvau message du site Lallemand Fred">
+            <input type = "text" name="name" placeholder="Nom" required>
+            <input type = "email" name="email" placeholder="E-mail" required>
+            <textarea type = "text" class="field" name="message" placeholder="Tapez votre message ici..." required></textarea>
+            <button type="submit">Envoyer</button>
         </form>
+        <!-- <a href="https://formsubmit.co/el/pevala" target="_blank">Envoyez-nous un e-mail</a> -->
         <div id="deuxiemeTrait"></div>
         <div id="copyrightEtIcons">
             <div id="espaceFin">
