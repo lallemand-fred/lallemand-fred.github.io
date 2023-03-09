@@ -10,9 +10,9 @@
 }
 
 body{
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
-    padding: 20px; 
+    padding: 0px; 
     background-color: #121212;
     position: relative;
     overflow: hidden;
@@ -26,10 +26,12 @@ body{
     overflow-y: scroll;
     padding-right: 10px;
     grid-auto-flow: dense;
+    z-index: -1;
 }
 #grid::-webkit-scrollbar{
     background-color: #dedede;
     width: 10px;
+    z-index: 1;
 }
 #grid::-webkit-scrollbar-thumb{
     background-color: #757575;
@@ -38,17 +40,17 @@ body{
 .grid-item{
     overflow: hidden;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.4s ease;
 }
 .grid-img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.2s ease ;
+    transition: transform 0.4s ease ;
 }
 .grid-item:hover{
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
     z-index: 2;
     
@@ -79,6 +81,7 @@ body{
 }
 #popup-bg.active{
     display: flex;
+    z-index: 10;
 }
 #popup-content{
     max-width: 80%;
@@ -109,4 +112,11 @@ body{
 }
 #popup-close:hover{
     background-color: orange;
+}
+@media (max-width: 1000px){
+    #Planete-10,
+    #Planete-11{grid-column: span 1;}
+
+
+    #Planete-2{grid-row: span 1;}
 }

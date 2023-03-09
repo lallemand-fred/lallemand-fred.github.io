@@ -12,7 +12,7 @@
 body{
     height: 80vh;
     width: 100vw;
-    padding: 20px; 
+    padding: 0px; 
     background-color: #121212;
     position: relative;
     overflow: hidden;
@@ -23,13 +23,15 @@ body{
     grid-auto-rows: 400px;
     gap: 5px;
     height: 100vh;
-    overflow-y: scroll;
+    overflow: scroll;
     padding-right: 10px;
     grid-auto-flow: dense;
+    z-index: -1;
 }
 #grid::-webkit-scrollbar{
     background-color: #dedede;
     width: 10px;
+    z-index: 1;
 }
 #grid::-webkit-scrollbar-thumb{
     background-color: #757575;
@@ -61,7 +63,7 @@ body{
 #Photo-5{grid-column: span 2;}
 
 #Photo-1,
-#Photo-6{grid-row: span 2;}
+#Photo-6{grid-row: span 1;}
 
 
 #popup-bg{
@@ -79,6 +81,7 @@ body{
 }
 #popup-bg.active{
     display: flex;
+    z-index: 10;
 }
 #popup-content{
     max-width: 80%;
@@ -86,7 +89,6 @@ body{
     align-items: center;
     justify-content: center;
     position: relative;
-
 }
 #popup-img{
     width: 100%;
@@ -110,4 +112,12 @@ body{
 }
 #popup-close:hover{
     background-color: orange;
+}
+@media (max-width: 1000px) {
+    #Photo-7,
+    #Photo-2,
+    #Photo-5{grid-column: span 1;}
+
+    #Photo-1,
+    #Photo-6{grid-row: span 1;}
 }

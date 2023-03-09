@@ -11,7 +11,7 @@
 body{
     height: 80vh;
     width: 100vw;
-    padding: 20px; 
+    padding: 0px; 
     background-color: #121212;
     position: relative;
     overflow: hidden;
@@ -25,10 +25,12 @@ body{
     overflow-y: scroll;
     padding-right: 10px;
     grid-auto-flow: dense;
+    z-index: -1;
 }
 #grid::-webkit-scrollbar{
     background-color: #dedede;
     width: 10px;
+    z-index: 1;
 }
 #grid::-webkit-scrollbar-thumb{
     background-color: #757575;
@@ -79,6 +81,7 @@ body{
 }
 #popup-bg.active{
     display: flex;
+    z-index: 10;
 }
 #popup-content{
     max-width: 80%;
@@ -110,4 +113,13 @@ body{
 }
 #popup-close:hover{
     background-color: orange;
+}
+@media (max-width: 1000px){
+    #pano-1,
+    #pano-2,
+    #pano-10,
+    #pano-11{grid-column: span 1;}
+
+    #pano-7,
+    #pano-8{grid-row: span 1;}
 }

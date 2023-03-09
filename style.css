@@ -197,11 +197,7 @@ h3{
 #moyen p, #serie p{
     border-radius: 0px 10px 10px 0px;
 }
-/* #youtube #moyen p:hover{
-    opacity: 0.9;
-    transform: scale(1.20);
-    transition: 0.9s ease-in-out;
-} */
+
 #youtube #moyen:hover{
     opacity: 0.9;
     transform: scale(1.20);
@@ -243,7 +239,7 @@ p.TitreV{
     color: #fffae1 ;
 }
 #svgSec1{
-    z-index: 100;
+    z-index: 9;
     position:relative;
     background-color: #524A3A;
 }

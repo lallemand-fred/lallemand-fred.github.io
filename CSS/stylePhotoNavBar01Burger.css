@@ -24,16 +24,19 @@ html{
 }
 header{
     z-index: 999;
-    transition: 0.3s ease-in-out;
-
+    transition: 0.3s ease-in-out;    
+}
+.scroll{
+    background: rgba(0, 0, 0, 0);
 }
 nav{
-    z-index: 3;
+    z-index: 100;
     width: 100%;
     height: 50px;
     background: #16120fde;
     border-bottom: 0.5px solid rgba(167, 167, 167, 0);
     position: fixed;
+    transition: 0.3s ease-in-out;
 }
 .liste-items{
     display: flex;
@@ -88,12 +91,16 @@ nav a:hover{
     display: block; 
   
 }
-.scroll-down header {
-    transform: translate3d(0. -100%,0);
+/* ------------------- Scroll Stuff ------------------- */
+/* .scroll-down header {
+    transform: translate(0. -100%,0);
+
+;
 }
 .scroll-up header {
     filter: drop-shadow(0 -10px 20px black);
-}
+
+} */
 
 /* ------------- Médié query ---------------- */
 
@@ -102,8 +109,6 @@ nav a:hover{
         position: relative;
         list-style: none;
         transition: 0.5s;
-        visibility: hidden;
-        opacity: 0;
         transform: translateX(-250px);
         transition-delay: calc(0.1s * var(--i));
     }
@@ -114,7 +119,9 @@ nav a:hover{
         border-radius: 0 10px 10px 10px;
         transform: scale(1.04) translate(2%);
     }
+    
     nav ul li a {
+        visibility: visible;
         position: relative;
         text-decoration: none;
         display: block;
@@ -123,7 +130,7 @@ nav a:hover{
         width: 167px;
         background: var(--navBarBurger-bg-color);
         color: var(--navBarBurger-color);
-        transition: 0.4s ease-in-out;
+        transition: 0.4s;
     }
     nav a:hover{
         color: black;
@@ -148,7 +155,7 @@ nav a:hover{
         align-items: center;      
     }
     .items{
-        height: 60px;
+        height: 50px;
         float: left;
     }
 
@@ -158,11 +165,11 @@ nav a:hover{
         z-index: -1;
     }
     .items-sous-liste:nth-child(3) {
-        top: -240px;
+        top: -210px;
         z-index: -1;
     }
     .items-sous-liste:nth-child(4) {
-        top: -360px;
+        top: -310px;
         z-index: -2;
     }
     .items-sous-liste{
@@ -184,7 +191,10 @@ nav a:hover{
     nav{
         background-color: #16120f00;
     }
+
     .navigation{
+        visibility: visible;
+        
         position: fixed;
         top: 20px;
         left: 20px;
@@ -203,7 +213,7 @@ nav a:hover{
         border-radius: 10px 10px 0 0;
         position: relative;
         top: 0;
-        left: 0;
+        left: 20px;
         width: 167px;
         height: 50px;
         background: var(--navBarBurger-bg-color);
@@ -217,10 +227,10 @@ nav a:hover{
     .toggle::before{
         font-size: 20px;
         content: 'Menu';
-        margin-right: 38px;
+        margin-right: 24px;
     }
     .toggle.active::before{
-        content: 'Fermer';
+        content: 'Menu';
     }
     .toggle span{
         position: relative;
@@ -235,7 +245,7 @@ nav a:hover{
         width: 100%;
         height: 2px;
         background: var(--navBarBurger-color);
-        transition: 0.5s;
+        transition: 0.5s ease-in-out;
     }
     .toggle span::after{
         content: '';
@@ -245,14 +255,14 @@ nav a:hover{
         width: 100%;
         height: 2px;
         background: var(--navBarBurger-color);
-        transition: 0.5s;
+        transition: 0.5s ease-in-out;
     }
     .toggle.active span::before{
-        transform: rotate(225deg);
+        transform: rotate(360deg) translate(3px,1px) scale(0.3);
         top: 24px;
     }
     .toggle.active span::after{
-        transform: rotate(135deg);
+        transform: rotate(360deg) translate(-3px,1px) scale(0.3) ;
         bottom: 24px;
     }
 }
