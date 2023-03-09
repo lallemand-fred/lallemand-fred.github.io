@@ -1,42 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>MINI PLANETES</title>
-        <link rel="shortcut icon" href="logo_LF.png">
-        <link rel="stylesheet" href="./CSS/stylePlanet.css">*
-        <link rel="stylesheet" href="./CSS/styleNavBar.css">
-    </head>
-    <!-- -----------------------NAVBAR---------------------------------- -->
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MINI PLANETES</title>
+    <link rel="shortcut icon" href="logo_LF.png">
+    <link rel="stylesheet" href="./CSS/stylePlanet.css">*
+    <link rel="stylesheet" href="./CSS/stylePhotoNavBar01Burger.css">
+</head>
+    <!-------------------------NAVBAR---------------------------------- -->
+<body>
     <header>
-        <nav>
+        <nav class="navigation">
+            <div class="toggle"><span></span></div>
             <ul class="liste-items">
-                <li class="items"><a id=logo href="index.html">Lallemand Frédéric</a></li>
-    
-                <li class="items"><a href="index.html#photos">Photos</a>
+                <li style="--i:0;" class="items"><a  href="index.html">Accueil</a></li>
+        
+                <li style="--i:1;" class="items"><a href="index.html#photos">Photos</a>
                     <ul class="sous-liste">
                         <li class="items-sous-liste"><a href="PHOTOS.html">Galerie images</a></li>
                         <li class="items-sous-liste"><a href="PrixPhotos.html">Format & prix</a></li>
                     </ul>
                 </li>
-    
-                <li class="items"><a href="index.html#photos">Panoramiques</a>
+        
+                <li style="--i:2;" class="items"><a href="index.html#photos">Panoramiques</a>
                     <ul class="sous-liste">
                         <li class="items-sous-liste"><a href="PANO.html">Galerie d'images</a></li>
                         <li class="items-sous-liste"><a href="PrixPano.html">Format & prix</a></li>
                     </ul>
                 </li>
-    
-                <li class="items"><a href="index.html#photos">Mini-planètes</a>
+        
+                <li style="--i:3;" class="items"><a href="index.html#photos">Mini-planètes</a>
                     <ul class="sous-liste">
                         <li class="items-sous-liste"><a href="PLANETE.html">Galerie d'images</a></li>
                         <li class="items-sous-liste"><a href="PrixPlanete.html">Format & prix</a></li>
                     </ul>
                 </li>
-    
-                <li class="items"><a href="index.html#youtube">Vidéos</a>
+        
+                <li style="--i:4;" class="items"><a href="index.html#youtube">Vidéos</a>
                     <ul class="sous-liste">
                         <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBOrHa1A2UJIgRqGAxNNYeWh" target="_blank" target="_blank">Animations 2D & 3D</a></li> 
                         <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBNEHPLyGaUdB5JX2rWB3O8c" target="_blank">Série Joli-bois</a></li> 
@@ -44,41 +46,42 @@
                         <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBMMxBF-VS7SY5GFOFMjLENm" target="_blank">Moyens métrages</a></li>
                     </ul>
                 </li>
-    
-                <li class="items"><a href="index.html#contact">Contact</a></li>
+        
+                <li style="--i:5;" class="items"><a id="navFin" href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <!-- -----------------------FIN_NAVBAR---------------------------------- -->
-    <body>
-        <div id="popup-bg">
-            <div id="popup-content">
-                <div id="popup-close">
-                    <ion-icon name="close-circle"></ion-icon>
-                </div>
-                <img id="popup-img" src="#" alt="">
+    <!-------------------------FIN_NAVBAR---------------------------------- -->
+    <div id="popup-bg">
+        <div id="popup-content">
+            <div id="popup-close">
+                <ion-icon name="close-circle"></ion-icon>
             </div>
+            <img id="popup-img" src="#" alt="">
         </div>
-        <div id="grid">
-            <div class="grid-item" id="Planete-1"> <img src="./media/mini_planetes/Planete-1.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-2"> <img src="./media/mini_planetes/Planete-2.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-3"> <img src="./media/mini_planetes/Planete-3.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-6"> <img src="./media/mini_planetes/Planete-6.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-11"><img src="./media/mini_planetes/Planete-11.jpg" alt="" class="grid-img"></div>     
-            <div class="grid-item" id="Planete-7"> <img src="./media/mini_planetes/Planete-7.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-8"> <img src="./media/mini_planetes/Planete-8.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-4"> <img src="./media/mini_planetes/Planete-4.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-9"> <img src="./media/mini_planetes/Planete-9.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-10"><img src="./media/mini_planetes/Planete-10.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-11"><img src="./media/mini_planetes/Planete-11.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-12"><img src="./media/mini_planetes/Planete-12.jpg" alt="" class="grid-img"></div>
-            <div class="grid-item" id="Planete-13"><img src="./media/mini_planetes/Planete-13.jpg" alt="" class="grid-img"></div>
-        </div>
-
-        <script src="JS/appPlanete.js"></script>
-        <script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" >
-        </script> 
-        <script  nomodule  src = "https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js" >
-        </script>
-    </body>
+    </div>
+    <div id="grid">
+        <div class="grid-item" id="Planete-1"><img src="./media/mini_planetes/Planete-1.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-2"><img src="./media/mini_planetes/Planete-2.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-3"><img src="./media/mini_planetes/Planete-3.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-6"><img src="./media/mini_planetes/Planete-6.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-11"><img src="./media/mini_planetes/Planete-11.jpg" alt="" class="grid-img"></div>     
+        <div class="grid-item" id="Planete-7"><img src="./media/mini_planetes/Planete-7.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-8"><img src="./media/mini_planetes/Planete-8.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-4"><img src="./media/mini_planetes/Planete-4.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-9"><img src="./media/mini_planetes/Planete-9.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-10"><img src="./media/mini_planetes/Planete-10.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-11"><img src="./media/mini_planetes/Planete-11.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-12"><img src="./media/mini_planetes/Planete-12.jpg" alt="" class="grid-img"></div>
+        <div class="grid-item" id="Planete-13"><img src="./media/mini_planetes/Planete-13.jpg" alt="" class="grid-img"></div>
+    </div>
+    
+    <script src="JS/appPlanete.js"></script>
+    <script  type = "module"  src = "https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js" >
+    </script> 
+    <script  nomodule  src = "https://unpkg .com/ionicons@5.5.2/dist/ionicons/ionicons.js" >
+    </script>
+    <script src="./JS/appNavBar01BurgerPhotos.js"></script>
+    
+</body>
 </html>
