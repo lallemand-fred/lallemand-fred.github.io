@@ -42,27 +42,91 @@ h5{
 h6{
     text-align: center;
 }
-/* ------------------IMAGE PRINCIPALE--------------------- */
-#imagePrincipale{
-    padding-top: 60px;
-    background: url(media/images/PeintureImage/horizon_paysage_peinture.jpg) no-repeat fixed 50% 50%;
-    background-size: cover;
-    height: 700px;
+nav{
+    z-index: 100;
 }
-#imagePrincipale h1 {
+/* ------------------IMAGE PRINCIPALE--------------------- */
+#imageParallax{
+    position: relative;
+    width: 100%;
+    height: 150vh;
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+/* #imageParallax::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #16120f,transparent);
+} */
+#imageParallax img {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#frontStart{
+    
+    z-index: 6;
+    transform: translatey(10px);
+}
+#frontEnd{
+    z-index: 5;
+}
+#middelStart{
+    transform: translatey(0px);
+    z-index: 4;
+}
+#firstName{
+    
+    transform: translatey(70px);
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+}
+#middelEnd{
+    transform: translatey(-20px);
+    z-index: 3;
+}
+#lastName{
+    
+    transform: translatey(200px);
+    position: absolute;
+    z-index: 4;
+    white-space: nowrap;
+}
+#background{
+    transform: translatey(-50px);
+    z-index: 1;
+}
+h1 {
     font-family: 'Dancing Script', cursive;
     color:#ffffff;
     font-size: 6em;
     margin-top: 120px;
     text-shadow: 5px 4px 8px rgb(107, 13, 35);
 }
-#premierTrait{
+/* #imagePrincipale{
+    padding-top: 60px;
+    background: url(media/images/PeintureImage/horizon_paysage_peinture.jpg) no-repeat fixed 50% 50%;
+    background-size: cover;
+    height: 700px;
+} */
+/* #premierTrait{
     height: 1px;
     width: 35%;
     margin: -3px auto;
     background-color: #ffffff;
     box-shadow: 3px 3px 4px rgb(107, 13, 35);
-}
+} */
 h3{
     text-align: center;
     color: #ffffff;
@@ -79,6 +143,7 @@ h3{
     background: linear-gradient(to top, #16120f, transparent);
 }
 #presentation{
+    z-index: 4;
     position: relative;
     width: 100%;
     background-color: #16120f;
@@ -119,6 +184,7 @@ h3{
 }
 /* ------------------------VIDEOS---------------------- */
 #youtube::before{
+    z-index: 10;
     content: '';
     position: absolute;
     top: -100px;
@@ -197,7 +263,11 @@ h3{
 #moyen p, #serie p{
     border-radius: 0px 10px 10px 0px;
 }
-
+/* #youtube #moyen p:hover{
+    opacity: 0.9;
+    transform: scale(1.20);
+    transition: 0.9s ease-in-out;
+} */
 #youtube #moyen:hover{
     opacity: 0.9;
     transform: scale(1.20);
@@ -310,6 +380,9 @@ button:hover{
     transform: scale(1.20);
 }
 @media (max-width: 1000px){
+    h1{
+        font-size: 5rem;
+    }
     #photos{
         flex-direction: column;
         flex-wrap:nowrap;
