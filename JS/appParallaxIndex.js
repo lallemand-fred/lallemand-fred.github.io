@@ -15,5 +15,18 @@ window.addEventListener('scroll', function(){
     frontEnd.style.top = value * 0.17 + "px"
     frontStart.style.top = value * 0.08 + "px"
     lastName.style.marginBotton = value * 2 + "px"
-    firstName.style.marginBotton = value * 2 + "px"  
+    firstName.style.marginBotton = value * 2 + "px"
+    
 })
+
+//---------------Effect bubble--------------------
+
+const wrapper = document.getElementById("bubble-wrapper")
+const animationBubble = x => {
+    const bubble = document.createElement("div")
+    bubble.className = "bubble"
+    bubble.style.left = `${x}px`
+    wrapper.appendChild(bubble)
+    setTimeout(() => wrapper.removeChild(bubble), 3000)
+}
+window.onmousemove = e => animationBubble(e.clientX)

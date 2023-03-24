@@ -31,38 +31,23 @@ window.addEventListener('scroll', () => {
 
     lastScroll = currentScroll;
 })
+//-------------------------------------------------------------------------------
+// let stars = document.getElementById('stars')
+// let moon = document.getElementById('moon')
+// let mountains_behind = document.getElementById('mountains_behind')
+// let text = document.getElementById('text')
+// let btn = document.getElementById('btn')
+// let mountains_front = document.getElementById('mountains_front')
+// let header = document.querySelector('header')
 
-//---------------------------------------------------------------
-// function getScroll(event)
-// {
-//      // gestion de event et calcul du scroll
-//      var e = event || window.event;
-//      var delta = (- e.detail / 3) || (e.wheelDelta / 120);
- 
-//      // empêche l'action par défaut du scroll
-//      if(e.preventDefault)
-//      {
-//           e.preventDefault();
-//      }
-//      else // pour IE
-//      {
-//           e.returnValue = false;
-//      }
-// }
- 
- 
-// // détection du scroll sur le div
-// if(document.addEventListener)
-// {
-//      document.getElementById('scroll').addEventListener('DOMMouseScroll', getScroll, false);
-//      document.getElementById('scroll').addEventListener('mousewheel', getScroll, false);
-// }
-// else if (document.attachEvent) // pour IE
-// {
-//      document.getElementById('scroll').attachEvent('onmousewheel', getScroll);
-// }
-// else {
-//     document.getElementById('scroll').onDOMMouseScroll = getScroll;
-//     document.getElementById('scroll').onmousewheel = getScroll;
-// }
-//---------------------------------------------------------------
+// window.addEventListener('scroll', function(){
+//     let value = window.scrollY
+//     stars.style.left = value * 0.25 + 'px'
+//     moon.style.top = value * 0.85 + 'px'
+//     mountains_behind.style.top = value * 0.5 + 'px'
+//     mountains_front.style.top = value * 0 + 'px'
+//     text.style.marginRight = value * 3 + 'px'
+//     text.style.marginTop = value * 0.5 + 'px'
+//     btn.style.marginTop = value * 1.5 + 'px'
+//     header.style.top = value * 0.7 + 'px'
+// })

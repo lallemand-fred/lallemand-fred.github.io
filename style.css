@@ -69,7 +69,7 @@ nav{
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: clamp(150px, 100%, 100%);
     height: 100%;
     object-fit: cover;
 }
@@ -104,6 +104,7 @@ nav{
     white-space: nowrap;
 }
 #background{
+    
     transform: translatey(-50px);
     z-index: 1;
 }
@@ -184,7 +185,7 @@ h3{
 }
 /* ------------------------VIDEOS---------------------- */
 #youtube::before{
-    z-index: 10;
+    z-index: 4;
     content: '';
     position: absolute;
     top: -100px;
@@ -292,11 +293,12 @@ p.TitreV{
     text-align: center;
     padding: 0;
 }
+
 #liensTravail{
     color: #fffae1 ;
     background: #221c17;
     height: auto ;
-    padding-bottom: 0;
+    padding-bottom: 150px;
 }
 .LIEN{
     font-size: 1.6rem;
@@ -304,15 +306,61 @@ p.TitreV{
 }
 .liens{
     padding-top: 30px;
-    
     text-align: center;
     color: #fffae1 ;
 }
-#svgSec1{
+/* #svgSec1{
     z-index: 9;
     position:relative;
     background-color: #524A3A;
+} */
+/* --------------------Transition Video => Footer------------------- */
+#liensTravail::after{
+    z-index: 1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    transform: translateY(50px);    
+    /* background: linear-gradient(to top, #524a3a, transparent); */
+    background: #524a3a;
+    margin-top: 100px;
 }
+/* #liensTravail{
+    color: #fffae1 ;
+    background: #221c17;
+    height: auto ;
+    padding-bottom: 0;
+} */
+/* -------------------Effect wave----------------- */
+#bubble-wrapper{
+    height: 100%;
+    width: 100%;
+    position: relative;
+    bottom: -110px;
+    /* overflow: hidden; */
+    pointer-events: none;
+}
+.bubble{
+    height: max(300px, 30vw);
+    width: max(300px, 30vw);
+    background-color: #524a3a;
+    /* background: linear-gradient(to top, #524a3a, transparent); */
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    animation: wave 2s ease-in-out infinite;
+}
+@keyframes wave {
+    from, to {
+        transform: translate(-50%, 0%);
+    }
+    50% {
+        transform: translate(-50%, -20%);
+    }
+}
+
 /* --------------FOOTER-------------------- */
 footer h2{
     padding: 0;
@@ -324,7 +372,7 @@ footer h2{
     width: 100%;
     background-color: #524A3A;
     color: #fffae1;
-    padding: 0 0 10px 0;
+    padding: 100px 0 10px 0;
     text-align: center;
 }
 form{
@@ -377,8 +425,9 @@ button:hover{
 .LIEN:hover{
     opacity: 0.7;
     transition: 0.3s;
-    transform: scale(1.20);
+    transform: scale(1);
 }
+
 @media (max-width: 1000px){
     h1{
         font-size: 5rem;
@@ -390,6 +439,26 @@ button:hover{
         padding: 20px 0 ;
         justify-items: center;
         text-align: center;
+    }
+    #youtube #moyen:hover{
+        opacity: 0.9;
+        transform: scale(0.99);
+        
+    }
+    #youtube #court:hover{
+        opacity: 0.9;
+        transform: scale(0.99);
+        
+    }
+    #youtube #serie:hover{
+        opacity: 0.9;
+        transform: scale(0.99);
+        
+    }
+    #youtube #animation:hover{
+        opacity: 0.9;
+        transform: scale(0.99);
+        
     }
     #court p, #animation p{
         float: center;
@@ -415,5 +484,35 @@ button:hover{
         padding: 0;
         margin-left: 0;
         margin-right: 0;
+    }
+}
+@media (max-width: 400px){
+    h1{
+        font-size: 3.5rem;
+    }
+    #youtube p{
+        color: #fffae1;
+        height: 45px;
+        width: 200px;
+        background-color: #ab956fdb;
+        float: center;
+        margin-left: -25%;
+        margin-right: auto;
+        font-size: 1.5em;
+        text-align: center;
+        padding-top: 15px;
+        box-shadow: 4px 4px 8px 1px rgba(232, 156, 5, 0.387);
+        border-radius: 10px;
+    }
+    #youtube #court, #youtube #animation{
+        float: center;
+    }
+    #court p, #animation p{
+        float: center;
+        font-size: 1.5em;
+        text-align: center;
+    }
+    #moyen p, #serie p{
+        margin-right: -25%;
     }
 }

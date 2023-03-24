@@ -37,24 +37,22 @@ nav{
 }
 .liste-items{
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     flex-direction: row;
     color: #fffae1;
     list-style-type: none;
     height: 100%;
-    line-height: 50px;
+    line-height: 51px;
     font-size:  1.3em;
     text-align: center;
 }
 .items{
     cursor: pointer;
-    margin: 0 20px;
+    margin: 0 0px;
     flex-shrink: 0;
 }
-/* .items :nth-child(1){
-    
-    float: left;
-} */
+.items :nth-child(2){
+}
 #logo{
     font-family: 'Dancing Script', sans-serif;
     font-weight: bold;
@@ -67,13 +65,16 @@ nav a {
 nav a:hover{
     color: #aaa396;
     cursor: pointer;
-    transition: 0.2s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 /* ----------------------sous liste---------------------- */
 
 .sous-liste{
-    position: relative;
+    position: fixed;
     display: none;
+    left: 230px;
+    right: 230px;
+    
 }
 .items-sous-liste{
     position: relative;
@@ -81,12 +82,16 @@ nav a:hover{
     text-align: center;
     padding: 0 10px;
     background: #16120fde;
-    border-bottom: 0.5 solid rgb(167, 167, 167)
+    border-bottom: 0.5 solid rgb(167, 167, 167);
+}
+.items-sous-liste:nth-last-child(1){
+    border-radius: 0 0 10px 10px;
 }
 
 .items:hover > ul {
-    display: block; 
-  
+    display: block;
+    transform: translatey(0. -100%,0);
+    transition: 1s ease-in-out;
 }
 .scroll-down header {
     transform: translate3d(0. -100%,0);
@@ -98,6 +103,9 @@ nav a:hover{
 /* ------------- Médié query ---------------- */
 
 @media (max-width: 1000px){
+    nav{
+        z-index: 100;
+    }
     nav ul li{
         position: relative;
         list-style: none;
@@ -106,6 +114,13 @@ nav a:hover{
         opacity: 0;
         transform: translateX(-250px);
         transition-delay: calc(0.1s * var(--i));
+    }
+    .sous-liste{
+        position: fixed;
+        display: none;
+        left: 0;
+        right: 0;
+        
     }
     nav ul li:nth-child(6) a {
         border-radius: 0 0 10px 10px ;
@@ -190,7 +205,7 @@ nav a:hover{
         left: 20px;
         height: 20px;
         width: 206px;
-        z-index: 15;
+        z-index: 10;
     }
     .toggle:hover{
         transition: 0.3s;
