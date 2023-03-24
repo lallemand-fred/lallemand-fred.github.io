@@ -344,7 +344,6 @@ p.TitreV{
 .bubble{
     height: max(300px, 40vw);
     width: max(300px, 40vw);
-    /* background-color: #524a3a; */
     background: linear-gradient(to top, #524a3a, transparent);
     border-radius: 100%;
     position: absolute;

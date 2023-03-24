@@ -27,6 +27,6 @@ const animationBubble = x => {
     bubble.className = "bubble"
     bubble.style.left = `${x}px`
     wrapper.appendChild(bubble)
-    setTimeout(() => wrapper.removeChild(bubble), 2000)
+    setTimeout(() => wrapper.removeChild(bubble), 3000)
 }
 window.onmousemove = e => animationBubble(e.clientX)
