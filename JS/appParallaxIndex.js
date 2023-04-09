@@ -19,14 +19,5 @@ window.addEventListener('scroll', function(){
     
 })
 
-//---------------Effect bubble--------------------
 
-const wrapper = document.getElementById("bubble-wrapper")
-const animationBubble = x => {
-    const bubble = document.createElement("div")
-    bubble.className = "bubble"
-    bubble.style.left = `${x}px`
-    wrapper.appendChild(bubble)
-    setTimeout(() => wrapper.removeChild(bubble), 3000)
-}
-window.onmousemove = e => animationBubble(e.clientX)
+

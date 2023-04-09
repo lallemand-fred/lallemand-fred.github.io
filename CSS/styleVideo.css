@@ -1,47 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
 
-html{
+body, html{
     scroll-behavior: smooth;
+    padding: 0;
+    margin: 0;
+    min-height: 100%;
+    overflow-x: hidden;
 }
 body {
     font-family: 'Advent Pro',sans-serif;
-    padding: 0;
-    margin: 0;
-    background-color: #16120f;
+    padding: 50px;
+    background: linear-gradient(1deg, #221c17, #16120f) center center no-repeat;
+    line-height: 1.4;
 }
-div.debutPage {
-    padding: 2em;
-}
-ul {
-    margin: 0;
-    padding: 0;
-}
-li{
-    list-style: none;
-}
-a{
+.title{
     text-align: center;
-    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 25px;
 }
-h1{
-    text-align: center;
-    color: #fffae1;
+.item{
+    border-radius: 20px;
+    margin: 40px 10px;
+    background-color: #ffffff;
+    box-shadow: 0 15px 35px #faf9f91a,0 5px 15px #ffffff1a ;
+    transition: transform 0.3s;
+    transform: translate3d(0,-1px,0);
 }
-h2{
+.item:hover{
+    transform: translate3d(0, -10px, 0);
+}
+.IMG__carousel1{
+    /* width: clamp(100px, 100%, 100%); */     
+    /* border-radius:  15px 15px 0 0;*/
+}
+.item img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius:  15px 15px 0 0;
+}
+.item__body{
+    padding: 25px;
+}
 
-    text-align: center;
+.item__title{
+    font-size: 24px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #232323;
+}
 
+.item__description{
+    color: #2c2c2c;
+    font-size: 16px;
 }
-h3{
-    text-align: center;        
+
+.items{
+    position: relative;
 }
-h4{
-    text-align: center;
-}
-h5{
-    text-align: center;
-}
-h6{
-    text-align: center;
-}
-/* --------------------NAVBAR-------------------------- */
