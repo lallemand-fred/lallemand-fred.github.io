@@ -184,111 +184,107 @@ h3{
     transition: 0.6s ease-in-out;
 }
 /* ------------------------VIDEOS---------------------- */
-#youtube::before{
-    z-index: 4;
-    content: '';
-    position: absolute;
-    top: -100px;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #221c17, transparent);
+.courtMetrage{
+    font-family: 'Advent Pro',sans-serif;
+    padding: 50px;
+    background: #221c17;
+    line-height: 1.4;
+    min-height: 100%;
+    overflow-x: hidden;
 }
-#youtube{
-    position: relative;
-    width: 100%;
-    height: 1499px;
-    background-color: #221c17;
-    padding: 0px 0 10px 0;
+.moyenMetrage{
+    font-family: 'Advent Pro',sans-serif;
+    padding: 50px;
+    background: linear-gradient(1deg, #221c17, #16120f) center center no-repeat;
+    line-height: 1.4;
+    min-height: 100%;
+    overflow-x: hidden;
 }
-#youtube h2{
-    color: #fffae1;
-    padding-top: 1px;
-}
-
-#moyen{
-    background: url(media/videos/images_liens_Youtube/Moyen_metrages_PetiteImage01.png);
-    background-size: 460px;
-    background-position: center;
-    border-radius: 10px 0px 0px 10px;
-
-
-}
-#court{
-    background: url(media/videos/images_liens_Youtube/Court_metrages_PetiteImage01.png);   
-    background-size: 479px;
-    background-position: top center;
-    border-radius: 0px 10px 10px 0px;
-}
-#serie{
-    background: url(media/videos/images_liens_Youtube/SerieJoli_bois01PetiteImage.PNG);
-    border-radius: 10px 0px 0px 10px;
-}
-#animation{
-    background: url(media/videos/images_liens_Youtube/Animations_PtiteteImage01.PNG);
-    background-size: 455px;
-    background-position: center;
-    border-radius: 0px 10px 10px 0px;
-}
-#youtube li{
-    
-    margin: 80px 20% 0 20%;
-    height: 256px;
-    width: 55%;
-    max-width: 420px;
-    float: left;
-    box-shadow: 10px 10px 20px -1px rgba(0, 0, 0, 0.7);
-}
-
-#youtube p{
-    color: #fffae1;
-    height: 45px;
-    width: 235px;
-    background-color: #ab956fdb;
-    float: right;
-    margin: 100px -230px 0 0px;
-    font-size: 1.7em;
+.title{
     text-align: center;
-    padding-top: 15px;
-    box-shadow: 4px 4px 8px 1px rgba(232, 156, 5, 0.387);
-    border-radius: 10px;
+    font-size: 25px;
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 25px;
 }
-#youtube #court, #youtube #animation{
-    float: right;
+.item{
+    border-radius: 20px;
+    margin: 30px 10px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px #faf9f91a,0 5px 5px #ffffff1a ;
+    transition: transform 0.3s;
+    transform: translate3d(0,-1px,0);
 }
-#court p, #animation p{
+.item:hover{
+    transform: translate3d(0, -10px, 0);
+}
+.item img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius:  15px 15px 0 0;
+}
+.item__body{
+    padding: 20px;
+}
+
+.item__title{
+    font-size: 20px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #232323;
+}
+
+.item__description{
+    color: #2c2c2c;
+    font-size: 17px;
+}
+
+.items{
+    position: relative;
+}
+/* ------------------------Carousel vidéos----------------------- */
+.carousel {
+    position: relative;
+    /* overflow: hidden; */
+}
+.carousel__container{
+    transition: transform 0.4s;
+    transform: translate3d(0, 0, 0);
+}
+.carousel__container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+.carousel__item {
     float: left;
-    margin-left: -230px;
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: -4px 4px 8px 1px rgba(232, 156, 5, 0.38);
 }
-#moyen p, #serie p{
-    border-radius: 0px 10px 10px 0px;
+.carousel__next, .carousel__prev {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: #ffffffb4 url(./media/svgButtons/right.svg) center center no-repeat;
+    background-size:45px;
+    border-radius: 50%;
+    top: 50%;
+    margin-top: -50px;
+    right: -20px;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
 }
-/* #youtube #moyen p:hover{
-    opacity: 0.9;
-    transform: scale(1.20);
-    transition: 0.9s ease-in-out;
-} */
-#youtube #moyen:hover{
-    opacity: 0.9;
-    transform: scale(1.20);
-    transition: 0.9s ease-in-out;
+.carousel__next:hover, .carousel__prev:hover {
+    transform: scale(1.2);
 }
-#youtube #court:hover{
-    opacity: 0.9;
-    transform: scale(1.20);
-    transition: 0.9s ease-in-out;
+.carousel__prev{
+    background-image: url(./media/svgButtons/left.svg);
+    right: auto;
+    left: -20px;
 }
-#youtube #serie:hover{
-    opacity: 0.9;
-    transform: scale(1.20);
-    transition: 0.9s ease-in-out;
+.carousel__next--hidden, .carousel__prev--hidden{
+    opacity: 0;
 }
-#youtube #animation:hover{
-    opacity: 0.9;
-    transform: scale(1.20);
-    transition: 0.9s ease-in-out;
-}
+/* ---------------------Liens Travaux--------------------- */
 p.TitreV{
     text-align: center;
     padding: 0;
@@ -298,7 +294,6 @@ p.TitreV{
     color: #fffae1 ;
     background: #221c17;
     height: auto ;
-    padding-bottom: 150px;
 }
 .LIEN{
     font-size: 1.6rem;
@@ -309,55 +304,12 @@ p.TitreV{
     text-align: center;
     color: #fffae1 ;
 }
-/* #svgSec1{
+/* --------------------Transition Video => Footer------------------- */
+
+#svgSec1{
     z-index: 9;
     position:relative;
     background-color: #524A3A;
-} */
-/* --------------------Transition Video => Footer------------------- */
-#liensTravail::after{
-    z-index: 1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    transform: translateY(50px);    
-    background: linear-gradient(to top, #524a3a, transparent);
-    /* background: #524a3a; */
-    margin-top: 0px;
-}
-/* #liensTravail{
-    color: #fffae1 ;
-    background: #221c17;
-    height: auto ;
-    padding-bottom: 0;
-} */
-/* -------------------Effect wave----------------- */
-#bubble-wrapper{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    bottom: -150px;
-    /* overflow: hidden; */
-    pointer-events: none;
-}
-.bubble{
-    height: max(300px, 40vw);
-    width: max(300px, 40vw);
-    background: linear-gradient(to top, #524a3a, transparent);
-    border-radius: 100%;
-    position: absolute;
-    left: 50%;
-    top: 100%;
-    animation: wave 2.5s ease-in-out infinite;
-}
-@keyframes wave {
-    from, to {
-        transform: translate(-50%, 0%);
-    }
-    50% {
-        transform: translate(-50%, -15%);
-    }
 }
 
 /* --------------FOOTER-------------------- */
@@ -371,7 +323,7 @@ footer h2{
     width: 100%;
     background-color: #524A3A;
     color: #fffae1;
-    padding: 100px 0 10px 0;
+    padding: 0px 0 10px 0;
     text-align: center;
 }
 form{

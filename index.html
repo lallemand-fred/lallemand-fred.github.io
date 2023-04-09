@@ -8,10 +8,11 @@
     <link rel="shortcut icon" href="logo_LF.png">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./CSS/styleNavBar.css">
-    <script src="./JS/appNavBar01Burger.js" defer></script>
-    <script src="./JS/appParallaxIndex.js" defer></script>
+    <script src="./JS/appNavBar01Burger.js" async></script>
+    <script src="./JS/appParallaxIndex.js" async></script>
+    <script src="./JS/main.js" async></script>
 </head>
-<!-- ----------------------NAVBAR_TOP_MENU---------------------------------- -->
+<!-- -----------------------NAVBAR_TOP_MENU---------------------------------- -->
 <body>
     <header>
         <nav class="navigation">
@@ -40,13 +41,13 @@
                     </ul>
                 </li>
 
-                <li style="--i:4;" class="items"><a href="index.html#youtube">Vidéos</a>
-                    <ul class="sous-liste">
+                <li style="--i:4;" class="items"><a href="index.html#video">Vidéos</a>
+                    <!-- <ul class="sous-liste">
                         <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBOrHa1A2UJIgRqGAxNNYeWh" target="_blank" target="_blank">Animations 2D & 3D</a></li> 
                         <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBNEHPLyGaUdB5JX2rWB3O8c" target="_blank">Série Joli-bois</a></li> 
                         <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBOdEYYaGexdyuHuv08tY47f" target="_blank">Courts métrages</a></li> 
                         <li class="items-sous-liste"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBMMxBF-VS7SY5GFOFMjLENm" target="_blank">Moyens métrages</a></li>
-                    </ul>
+                    </ul> -->
                 </li>
 
                 <li style="--i:5;" class="items"><a id="navFin" href="index.html#contact">Contact</a></li>
@@ -100,15 +101,526 @@
             </div>
         </div>        
     </section>
-    <section id="youtube">
-        <h2>Vidéos</h2>
-        <ul class="Vid">
-            <a href="https://youtube.com/playlist?list=PLWSjBstp4cBMMxBF-VS7SY5GFOFMjLENm" target="_blank"><li id="moyen"><p class="TitreV">Moyens métrages</p></li></a>
-            <a href="https://youtube.com/playlist?list=PLWSjBstp4cBOdEYYaGexdyuHuv08tY47f" target="_blank"><li id="court"><p class="TitreV">Courts métrages</p></li></a>
-            <a href="https://youtube.com/playlist?list=PLWSjBstp4cBNEHPLyGaUdB5JX2rWB3O8c" target="_blank"><li id="serie"><p class="TitreV">Série Joli-bois</p></li></a>
-            <a href="https://youtube.com/playlist?list=PLWSjBstp4cBOrHa1A2UJIgRqGAxNNYeWh" target="_blank"><li id="animation"><p class="TitreV">Animations 2D & 3D</p></li></a>
-        </ul>       
+    <div id="video"></div>
+    <section class="moyenMetrage">
+        <div class="container">
+            <div class="title"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBMMxBF-VS7SY5GFOFMjLENm" target="_blank" class="title">Moyens métrages</a></div>
+            <div id="carousel1">
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/lHiverNoir.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            L'HIVER NOIR
+                        </div>
+                        <div class="item__description">
+                            Bande-annonce du film l'HIVER NOIR
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/leTourDuMonde.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Le tour du monde
+                        </div>
+                        <div class="item__description">
+                            EsquisseS ASBL sur la commune d'Esneux
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/starlettes.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            STARLETTES
+                        </div>
+                        <div class="item__description">
+                            La bande large ASBL sur la commune d'Esneux
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/starlettesMakingOf.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Making of STARLETTES
+                        </div>
+                        <div class="item__description">
+                            Making of de Starlette ou les étoiles filantes
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/commeSiCetaitHier.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Comme si c'était hier
+                        </div>
+                        <div class="item__description">
+                            EsquisseS ASBL à la Mj Sprimont
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="title"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBOdEYYaGexdyuHuv08tY47f" target="_blank" class="title">Courts métrages</a></div>
+            <div id="carousel2">
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/Dehors1.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Dehors !
+                        </div>
+                        <div class="item__description">
+                            Animé par La bande large asbl
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/DeuxGouttesDeau.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Deux gouttes d'eau
+                        </div>
+                        <div class="item__description">
+                            Animé par La bande large asbl
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/CantatePourUnCambrioleur1.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Cantate pour un cambrioleur
+                        </div>
+                        <div class="item__description">
+                            Animé par EsquisseS ASBL
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/LaRueBeauregard1.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            La rue beauregard
+                        </div>
+                        <div class="item__description">
+                            Court métrage diffuser sur MCM
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/CommeUneOmbre1.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Comme une ombre
+                        </div>
+                        <div class="item__description">
+                            Animé par La bande large asbl
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/EscaleMortelle1.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Escale mortelle
+                        </div>
+                        <div class="item__description">
+                            Animé par EsquisseS ASBL
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/2hChrono1.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            2h chrono
+                        </div>
+                        <div class="item__description">
+                            Animé par La bande large asbl
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/TherapieDeGroupe1.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Thérapie de groupe
+                        </div>
+                        <div class="item__description">
+                            Animé par La bande large asbl
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/AmourEtHasard.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Amour & hasard
+                        </div>
+                        <div class="item__description">
+                            Animé par EsquisseS ASBL
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/Le couloir.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Le Couloir
+                        </div>
+                        <div class="item__description">
+                            Monteur pour Adrien François 
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel2/HorsControle.jpg" alt="">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Hors contrôle
+                        </div>
+                        <div class="item__description">
+                            Monteur pour Khalid Zahar & Adrien François 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="title"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBOrHa1A2UJIgRqGAxNNYeWh" target="_blank" target="_blank" class="title">Captations & Animations logos</a></div>
+            <div id="carousel3">
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel4/TropEnForme.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Trop en forme
+                        </div>
+                        <div class="item__description">
+                            Clip vidéo : Dope Skwad + ADN76
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel4/FestivalDeLiege.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Festival de Liège
+                        </div>
+                        <div class="item__description">
+                            2009 À la caserne Fonck
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel4/festivalFilmDActionSociale.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Festival du film d'action sociale
+                        </div>
+                        <div class="item__description">
+                            2012 Au Foyer Culturel de Sprimont
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel4/PlaceAuxEnfants.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Place aux enfants
+                        </div>
+                        <div class="item__description">
+                            2009 sur la région de Sprimont
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel4/AnimBildo.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            BILDO
+                        </div>
+                        <div class="item__description">
+                            Animation du logo BILDO
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel4/AnimPixL.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            PixL
+                        </div>
+                        <div class="item__description">
+                            Animation du logo PixL
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel4/AnimSKO.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            SKO
+                        </div>
+                        <div class="item__description">
+                            Logo 3D de la team SKO 
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel4/AnimGTA.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            BRK
+                        </div>
+                        <div class="item__description">
+                            Logo du serveur BRK
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="title"><a href="https://youtube.com/playlist?list=PLWSjBstp4cBNEHPLyGaUdB5JX2rWB3O8c" target="_blank" class="title">Série Joli-Bois</a></div>
+            <div id="carousel4">
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel3/Ep1JoliBois.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Joli-Bois n°1
+                        </div>
+                        <div class="item__description">
+                            Ep 1 : Tous violents
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel3/Ep2JoliBois.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Joli-Bois n°2
+                        </div>
+                        <div class="item__description">
+                            Ep 2 : Tous sales & paresseux
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel3/Ep3JoliBois.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Joli-Bois n°3
+                        </div>
+                        <div class="item__description">
+                            Ep 3 : Tous incultes
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel3/Ep4JoliBois.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Joli-Bois n°4
+                        </div>
+                        <div class="item__description">
+                            Ep 4 : Tous des voyous
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel3/Ep5JoliBois.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Joli-Bois n°5
+                        </div>
+                        <div class="item__description">
+                            Ep 5 : Tous alcooliques
+                        </div>
+                    </div>
+                </div>
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel3/Ep6JoliBois.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Joli-Bois n°6
+                        </div>
+                        <div class="item__description">
+                            Ep 6 : Ne trouverais pas l'amour ici
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <!-- <section class="courtMetrage">
+        <div class="container">
+            <div class="title">Courts métrages</div>
+            <div id="carousel2">
+
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/lHiverNoir.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            L'HIVER NOIR
+                        </div>
+                        <div class="item__description">
+                            Bande-annonce du film l'HIVER NOIR
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/leTourDuMonde.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Le tour du monde
+                        </div>
+                        <div class="item__description">
+                            EsquisseS ASBL sur la commune d'Esneux
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/starlettes.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            STARLETTES
+                        </div>
+                        <div class="item__description">
+                            La bande large ASBL sur la commune d'Esneux
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/starlettesMakingOf.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Making of STARLETTES
+                        </div>
+                        <div class="item__description">
+                            Making of de Starlette ou les étoiles filantes
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="item">
+                    <div class="item__image">
+                        <img src="./media/videos/images_liens_Youtube/carousel1/commeSiCetaitHier.jpg" alt="" class="IMG__carousel1">
+                    </div>
+                    <div class="item__body">
+                        <div class="item__title">
+                            Comme si c'était hier
+                        </div>
+                        <div class="item__description">
+                            EsquisseS ASBL à la Mj Sprimont
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+     
     <div id="liensTravail">
         <h2 class="titreLiens">Liens des différents travaux WEB</h2>
         <div class="liens">
@@ -126,11 +638,11 @@
             <div class="bubble"></div>
         </div>
     </div>
-    <!-- <section id="svgSec1">
+    <section id="svgSec1">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#221c17" fill-opacity="1" d="M0,192L48,170.7C96,149,192,107,288,80C384,53,480,43,576,58.7C672,75,768,117,864,144C960,171,1056,181,1152,186.7C1248,192,1344,192,1392,192L1440,192L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
         </svg>
-    </section> -->
+    </section>
     
     <footer id="contact">
         <h2>Contact</h2>
