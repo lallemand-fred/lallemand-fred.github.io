@@ -51,8 +51,6 @@ nav{
     margin: 0 0px;
     flex-shrink: 0;
 }
-.items :nth-child(2){
-}
 #logo{
     font-family: 'Dancing Script', sans-serif;
     font-weight: bold;
