@@ -148,7 +148,7 @@ h3{
     position: relative;
     width: 100%;
     background-color: #16120f;
-    padding: 10px 0px 100px 0px;
+    padding: 10px 0px 30px 0px;
 }
 #textIntro{
     text-align: center;
@@ -160,12 +160,12 @@ h3{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     gap: 20px;
-    padding: 0px;
+    padding: 10px 5px;
     justify-items: center;
+    margin-top: 100px;
 }
-
 .imagesPhotos h4 {
     font-family: 'Dancing Script', cursive;
     text-align: center;
@@ -184,17 +184,10 @@ h3{
     transition: 0.6s ease-in-out;
 }
 /* ------------------------VIDEOS---------------------- */
-.courtMetrage{
-    font-family: 'Advent Pro',sans-serif;
-    padding: 50px;
-    background: #221c17;
-    line-height: 1.4;
-    min-height: 100%;
-    overflow-x: hidden;
-}
 .moyenMetrage{
+    margin-top: 0;
     font-family: 'Advent Pro',sans-serif;
-    padding: 50px;
+    padding: 0px 50px;
     background: linear-gradient(1deg, #221c17, #16120f) center center no-repeat;
     line-height: 1.4;
     min-height: 100%;
@@ -202,10 +195,10 @@ h3{
 }
 .title{
     text-align: center;
-    font-size: 25px;
+    font-size: 1rem;
     color: #ffffff;
     font-weight: bold;
-    margin-bottom: 25px;
+    margin-top: 60px;
 }
 .item{
     border-radius: 20px;
@@ -243,6 +236,9 @@ h3{
 .items{
     position: relative;
 }
+.item a{
+    text-align: left;
+}
 /* ------------------------Carousel vidéos----------------------- */
 .carousel {
     position: relative;
@@ -260,7 +256,10 @@ h3{
 .carousel__item {
     float: left;
 }
+
+/* ---------------------Bouttons de navigation et de pagination---------------- */
 .carousel__next, .carousel__prev {
+    z-index: 11;
     position: absolute;
     width: 50px;
     height: 50px;
@@ -284,6 +283,29 @@ h3{
 .carousel__next--hidden, .carousel__prev--hidden{
     opacity: 0;
 }
+.carousel__pagination{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    display: none;
+}
+.carousel__pagination__button{
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 3px;
+    box-shadow: 0 2px 5px #3232321a;
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.carousel__pagination__button--active, .carousel__pagination__button:hover{
+transform: scale(1.4);
+}
 /* ---------------------Liens Travaux--------------------- */
 p.TitreV{
     text-align: center;
@@ -291,6 +313,7 @@ p.TitreV{
 }
 
 #liensTravail{
+    padding-bottom: 0px;
     color: #fffae1 ;
     background: #221c17;
     height: auto ;
@@ -304,6 +327,7 @@ p.TitreV{
     text-align: center;
     color: #fffae1 ;
 }
+
 /* --------------------Transition Video => Footer------------------- */
 
 #svgSec1{
@@ -373,10 +397,10 @@ button:hover{
 #espaceFin{
     padding: 30px;
 }
-.LIEN:hover{
-    opacity: 0.7;
-    transition: 0.3s;
-    transform: scale(1);
+@media screen and (min-width: 800px){
+    .carousel__pagination{
+        display: block;
+    }
 }
 
 @media (max-width: 1000px){
@@ -391,79 +415,15 @@ button:hover{
         justify-items: center;
         text-align: center;
     }
-    #youtube #moyen:hover{
-        opacity: 0.9;
-        transform: scale(0.99);
-        
+    .imagesPhotos img{
+        width: clamp(250px, 80%, 700px);
     }
-    #youtube #court:hover{
-        opacity: 0.9;
-        transform: scale(0.99);
-        
-    }
-    #youtube #serie:hover{
-        opacity: 0.9;
-        transform: scale(0.99);
-        
-    }
-    #youtube #animation:hover{
-        opacity: 0.9;
-        transform: scale(0.99);
-        
-    }
-    #court p, #animation p{
-        float: center;
-        margin-left: 0;
-        border-radius: 10px
-    }
-    #youtube p{
-        color: #fffae1;
-        height: 45px;
-        width: 235px;
-        float: center;
-        margin: 255px auto;
-        text-align: center;
-        padding-top: 15px;
-        border-radius: 10px;
-    }
-    #youtube #court, #youtube #animation{
-        float: center;
-    }
-    #moyen, #court, #serie, #animation{
-        border-radius: 10px;
-        margin: 0;
-        padding: 0;
-        margin-left: 0;
-        margin-right: 0;
-    }
+    #liensTravail{
+        padding-bottom: 20px;
+    }    
 }
 @media (max-width: 400px){
     h1{
         font-size: 3.5rem;
-    }
-    #youtube p{
-        color: #fffae1;
-        height: 45px;
-        width: 200px;
-        background-color: #ab956fdb;
-        float: center;
-        margin-left: -25%;
-        margin-right: auto;
-        font-size: 1.5em;
-        text-align: center;
-        padding-top: 15px;
-        box-shadow: 4px 4px 8px 1px rgba(232, 156, 5, 0.387);
-        border-radius: 10px;
-    }
-    #youtube #court, #youtube #animation{
-        float: center;
-    }
-    #court p, #animation p{
-        float: center;
-        font-size: 1.5em;
-        text-align: center;
-    }
-    #moyen p, #serie p{
-        margin-right: -25%;
     }
 }
