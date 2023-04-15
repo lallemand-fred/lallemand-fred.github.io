@@ -402,8 +402,18 @@ button:hover{
         display: block;
     }
 }
+/* ----------ordre de position images--------------- */
+@media (max-width: 1326px){
+    .imagesPhotos:last-child{
+        order: -1;
+    }
+    .imagesPhotos:first-child{
+        order: -1;
+    }
+    
+}
 
-@media (max-width: 1000px){
+@media (max-width: 800px){
     h1{
         font-size: 5rem;
     }
