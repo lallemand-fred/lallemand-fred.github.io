@@ -414,6 +414,12 @@ button:hover{
 }
 
 @media (max-width: 800px){
+    .imagesPhotos:last-child{
+        order: 0;
+    }
+    .imagesPhotos:first-child{
+        order: 0;
+    }
     h1{
         font-size: 5rem;
     }
