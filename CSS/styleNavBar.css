@@ -51,10 +51,6 @@ nav{
     margin: 0 0px;
     flex-shrink: 0;
 }
-#logo{
-    font-family: 'Dancing Script', sans-serif;
-    font-weight: bold;
-}
 nav a {
     text-decoration: none;
     color: #fffae1;
@@ -68,14 +64,11 @@ nav a:hover{
 /* ----------------------sous liste---------------------- */
 
 .sous-liste{
-    position: fixed;
+    position: relative;
     display: none;
-    left: 230px;
-    right: 230px;
-    
 }
 .items-sous-liste{
-    position: relative;
+    position:relative;
     list-style-type: none;
     text-align: center;
     padding: 0 10px;
