@@ -338,6 +338,7 @@ p.TitreV{
 
 /* --------------FOOTER-------------------- */
 footer h2{
+    z-index: 10;
     padding: 0;
     margin: 0;
 }
@@ -351,37 +352,97 @@ footer h2{
     text-align: center;
 }
 form{
+    z-index: 100;
     margin: 0 auto;
     max-width: 900px;
 }
 input, .field, button{
+    z-index: 100;
     border: none;
-    width: 55%;
+    width: 70%;
+    height: 100%;
     padding: 15px 10px;
     margin: 1px 0;
     font-size: 1.2em;
     font-family: 'Advent Pro', sans-serif;
-    border-radius: 8px;
+    border-radius: 10px;
 }
 .field{
-    height: 120px;
+    height: 50px;
 }
 button{
+    z-index: 100;
+    border-radius: 40px;
+    width: 45%;
     font-size: 1.5em;
-    background-color: #fffae1;
+    background: linear-gradient(45deg, #524A3A, #fffae1);
+    box-shadow: 0px 5px 10px #fffae1;
+    transition: 0.4s ease-in-out;
 }
 button:hover{
-    background-color: #aaa396;
-    color: #fffae1;
+    background: linear-gradient(45deg, #fffae1, #fffae1);
     cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
-#deuxiemeTrait{
+.containerForm {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding-bottom: 20%;
+    padding-top: 20%;
+    margin-bottom: 70px;
+    margin-left: 22% ;
+    margin-right: 22% ;
+}
+.containerForm i{
+    padding: 100px 100px;
+    float: center;   
+    z-index: 9;
+    position: absolute;
+    inset: 0;
+    border: 2px solid #fff;
+    transition: 0.5s;
+}
+.containerForm i:nth-child(1){
+    border-radius:58% 42% 56% 44% / 46% 53% 47% 54% ;
+    animation: animate 17s linear infinite;
+}
+.containerForm i:nth-child(2){
+    border-radius:45% 55% 47% 53% / 51% 49% 51% 49%  ;
+    animation: animate1 11s linear infinite;
+}
+.containerForm i:nth-child(3){
+    border-radius: 42% 58% 52% 48% / 51% 60% 40% 49%   ;
+    animation: animate 9s linear infinite;
+}
+.containerForm:hover i{
+    border: 3px solid var(--clr);
+    filter: drop-shadow(0 0 10px var(--clr));
+} 
+@keyframes animate{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes animate1{
+    0%{
+        transform: rotate(360deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+
+/* #deuxiemeTrait{
     height: 1px;
     width: 75%;
     background-color: #fffae1;
     margin: 60px auto;
-}
+} */
 #copyrightEtIcons{
     color: #fffae1;
     margin: 5px 0;
@@ -436,6 +497,26 @@ button:hover{
     }
     #liensTravail{
         padding-bottom: 20px;
+    }
+    .containerForm {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 5%;
+        padding-top: 5%;
+        margin-bottom: 60px;
+        margin-left: 22% ;
+        margin-right: 22% ;
+    }
+    .containerForm i{
+        padding: 100px 100px;
+        float: center;   
+        z-index: 9;
+        position: absolute;
+        inset: 0;
+        border: 2px solid #fff;
+        transition: 0.5s;
     }    
 }
 @media (max-width: 400px){
