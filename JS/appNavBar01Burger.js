@@ -1,3 +1,12 @@
+
+//------------------------------Page de chargement---------------------------
+const loader = document.querySelector('.loader')
+window.addEventListener('load', () => {
+    loader.classList.add('fondu-out')
+})
+
+
+//-----------------------------------Navigation menu burger-------------------------------
 let navigation = document.querySelector('.navigation');
 
 document.querySelector('.toggle').onclick = function (){
@@ -5,7 +14,7 @@ document.querySelector('.toggle').onclick = function (){
         navigation.classList.toggle('active');
 }
 
-//-----------------------------------------------------------------------------
+//-------------------Scroll up apparition des menus, scroll bas disparition----------------
 
 const body = document.body;
 let lastScroll = 0;
