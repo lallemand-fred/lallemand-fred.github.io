@@ -5,20 +5,34 @@ html{
 }
 /* Variables */
 :root{
-    --font-size:1rem;
-    --font-family:'Advent Pro',sans-serif;
+    /* -----------------Font & Size-------------------- */
+    --font-size-Titre-Sec:1rem;
+    --font-size-H1:6em;
+    --font-size-H2:2em;
+    --font-size-H3:3em;
+    --font-size-H4:2em;
+    --font-size-P:1rem;
+    --font-family-Advent:'Advent Pro',sans-serif;
+    --font-family-Dancing:'Dancing Script',sans-serif;
     /* -----------------white mode-------------------- */
     --text-white: #000000;
     --bg-white: #ffffff;
     /* -------------------darck mode------------------ */
     --text-darck: #e0d9d3;
+    --text-darck-sec01: #fffae1;
     --bg-darck:  #14110e;
+    --bg-darck-sec01: #16120f;
+    /* -------------------Chargement------------------ */
+    --font-size-chargemnt:6em;
+    --text-chargement01: #484848;
+    --text-chargement02: #fff900;
+    --bg-chargement:  #000;
 }
 body {
-    font-family: 'Advent Pro',sans-serif;
+    font-family: var(--font-family-Advent);
     padding: 0;
     margin: 0;
-    color: darck;
+    color: var(--text-white);
 }
 
 ul {
@@ -31,7 +45,7 @@ li{
 a{
     text-align: center;
     text-decoration: none;
-    color: black;
+    color: var(--text-white);
 }
 h1{
     text-align: center;
@@ -40,7 +54,7 @@ h2{
     text-transform: uppercase;
     text-align: center;
     padding-top: 30px;
-    font-size: 2em;
+    font-size: var(--font-size-H2);
 }
 h3{
     text-align: center;        
@@ -57,36 +71,36 @@ h6{
 nav{
     z-index: 100;
 }
-/* ---------------------LOADER----------------------------- */
+/* ---------------------Chargement----------------------------- */
 .loader{
     z-index: 9;
     position: absolute;
     width: 100%;
     height: 100%;
-    background: #000;
+    background: var(--bg-chargement);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .lettre{
     color: #484848;
-    font-size: 80px;
+    font-size: var(--font-size-chargemnt);
     letter-spacing: 15px;
     margin-bottom: 150px;
     animation: flash 1.2s linear infinite;
 }
 @keyframes flash{
     0%{
-        color: #fff900;
-        text-shadow: 0 0 7px #fff900;
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
     }
     90%{
-        color: #484848;
+        color: var(--text-chargement01);
         text-shadow: none;
     }
     100%{
-        color: #fff900;
-        text-shadow: 0 0 7px #fff900;
+        color: var(--text-chargement02);
+        text-shadow: 0 0 7px var(--text-chargement02);
     }
 }
 .lettre:nth-child(1){
@@ -134,14 +148,6 @@ nav{
     align-items: center;
     overflow: hidden;
 }
-/* #imageParallax::before{
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
-    background: linear-gradient(to top, #16120f,transparent);
-} */
 #imageParallax img {
     pointer-events: none;
     position: absolute;
@@ -189,27 +195,14 @@ nav{
 h1 {
     font-family: 'Dancing Script', cursive;
     color:#ffffff;
-    font-size: 6em;
+    font-size:var(--font-size-H1);
     margin-top: 120px;
     text-shadow: 5px 4px 8px rgb(107, 13, 35);
 }
-/* #imagePrincipale{
-    padding-top: 60px;
-    background: url(media/images/PeintureImage/horizon_paysage_peinture.jpg) no-repeat fixed 50% 50%;
-    background-size: cover;
-    height: 700px;
-} */
-/* #premierTrait{
-    height: 1px;
-    width: 35%;
-    margin: -3px auto;
-    background-color: #ffffff;
-    box-shadow: 3px 3px 4px rgb(107, 13, 35);
-} */
 h3{
     text-align: center;
     color: #ffffff;
-    font-size: 3em;
+    font-size: var(--font-size-H3);
     text-shadow: 5px 4px 8px rgb(107, 13, 35);
 }
 /* -------------------PRESENTATION---------------------- */
@@ -219,20 +212,21 @@ h3{
     top: -100px;
     width: 100%;
     height: 100px;
-    background: linear-gradient(to top, #16120f, transparent);
+    background: linear-gradient(to top, var(--bg-darck-sec01), transparent);
 }
 #presentation{
     z-index: 4;
     position: relative;
     width: 100%;
-    background-color: #16120f;
+    background-color:var(--bg-darck-sec01);
     padding: 10px 0px 30px 0px;
 }
 #textIntro{
     text-align: center;
-    color: #fffae1;
+    color: var(--text-darck-sec01);
     padding: 0px 15%;
 }
+/* -------------------Photos---------------------- */
 #photos{
     color: #fffae1;
     display: flex;
