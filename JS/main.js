@@ -1,3 +1,18 @@
+// ----------------------------------Animations déplacement et blur-------------------------------
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entre) => {
+        console.log(entre)
+        if (entre.isIntersecting) {
+            entre.target.classList.add('show')
+        } else {
+            entre.target.classList.remove('show')
+        }
+    });
+})
+
+const slideElements = document.querySelectorAll('.slidG, .slidD, .slidB, .slidH, .slidO')
+slideElements.forEach((el) => observer.observe(el));
+
 /**
  * Permet de rajouter la navigation tactile pour le carousel
  */

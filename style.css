@@ -11,6 +11,7 @@ html{
     --font-size-H2:2em;
     --font-size-H3:3em;
     --font-size-H4:2em;
+    --font-size-P-16px:16px;
     --font-size-P:1rem;
     --font-family-Advent:'Advent Pro',sans-serif;
     --font-family-Dancing:'Dancing Script',sans-serif;
@@ -29,6 +30,7 @@ html{
     --bg-chargement:  #000;
 }
 body {
+    letter-spacing: 1px;
     font-family: var(--font-family-Advent);
     padding: 0;
     margin: 0;
@@ -181,14 +183,12 @@ nav{
     z-index: 3;
 }
 #lastName{
-    
     transform: translatey(200px);
     position: absolute;
     z-index: 4;
     white-space: nowrap;
 }
 #background{
-    
     transform: translatey(-50px);
     z-index: 1;
 }
@@ -225,6 +225,13 @@ h3{
     text-align: center;
     color: var(--text-darck-sec01);
     padding: 0px 15%;
+}
+#textIntro H2{
+    font-size: var(--font-size-H2);
+    padding-bottom: 16px;
+}
+#textIntro p{
+    font-size: var(--font-size-P-16px);
 }
 /* -------------------Photos---------------------- */
 #photos{
@@ -530,6 +537,73 @@ button:hover{
 #espaceFin{
     padding: 30px;
 }
+
+/* -----------------------Animation avec .slid----------------------*/
+@media(prefers-reduced-motion){
+    .slidG, .slidD, .slidH, .slidB, .slidO {
+        transition: none;
+    }
+}
+/* ------------Déplacement de la gauche => vers la droite------------ */
+.slidG{
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(-100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+/* ------------Déplacement de la droite => vers la gauche------------ */
+.slidD{
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+    transform: translateX(100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+/* ------------Déplacement du haut vers le bas------------ */
+.slidH{
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+    transform: translatey(-100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translatey(0);
+}
+/* ------------Déplacement du bas vers le haut------------ */
+.slidB{
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 1s;
+    transform: translatey(100%);
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translatey(0);
+}
+/* -----------------------Flou d'apparition ----------------------- */
+.slidO{
+    filter: blur(5px);
+    opacity: 0;
+    transition: all 3s;
+}
+.show{
+    opacity: 1;
+    filter: blur(0);
+}
+/* -----------------------FIN des animations ----------------------- */
+
 @media screen and (min-width: 800px){
     .carousel__pagination{
         display: block;
