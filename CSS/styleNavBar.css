@@ -22,9 +22,79 @@
 html{   
     font-family: 'Advent Pro',sans-serif;
 }
+/* --------------------NAVBAR01-------------------------- */
+header01{
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(20px);
+    background: linear-gradient( to bottom, rgb(39,28,25), transparent);
+    display: flex;
+    justify-content: center;
+    height: 40px;
+}
+.nav{
+    margin-top: 5px;
+    display: flex;
+    gap: 50px;
+}
+header01 ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+header01 ul li a{
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.5em;
+}
+header01 ul li.active a,
+header01 ul li:hover a{
+    color: #e4ab4e;
+    transition: 0.4s ease-in-out;
+}
+.deux-linges{
+    text-decoration: none;
+    position: relative;
+    
+}
+.deux-linges::before, .deux-linges::after{
+    content: '';
+    position: absolute;
+    height: 1%;
+    background: #e4ab4e;
+    opacity: 0;
+    left: 50%;
+    transform: translate(-50%, 10px);
+    transition: all 0.2s ease-in-out;
+    filter: blur(5px)
+}
+.deux-linges::before{
+    width: 80%;
+    bottom: 0;
+}
+.deux-linges::after{
+    bottom: -4px;
+    width: 40%;
+}
+.deux-linges:hover::before, .deux-linges:hover::after{
+    height: 1%;
+    opacity: 1;
+    transform: translate(-50%, 0px);
+    filter: blur(0px);
+}
+.deux-linges::before, .deux-linges:hover::after {
+    transition-delay: 0.1s;
+}
+.deux-linges:hover::before {
+    transition-delay: 0s;
+}
+/* -------------------Fin navbar01------------------ */
 header{
     z-index: 999;
     transition: 0.3s ease-in-out;
+    display: none;
 
 }
 nav{
@@ -91,9 +161,15 @@ nav a:hover{
     filter: drop-shadow(0 -10px 20px black);
 }
 
-/* ------------- Médié query ---------------- */
+/* ------------- Média query ---------------- */
 
 @media (max-width: 1000px){
+    header01{
+        display: none;
+    }
+    header{
+        display: contents;
+    }
     nav{
         z-index: 100;
     }
