@@ -69,6 +69,7 @@ header01 ul li:hover a{
     transform: translate(-50%, 10px);
     transition: all 0.2s ease-in-out;
     filter: blur(5px)
+    
 }
 .deux-linges::before{
     width: 80%;
