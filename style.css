@@ -704,7 +704,7 @@ button:hover{
 .slidO{
     filter: blur(5px);
     opacity: 0;
-    transition: all 3s;
+    transition: all 2s;
 }
 .show{
     opacity: 1;
