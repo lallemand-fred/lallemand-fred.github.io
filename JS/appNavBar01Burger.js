@@ -4,7 +4,27 @@ const loader = document.querySelector('.loader')
 window.addEventListener('load', () => {
     loader.classList.add('fondu-out')
 })
+//------------------------------Page Parallax---------------------------
+let background = document.getElementById('background')
+let middelEnd = document.getElementById('middelEnd')
+let middelStart = document.getElementById('middelStart')
+let frontEnd = document.getElementById('frontEnd')
+let frontStart = document.getElementById('frontStart')
+let lastName = document.getElementById('lastName')
+let firstName = document.getElementById('firstName')
+let navBar = document.querySelector('nav')
 
+window.addEventListener('scroll', function(){
+    let value = window.scrollY;
+    background.style.top = value * 0.40 + "px"
+    middelEnd.style.top = value * 0.35 + "px"
+    middelStart.style.top = value * 0.30 + "px"
+    frontEnd.style.top = value * 0.17 + "px"
+    frontStart.style.top = value * 0.08 + "px"
+    lastName.style.marginBotton = value * 2 + "px"
+    firstName.style.marginBotton = value * 2 + "px"
+    
+})
 
 //-----------------------------------Navigation menu burger-------------------------------
 let navigation = document.querySelector('.navigation');
@@ -41,22 +61,3 @@ window.addEventListener('scroll', () => {
     lastScroll = currentScroll;
 })
 //-------------------------------------------------------------------------------
-// let stars = document.getElementById('stars')
-// let moon = document.getElementById('moon')
-// let mountains_behind = document.getElementById('mountains_behind')
-// let text = document.getElementById('text')
-// let btn = document.getElementById('btn')
-// let mountains_front = document.getElementById('mountains_front')
-// let header = document.querySelector('header')
-
-// window.addEventListener('scroll', function(){
-//     let value = window.scrollY
-//     stars.style.left = value * 0.25 + 'px'
-//     moon.style.top = value * 0.85 + 'px'
-//     mountains_behind.style.top = value * 0.5 + 'px'
-//     mountains_front.style.top = value * 0 + 'px'
-//     text.style.marginRight = value * 3 + 'px'
-//     text.style.marginTop = value * 0.5 + 'px'
-//     btn.style.marginTop = value * 1.5 + 'px'
-//     header.style.top = value * 0.7 + 'px'
-// })

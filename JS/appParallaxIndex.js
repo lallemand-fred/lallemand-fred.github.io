@@ -19,5 +19,3 @@ window.addEventListener('scroll', function(){
     
 })
 
-
-
