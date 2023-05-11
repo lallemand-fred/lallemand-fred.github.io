@@ -389,7 +389,7 @@ h3{
 .item{
     border-radius: 20px;
     margin: 30px 10px;
-    background-color: #ffffff;
+    background: linear-gradient(to bottom, transparent, #fff) ;
     box-shadow: 0 10px 15px #faf9f91a,0 5px 5px #ffffff1a ;
     transition: transform 0.3s;
     transform: translate3d(0,-1px,0);
@@ -410,13 +410,14 @@ h3{
 .item__title{
     font-size: 20px;
     margin-bottom: 5px;
-    font-weight: bold;
+    font-weight: bold ;
     color: #232323;
 }
 
 .item__description{
     color: #2c2c2c;
-    font-size: 17px; 
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .items{
