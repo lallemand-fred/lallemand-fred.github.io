@@ -382,7 +382,7 @@ h3{
 .title{
     text-align: center;
     font-size: 1rem;
-    color: #ffffff;
+    color: var(--text-darck-sec01);
     font-weight: bold;
     margin-top: 60px;
 }
@@ -395,7 +395,7 @@ h3{
     transform: translate3d(0,-1px,0);
 }
 .item:hover{
-    transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0) scale(1.05);
 }
 .item img{
     display: block;
@@ -416,7 +416,7 @@ h3{
 
 .item__description{
     color: #2c2c2c;
-    font-size: 17px;
+    font-size: 17px; 
 }
 
 .items{
