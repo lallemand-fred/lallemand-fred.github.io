@@ -6,12 +6,12 @@ html{
 /* Variables */
 :root{
     /* -----------------Font & Size-------------------- */
+    /* ---------------- 1rem = 16P -------------------- */
     --font-size-Titre-Sec:1rem;
     --font-size-H1:6em;
     --font-size-H2:2em;
     --font-size-H3:3em;
     --font-size-H4:2em;
-    --font-size-P-16px:16px;
     --font-size-P:1rem;
     --font-family-Advent:'Advent Pro',sans-serif;
     --font-family-Dancing:'Dancing Script',sans-serif;
@@ -196,17 +196,17 @@ nav{
 }
 h1 {
     font-family: 'Dancing Script', cursive;
-    color:#ffffff;
+    color:var(--text-darck-sec01);
     font-size:var(--font-size-H1);
     margin-top: 120px;
     text-shadow: 5px 4px 8px rgb(107, 13, 35);
 }
-h3{
+/* h3{
     text-align: center;
     color: #ffffff;
     font-size: var(--font-size-H3);
     text-shadow: 5px 4px 8px rgb(107, 13, 35);
-}
+} */
 /* -------------------PRESENTATION---------------------- */
 #presentation::before{
     content: '';
@@ -233,7 +233,7 @@ h3{
     padding-bottom: 16px;
 }
 #textIntro p{
-    font-size: var(--font-size-P-16px);
+    font-size: var(--font-size-P);
 }
 /* -------------------Photos---------------------- */
 /* #photos{
