@@ -25,7 +25,7 @@ html{
 /* --------------------NAVBAR01-------------------------- */
 .header01{
     position: fixed;
-    width: 100%;
+    width: 100vw;
     z-index: 1000;
     backdrop-filter: blur(20px);
     background: linear-gradient( to bottom, rgb(39,28,25), transparent);

@@ -1,8 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
 
+
 html{
     scroll-behavior: smooth;
 }
+
 /* Variables */
 :root{
     /* -----------------Font & Size-------------------- */
@@ -26,6 +28,7 @@ html{
     --bg-darck-foot: #524A3A;
     --text-darck-foot: #fffae1;
     /* -------------------Chargement------------------ */
+    --font-size-chargemnt-Mobil:2.5em;
     --font-size-chargemnt:6em;
     --text-chargement01: #484848;
     --text-chargement02: #fff900;
@@ -556,6 +559,7 @@ input, .field, button{
 }
 .field{
     height: 50px;
+    resize: none;
 }
 button{
     z-index: 100;
@@ -571,6 +575,7 @@ button:hover{
     cursor: pointer;
 }
 .containerForm {
+    
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -719,8 +724,59 @@ button:hover{
 }
 
 @media (max-width: 800px){
+    .lettre{
+        font-size: var(--font-size-chargemnt-Mobil);
+        letter-spacing: 1px;
+    }
     h1{
         font-size: 5rem;
+    }
+    .containerMenu{
+        gap: 70px 1px;
+        padding: 0px 0px;
+    }
+    .containerMenu .cardre{
+        width: 250px;
+        height: 350px;
+        background: var(--bg-white);
+    }
+    .containerMenu .cardre:hover{
+        height: 350px;
+    }
+    .containerMenu .cardre .imgBx{
+        top: 20px;
+        width: 230px;
+        height: 250px;
+    }
+    .containerMenu .cardre:hover .imgBx{
+        top: -80px;
+        scale: 0.75;
+    }
+    .containerMenu .cardre .contenu{
+        top: 250px;
+        width: 100%;
+        padding: 7px 20px;
+        height: 65px;
+        overflow: hidden;
+    }
+    .containerMenu .cardre:hover .contenu{
+        top: 130px;
+        height: 200px;
+    }
+    .containerMenu .cardre .contenu h2{
+        font-size: 1.5em;
+        font-weight: 2000;
+    }
+    .containerMenu .cardre .contenu p{
+        font-weight: 600;
+        letter-spacing: 0.9px;
+        /* text-justify: inherit; */
+    }
+    .containerMenu .cardre .contenu a{
+        top: 15px;
+        padding: 12px 25px;
+        font-weight: 500;
+        border-radius: 8px;
     }
     #liensTravail{
         padding-bottom: 20px;
@@ -749,5 +805,8 @@ button:hover{
 @media (max-width: 400px){
     h1{
         font-size: 3.5rem;
+    }
+    .containerForm{
+        overflow: hidden;
     }
 }
