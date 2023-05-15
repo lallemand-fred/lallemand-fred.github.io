@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,41 +7,28 @@
     <title>Lallemand Frédéric</title>
     <link rel="shortcut icon" href="logo_LF.png">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./CSS/styleNavBar.css">
-    <script src="./JS/appNavBar01Burger.js" async></script>
-    <!-- <script src="./JS/appParallaxIndex.js" defer></script> -->
+    <link rel="stylesheet" href="./CSS/styleNavbar2.css">
+    <script src="./JS/appNavbar2.js" async></script>
     <script src="./JS/main.js" defer></script>
+    <!-- <link rel="stylesheet" href="./CSS/styleNavBar.css"> -->
+    <!-- <script src="./JS/appNavBar01Burger.js" async></script> -->
+    <!-- <script src="./JS/appParallaxIndex.js" defer></script> -->
 </head>
 <!-- -----------------------NAVBAR_TOP_MENU---------------------------------- -->
 <body>
-    <div class="header01" role="navigation">
-        <ul class="nav">
-            <li><a class="deux-linges" href="index.html">Accueil</a></li>
-            <li><a class="deux-linges" href="index.html#photos">Photos</a></li>
-            <li><a class="deux-linges" href="index.html#photos">Panoramiques</a></li>
-            <li><a class="deux-linges" href="index.html#miniPlanetes">Mini-planètes</a></li>
-            <li><a class="deux-linges" href="index.html#video">Vidéos</a></li>
-            <li><a class="deux-linges" id="navFin" href="index.html#contact">Contact</a></li>
-        </ul> 
-    </div>
-    <header>
-        <nav class="navigation">
-            <div class="toggle"><span></span></div>
-            <ul class="liste-items">
-                <li style="--i:0;" class="items"><a  href="index.html">Accueil</a></li>
-
-                <li style="--i:1;" class="items"><a href="index.html#photos">Photos</a></li>
-
-                <li style="--i:2;" class="items"><a href="index.html#panoramiques">Panoramiques</a></li>
-
-                <li style="--i:3;" class="items"><a href="index.html#miniPlanetes">Mini-planètes</a></li>
-
-                <li style="--i:4;" class="items"><a href="index.html#video">Vidéos</a></li>
-
-                <li style="--i:5;" class="items"><a id="navFin" href="index.html#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar dark-mode" role="navigation">
+        <div class="navbar__logo"><a href="index.html">Lallemand Frédéric</a></div>
+        <ul class="navbar__links">
+            <li class="navbar__link first"><a href="index.html#photos">Photos</a></li>
+            <li class="navbar__link second"><a href="index.html#panoramiques">Panoramiques</a></li>
+            <li class="navbar__link third"><a href="index.html#miniPlanetes">Mini planètes</a></li>
+            <li class="navbar__link four"><a href="index.html#video">Vidéos</a></li>
+            <li class="navbar__link five"><a href="index.html#contact">Contact</a></li>
+        </ul>  
+        <button class="burger">
+            <span class="bar"></span>
+        </button>
+    </nav>
     <!-- --------------------Page LOADER-------------------- -->
     <div class="loader">
         <s class="lettre">C</s>
@@ -635,9 +622,9 @@
         <s> </s>
         <li class="LIEN"><a class="LIEN" href="./pageLogin.html" target="_blank">Liens 02 page Login</a></li>
         <s> </s>
-        <li class="LIEN"><a class="LIEN" href="./NavbarBurger.html" target="_blank">Liens 03 Navbar Burger</a></li>
+        <li class="LIEN"><a class="LIEN" href="./Navbar2.html" target="_blank">Liens 03 Navbar Burger</a></li>
         <s> </s>
-        <li class="LIEN"><a class="LIEN" href="./Navbar2.html" target="_blank">Liens 04 Navbar Burger</a></li>
+        <li class="LIEN"><a class="LIEN" href="./Navbar1.html" target="_blank">Liens 04 Navbar Burger</a></li>
         <s> </s>
         <li class="LIEN"><a class="LIEN" href="./Navbar3.html" target="_blank">Liens 05 Navbar 3D</a></li>
         <s> </s>
@@ -664,7 +651,7 @@
                 <input type = "text" name="name" placeholder="Nom" required>
                 <input type = "email" name="email" placeholder="E-mail" required>
                 <textarea type = "text" class="field" name="message" placeholder="Tapez votre message ici..." required></textarea>
-                <button type="submit">Envoyer</button>
+                <button class="btnSubmit" type="submit">Envoyer</button>
             </form>
         </div>
         <div id="deuxiemeTrait"></div>

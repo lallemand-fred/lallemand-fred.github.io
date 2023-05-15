@@ -22,6 +22,16 @@
 html{   
     font-family: 'Advent Pro',sans-serif;
 }
+body{
+    height: 100vh;
+    background: linear-gradient(131deg, hsl(29, 65%, 12%), #1a1a2c);
+}
+main h1{
+    color: antiquewhite;
+    padding-top: 200px;
+    font-size: 2.5rem;
+    text-align: center;
+}
 /* --------------------NAVBAR01-------------------------- */
 .header01{
     position: fixed;
@@ -159,10 +169,12 @@ nav a:hover{
 .scroll-up header {
     filter: drop-shadow(0 -10px 20px black);
 }
-
 /* ------------- Média query ---------------- */
 
 @media (max-width: 1000px){
+    main h1{
+        padding-top: 500px;
+    }
     .header01{
         display: none;
     }
@@ -337,3 +349,4 @@ nav a:hover{
         bottom: 24px;
     }
 }
+
