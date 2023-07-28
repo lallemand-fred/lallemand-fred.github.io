@@ -511,7 +511,7 @@ footer h2{
     text-align: center;
 }
 form{
-    z-index: 100;
+    z-index: 99;
     margin: 0 auto;
     max-width: 900px;
 }
