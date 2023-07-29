@@ -8,10 +8,10 @@
 body{
     display: flex;
     justify-content: left;
-    padding: 65px 0px 0px 50px;
+    padding: 165px 0px 0px 100px;
     align-items: top;
     min-height: 100vh;
-    background: #434750;
+    background: #1e2125;
 }
 ul{
     position: relative;
