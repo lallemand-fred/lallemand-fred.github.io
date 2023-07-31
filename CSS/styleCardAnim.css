@@ -9,31 +9,38 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    perspective: 1000px;
 }
 .container{
+    transform-style: preserve-3d ;
     width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    /* background: #f54642; */
 }
-.card{
+.card{ 
+    z-index: 2;
+    /* background: #f54642; */
+    /* transform-style: preserve-3d ; */
     border-radius: 30px;
     min-height: 80vh;
     width: 35rem;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2),0px 0px 50px rgba(0, 0, 0, 0.2) ;
     padding: 0rem 5rem;
 }
-.sneaker{
+.planete{
     min-height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.sneaker img{
+.planete img{
+    transition: all 0.75s ease-out;
     width: 15rem;
     z-index: 2;
 }
-.circle{
+.forme{
     transform: translate(11px,28px) rotate(90deg);
     width: 16rem;
     height: 16rem;
@@ -47,18 +54,22 @@ body{
     z-index: 1;
 }
 .info h1{
+    z-index: 10;
     font-size: 3rem;
+    transition: all 0.75s ease-out;
 }
 .info h3{
     font-size: 1.3rem;
     padding: 2rem 0rem;
     color: #585858;
     font-weight: 300;
+    transition: all 0.75s ease-out;
 }
 
 .sizes{
     display: flex;
     justify-content: space-between;
+    transition: all 0.75s ease-out;
 }
 .sizes button{
     border: none;
@@ -76,6 +87,7 @@ button.active{
 }
 .purchase{
     margin-top: 5rem;
+    transition: all 0.75s ease-out;
 }
 .purchase button{
     width: 100%;
