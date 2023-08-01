@@ -17,8 +17,11 @@ container.addEventListener("mousemove", (e) => {
 card.addEventListener("mouseenter", (e) => {
   card.style.transition = "none";
   //Pop out
-  title.style.transform = "translateZ(150px)";
-  planete.style.transform = "translateZ(50px) rotateZ(-45deg) ";
+  title.style.transform = "translateZ(70px)";
+  planete.style.transform = "translateZ(90px) rotateZ(-25deg) ";
+  description.style.transform = "translateZ(40px)";
+  sizes.style.transform = "translateZ(70px)";
+  purchase.style.transform = "translateZ(40px)";
 });
 //Anim sortie
 container.addEventListener("mouseleave", (e) => {
@@ -26,5 +29,8 @@ container.addEventListener("mouseleave", (e) => {
   card.style.transform = `rotateY(0deg) rotateX(0deg)`;
   //Pop back
   title.style.transform = "translateZ(0px)";
-  planete.style.transform = "translateZ(0px)";
+  planete.style.transform = "translateZ(0px) rotateZ(0deg)";
+  description.style.transform = "translateZ(0px)";
+  sizes.style.transform = "translateZ(0px)";
+  purchase.style.transform = "translateZ(0px)";
 });
