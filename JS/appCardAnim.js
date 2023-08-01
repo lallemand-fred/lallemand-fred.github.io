@@ -17,8 +17,8 @@ container.addEventListener("mousemove", (e) => {
 card.addEventListener("mouseenter", (e) => {
   card.style.transition = "none";
   //Pop out
-  title.style.transform = "translateZ(50px)";
-  planete.style.transform = "translateZ(150px) rotateZ(-45deg) ";
+  title.style.transform = "translateZ(150px)";
+  planete.style.transform = "translateZ(50px) rotateZ(-45deg) ";
 });
 //Anim sortie
 container.addEventListener("mouseleave", (e) => {

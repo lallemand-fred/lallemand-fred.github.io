@@ -12,19 +12,20 @@ body{
 }
 .container{
     transform-style: preserve-3d ;
-    width: 50%;
+    width: 40%;
     display: flex;
     justify-content: center;
     align-items: center;
     /* background: #f54642; */
+    perspective: 1000px;
 }
 .card{ 
     z-index: 2;
     /* background: #f54642; */
-    /* transform-style: preserve-3d ; */
+    transform-style: preserve-3d ;
     border-radius: 30px;
-    min-height: 80vh;
-    width: 35rem;
+    min-height: 40vh;
+    width: 70%;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2),0px 0px 50px rgba(0, 0, 0, 0.2) ;
     padding: 0rem 5rem;
 }
@@ -54,6 +55,8 @@ body{
     z-index: 1;
 }
 .info h1{
+    position: relative;
+    transform: translateZ(50px);
     z-index: 10;
     font-size: 3rem;
     transition: all 0.75s ease-out;
@@ -86,7 +89,7 @@ button.active{
     color: white;
 }
 .purchase{
-    margin-top: 5rem;
+    margin: 2rem 2rem;
     transition: all 0.75s ease-out;
 }
 .purchase button{
