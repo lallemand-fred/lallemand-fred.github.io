@@ -9,7 +9,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    perspective: 1000px;
 }
 .container{
     transform-style: preserve-3d ;
@@ -30,6 +29,7 @@ body{
     padding: 0rem 5rem;
 }
 .planete{
+    perspective: 1000px;
     min-height: 35vh;
     display: flex;
     align-items: center;

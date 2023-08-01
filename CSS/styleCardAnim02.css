@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Poppins',sans-serif;
+    background: blueviolet;
+}
+.wrapper,.single-card{
+    height: 450px;
+    min-width: 300px;
+    margin: auto;
+    position: relative;
+}
+.wrapper{
+    perspective: 900px;
+}
+.single-card{
+    text-align: center;
+    transition: all 1.5s ;
+    transform-style: preserve-3d;
+}
+.wrapper:hover .single-card{
+    transform: rotateY('180deg') ;
+}
+.front, .back{
+    width: 300px;
+    position: relative;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+
+}
+.front{
+    cursor: pointer;
+    height: 100%;
+    background: url(../media/imgEffet/planetePasserelle1080px.png) ;
+    backface-visibility: hidden;
+    border-radius: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+.back{
+    transform: rotateY('180deg');
+    position: absolute;
+    border-radius: 50px;
+    height: 450px;
+    background: #fff;
+}
+.content{
+    padding-top: 25%;
+}
+.content h2{
+    transform:;
+    font-size: 35px;
+    margin: 0;
+    font-weight: 300;
+}
+.content h4{
+    margin: 0;
+}
+.socials{
+    margin-top: 20%;
+}
