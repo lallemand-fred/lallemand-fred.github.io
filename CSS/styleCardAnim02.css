@@ -20,6 +20,7 @@ body{
     position: relative;
 }
 .wrapper{
+    /* -webkit-perspective: 1000; */
     perspective: 900px;
 }
 .single-card{
@@ -39,6 +40,7 @@ body{
 
 }
 .front{
+    
     cursor: pointer;
     height: 100%;
     background: url(../media/imgEffet/planetePasserelle1080px.png) ;
@@ -49,6 +51,7 @@ body{
     background-position: 50% 50%;
 }
 .back{
+    
     transform: rotateY('180deg');
     position: absolute;
     border-radius: 50px;
@@ -59,7 +62,6 @@ body{
     padding-top: 25%;
 }
 .content h2{
-    transform:;
     font-size: 35px;
     margin: 0;
     font-weight: 300;
