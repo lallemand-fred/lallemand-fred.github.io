@@ -43,22 +43,27 @@ body{
     backface-visibility: hidden;
 }
 .front{
-    border: solid 1 px black;
+    border: solid 1px black;
     perspective: 1000px;
     transform-style: preserve-3d ;
     cursor: pointer;
     height: 100%;
-    background: rgb(160, 160, 160);
+    background: linear-gradient(45deg, rgb(116, 30, 30),rgb(39, 39, 134));
     /* background-image:url(../media/imgEffet/planetePasserelle1080px.png); */
     backface-visibility: hidden;
     border-radius: 50px;
     /* background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%; */
+    box-shadow: -3px 3px 20px 2px rgba(0, 0, 0, 0.2);
 }
 .front img{
     transform: translate(00px, 100px) translateZ(70px);
     height: 50%;
+    transition: all 1s ease-in-out;
+}
+.front img:hover{
+    transform: translate(00px, 100px) translateZ(70px) rotate(40deg);
 }
 
 .back{ 
@@ -68,7 +73,15 @@ body{
     position: absolute;
     border-radius: 50px;
     height: 450px;
-    background: #fff;
+    background: linear-gradient(
+        to top,
+        rgb(158, 158, 158),
+        rgb(180, 185, 206),
+        rgb(180, 185, 206),
+        rgb(158, 158, 158)
+    );
+    border: solid 1px black;
+    box-shadow: -3px 3px 20px 2px rgba(0, 0, 0, 0.2);
 }
 .content{
     perspective: 900px;
@@ -96,5 +109,36 @@ body{
 }
 .socials i{
     transform: translateZ(50px);
+    transition: all 0.2s ease-in-out;
     padding: 10px 5px;
+}
+.socials i:nth-child(1):hover{
+    color: rgb(255,0,0);
+    transform: translate(-15px, 25px) scale(1.9);
+    background-color: whitesmoke;
+    border-radius: 2px;
+    padding: 3px 3px;
+}
+.socials i:nth-child(2):hover{
+    color:whitesmoke;
+    background: linear-gradient(135deg, #513dd3, #f60266, #f7bb00);
+    padding: 3px 3px;
+    border-radius: 2px;
+    transform: translate(-5px, 25px) scale(1.9);
+}
+.socials i:nth-child(3):hover{
+    transform: translate(5px, 25px) scale(1.9);
+    background-color: #00a8e8;
+    border-radius: 2px;
+    padding: 3px 3px;
+    color: whitesmoke;
+}
+.socials i:nth-child(4):hover{
+    color: whitesmoke ;
+    background: linear-gradient(to top,#026ae3,#16a6fb);
+    padding: 5px 5px;
+    border-radius: 50%;
+    transform: translate(15px, 25px) scale(1.7);
+    height: 15px;
+    width: 15px;
 }
