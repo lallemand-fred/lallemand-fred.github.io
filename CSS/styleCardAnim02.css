@@ -12,6 +12,8 @@ body{
     justify-content: center;
     font-family: 'Poppins',sans-serif;
     background: blueviolet;
+    perspective: 900px;
+    transform-style: preserve-3d;
 }
 .wrapper,.single-card{
     height: 450px;
@@ -22,14 +24,16 @@ body{
 .wrapper{
     /* -webkit-perspective: 1000; */
     perspective: 900px;
-}
-.single-card{
-    text-align: center;
-    transition: all 1.5s ;
     transform-style: preserve-3d;
 }
+.single-card{
+    transform-style: preserve-3d;
+    perspective: 900px;
+    text-align: center;
+    transition: all 1.5s cubic-bezier(0.7, -.5, 0.3, 1.8);
+}
 .wrapper:hover .single-card{
-    transform: rotateY('180deg') ;
+    transform: rotateY(180deg) ;
 }
 .front, .back{
     width: 300px;
@@ -47,25 +51,42 @@ body{
     background-size: contain;
     background-repeat: no-repeat;
     background-position: 50% 50%;
+    background-color: #fff;
 }
 .back{ 
-    transform: rotateY('180deg');
+    transform-style: preserve-3d;
+    perspective: 900px;
+    transform: rotateY(180deg);
     position: absolute;
     border-radius: 50px;
     height: 450px;
     background: #fff;
 }
 .content{
-    padding-top: 25%;
+    perspective: 900px;
+    transform-style: preserve-3d;
+    padding-top: 35%;
 }
 .content h2{
+    transform: translateZ(50px);
     font-size: 35px;
     margin: 0;
-    font-weight: 300;
+    font-weight: 600;
 }
 .content h4{
+    transform: translateZ(70px);
     margin: 0;
 }
+.content p{
+    transform: translateZ(25px);
+
+}
 .socials{
+    perspective: 900px;
+    transform-style: preserve-3d;
     margin-top: 20%;
+}
+.socials i{
+    transform: translateZ(50px);
+    padding: 10px 5px;
 }
