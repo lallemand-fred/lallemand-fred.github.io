@@ -11,7 +11,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Poppins',sans-serif;
-    background: blueviolet;
+    background: rgb(10, 85, 85);
     perspective: 900px;
     transform-style: preserve-3d;
 }
@@ -43,16 +43,24 @@ body{
     backface-visibility: hidden;
 }
 .front{
+    border: solid 1 px black;
+    perspective: 1000px;
+    transform-style: preserve-3d ;
     cursor: pointer;
     height: 100%;
-    background: url(../media/imgEffet/planetePasserelle1080px.png) ;
+    background: rgb(160, 160, 160);
+    /* background-image:url(../media/imgEffet/planetePasserelle1080px.png); */
     backface-visibility: hidden;
     border-radius: 50px;
-    background-size: contain;
+    /* background-size: contain;
     background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-color: #fff;
+    background-position: 50% 50%; */
 }
+.front img{
+    transform: translate(00px, 100px) translateZ(70px);
+    height: 50%;
+}
+
 .back{ 
     transform-style: preserve-3d;
     perspective: 900px;
