@@ -238,7 +238,6 @@ h1 {
 }
 /* --------------------MENU 3 photos----------------------- */
 .menu3{
-    z-index: 1;
     padding-top: 100px;
     padding-bottom: 50px;
     display: flex;
@@ -246,16 +245,9 @@ h1 {
     align-items: center;
     min-height: 600px;
     background: var(--bg-darck-sec01);
-    transform-style: preserve-3d ;
-    perspective: 1500px;
-}
-.cardre{
-
-    z-index: 10;
-}
+    }
 .containerMenu{
     perspective: 1500px;
-    transform-style: preserve-3d ;
     flex-direction: row;
     position: relative;
     display: flex;
@@ -267,8 +259,6 @@ h1 {
     
 }
 .containerMenu .cardre{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     color: var(--bg-color);
     position: relative;
     display: flex;
@@ -282,13 +272,9 @@ h1 {
     transition: 0.5s;
 }
 .containerMenu .cardre:hover{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     height: 470px;
 }
 .containerMenu .cardre .imgBx{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     overflow: hidden;
     position: absolute;
     top: 20px;
@@ -298,15 +284,11 @@ h1 {
     transition: 0.5s;
 }
 .containerMenu .cardre:hover .imgBx{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     top: -100px;
     scale: 0.75;
     box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
 }
 .containerMenu .cardre .imgBx img{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     position: absolute;
     top: 0;
     left: 0;
@@ -315,8 +297,6 @@ h1 {
     object-fit: cover;
 }
 .containerMenu .cardre .contenu{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     box-sizing: border-box;
     position: absolute;
     top: 400px;
@@ -332,23 +312,17 @@ h1 {
     height: 250px;
 }
 .containerMenu .cardre .contenu h2{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     font-size: 1.5em;
     font-weight: 2000;
     color: var(--clr);
 }
 .containerMenu .cardre .contenu p{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     color: var(--color-textS2);
     font-weight: 600;
     letter-spacing: 0.9px;
     /* text-justify: inherit; */
 }
 .containerMenu .cardre .contenu a{
-    perspective: 1500px;
-    transform-style: preserve-3d ;
     position: relative;
     top: 15px;
     display: inline-block;
