@@ -49,15 +49,27 @@ body{
     object-fit: cover;
     width: 100%;
     height: 100%;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 .glow img:hover{
     mix-blend-mode: hard-light;
-    opacity: 0.3;
+    /* opacity: 0.3; */
     position: absolute;
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+.image01:hover{
+    opacity: 0.3;
+}
+.image02:hover{
+    opacity: 0.1;
+}
+.image03:hover{
+    opacity: 0.3;
+}
+.image04:hover{
+    opacity: 0.6;
 }
 .glow {
     opacity: 0.1;
@@ -69,5 +81,5 @@ body{
     transition: all 0.25s ease-out;
     border-radius: 13px;
     mix-blend-mode: hard-light;
-    background: radial-gradient(circle at 50% 0%, rgb(184,196,211), transparent);
+    background: radial-gradient(circle at 50% 0%, rgba(184,196,211,0.7), transparent);
 }
