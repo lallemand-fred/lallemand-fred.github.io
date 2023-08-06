@@ -24,3 +24,4 @@ card.forEach((el) => {
     el.children[1].style.transform = `rotateX(0deg) rotateY(0deg) scale(1)`;
   });
 });
+let choco = "noir";
