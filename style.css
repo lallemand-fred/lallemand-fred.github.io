@@ -555,7 +555,7 @@ form{
 .inputBox input:valid ~ label span{
     color: #14a800;
     text-shadow: 0 0 5PX #14a800, 0 0 15px #14a800, 0 0 30px #14a800;
-    transform: translateY(-30px) scale(0.8);
+    transform: translateY(-30px) scale(0.9);
 }
 .inputBox input:focus,
 .inputBox input:valid {
@@ -811,19 +811,30 @@ form{
 }
 @media (max-width: 500px){
     .inputBox{
-        width: 200px;
+        width: 210px;
     }
 }
 @media (max-width: 400px){
+    .containerForm i{
+        display: none;
+    }
     h1{
         font-size: 3.5rem;
     }
-    
     .containerForm{
         overflow: hidden;
     }
+    .inputBox label span{
+        font-size: 1rem;
+        letter-spacing: -0.4px;
+    }
     .inputBox{
         width: 150px;
+    }
+    .btnSubmit{
+        padding: 5px 0px;
+        border-radius: 15px;
+        font-size: 1.25rem;
     }
     
 }
