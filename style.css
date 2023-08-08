@@ -549,7 +549,7 @@ form{
     flex-direction: row;
     font-size: 1.25rem;
     letter-spacing: 0.05rem;
-    transition: 0.25s;
+    transition: 0.25s ease-in-out;
 }
 .inputBox input:focus ~ label span,
 .inputBox input:valid ~ label span{
