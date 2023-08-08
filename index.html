@@ -656,9 +656,17 @@
             <h2>Contact</h2>
             <form action="https://formsubmit.co/83a919eb28df6b2c574f6a644f13d4a0" method="POST">
                 <input type="hidden" name="_subject" value="Nouvau message du site Lallemand Fred">
-                <input type = "text" name="name" placeholder="Nom" required>
-                <input type = "email" name="email" placeholder="E-mail" required>
-                <textarea type = "text" class="field" name="message" placeholder="Tapez votre message ici..." required></textarea>
+                <div class="inputBox IBName">
+                    <input type = "text" name="name" placeholder="" required>
+                    <label>Nom</label></div>
+                <div class="inputBox IBEmail">
+                    <input type = "email" name="email" placeholder="" required>
+                    <label>E-mail</label>
+                </div>
+                <div class="inputBox IBMessege">
+                    <textarea type = "text" class="field" name="message" placeholder="" required></textarea>
+                    <label>Tapez votre message ici...</label>
+                </div>
                 <button class="btnSubmit" type="submit">Envoyer</button>
             </form>
         </div>
