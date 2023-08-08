@@ -74,8 +74,28 @@ window.addEventListener("scroll", () => {
   lastScroll = currentScroll;
 });
 // Form wave text
-let label = document.querySelector("label");
-label.innerHTML = label.innerText
+let label1 = document.querySelector(".lab1");
+label1.innerHTML = label1.innerText
   .split("")
-  .map((letters, i) => `<span>${letters}</span>`)
+  .map(
+    (letters, i) =>
+      `<span style="transition-delay: ${i * 30}ms;">${letters}</span>`
+  )
+  .join("");
+let label2 = document.querySelector(".lab2");
+label2.innerHTML = label2.innerText
+  .split("")
+  .map(
+    (letters, i) =>
+      `<span style="transition-delay: ${i * 30}ms;">${letters}</span>`
+  )
+  .join("");
+
+let label3 = document.querySelector(".lab3");
+label3.innerHTML = label3.innerText
+  .split("")
+  .map(
+    (letters, i) =>
+      `<span style="transition-delay: ${i * 30}ms;">${letters}</span>`
+  )
   .join("");

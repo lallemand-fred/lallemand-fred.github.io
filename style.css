@@ -501,6 +501,7 @@ footer h2{
     z-index: 10;
     padding: 0;
     margin: 0;
+    padding-bottom: 10px
 }
 
 #contact{
@@ -522,28 +523,45 @@ form{
 }
 .inputBox input, .field{
     position: relative;
-    width: 100%;
+    width: 90%;
     padding: 10px 0;
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 2px solid #999;
+    border-bottom: 2px solid #9999992c;
     color: #e0d9d3;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     resize: none;
     transition: 0.5s;
+    letter-spacing: 0.05rem;
+    margin-top: 15px;
 }
 .inputBox label{
     position: absolute;
     left: 0;
-    padding: 15px 20px;
+    padding: 30px 15px;
     pointer-events: none;
     user-select: none;
 }
 .inputBox label span{
     position: relative;
     display: inline-flex;
+    flex-direction: row;
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+    transition: 0.25s;
 }
+.inputBox input:focus ~ label span,
+.inputBox input:valid ~ label span{
+    color: #14a800;
+    text-shadow: 0 0 5PX #14a800, 0 0 15px #14a800, 0 0 30px #14a800;
+    transform: translateY(-30px) scale(0.8);
+}
+.inputBox input:focus,
+.inputBox input:valid {
+    border-bottom: 2px solid #ffffff3a;
+}
+
 .btnSubmit{
     z-index: 100;
     border: none;
