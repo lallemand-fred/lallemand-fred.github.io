@@ -516,10 +516,9 @@ form{
     margin: 0 auto;
     max-width: 900px;
 }
-
 .inputBox{
     position: relative;
-    width: 500px;
+    width: 400px;
 }
 .inputBox input, .field{
     position: relative;
@@ -530,16 +529,20 @@ form{
     outline: none;
     border-bottom: 2px solid #999;
     color: #e0d9d3;
-    font-size: var(--font-size-P);
+    font-size: 1.5rem;
     resize: none;
     transition: 0.5s;
 }
 .inputBox label{
     position: absolute;
     left: 0;
-    padding: 10px 0;
+    padding: 15px 20px;
     pointer-events: none;
     user-select: none;
+}
+.inputBox label span{
+    position: relative;
+    display: inline-flex;
 }
 .btnSubmit{
     z-index: 100;
@@ -778,11 +781,14 @@ form{
         inset: 0;
         border: 2px solid #fff;
         transition: 0.5s;
-    }    
+    }  
+    .inputBox{
+        width: 300px;
+    }  
 }
 @media (max-width: 600px){
     .inputBox{
-        width: 350px;
+        width: 250px;
     }
 }
 @media (max-width: 500px){
