@@ -333,6 +333,12 @@ h1 {
     border-radius: 8px;
     text-decoration: none;
 }
+.containerMenu .cardre .contenu a:hover{
+    transform: translate(0px, -2px) scale(1.05);
+    background: linear-gradient(to top,#dd7c3b, #c4a426);
+    transition: 0.3s ease-in-out;
+    
+}
 .cardre:nth-child(1){
     transition-delay: 200ms;
 }
@@ -481,6 +487,10 @@ p.TitreV{
 .LIEN{
     font-size: 1.6rem;
     color: #fffae1
+}
+.LIEN:hover{
+    transition: 0.2s ease-in-out;
+    color: #b8b08d   
 }
 .liens{
     padding-top: 30px;
