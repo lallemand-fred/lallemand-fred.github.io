@@ -529,7 +529,7 @@ form{
     background: transparent;
     border: none;
     outline: none;
-    border-bottom: 2px solid #9999992c;
+    border-bottom: 1px solid #9999992c;
     color: #e0d9d3;
     font-size: 1.25rem;
     resize: none;
@@ -560,9 +560,9 @@ form{
 }
 .inputBox input:focus,
 .inputBox input:valid {
-    border-bottom: 2px solid #ffffff3a;
-}
+    border-bottom: 1px solid #ffffff3a;
 
+}
 .btnSubmit{
     z-index: 100;
     border: none;
@@ -633,8 +633,6 @@ form{
         transform: rotate(0deg);
     }
 }
-
-
 /* #deuxiemeTrait{
     height: 1px;
     width: 75%;
@@ -647,7 +645,6 @@ form{
     font-size: 1.2em;
     font-family: 'Advent Pro', sans-serif;
 }
-
 #copyrightEtIcons a {
     color: #fffae1;
     font-size: 1.2em;
@@ -656,7 +653,6 @@ form{
 #espaceFin{
     padding: 30px;
 }
-
 /* -----------------------Animation avec .slid----------------------*/
 @media(prefers-reduced-motion){
     .slidG, .slidD, .slidH, .slidB, .slidO {
