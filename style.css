@@ -336,8 +336,7 @@ h1 {
 .containerMenu .cardre .contenu a:hover{
     transform: translate(0px, -2px) scale(1.05);
     background: linear-gradient(to top,#dd7c3b, #c4a426);
-    transition: 0.3s ease-in-out;
-    
+    transition: 0.1s ease-in-out;
 }
 .cardre:nth-child(1){
     transition-delay: 200ms;
@@ -398,7 +397,6 @@ h1 {
     font-size: 16px;
     font-weight: 600;
 }
-
 .items{
     position: relative;
 }
@@ -422,7 +420,6 @@ h1 {
 .carousel__item {
     float: left;
 }
-
 /* ---------------------Bouttons de navigation et de pagination---------------- */
 .carousel__next, .carousel__prev {
     z-index: 11;
