@@ -561,7 +561,6 @@ form{
 .inputBox input:focus,
 .inputBox input:valid {
     border-bottom: 1px solid #ffffff3a;
-
 }
 .btnSubmit{
     z-index: 100;
@@ -724,7 +723,6 @@ form{
         display: block;
     }
 }
-
 @media (max-width: 800px){
     .lettre{
         font-size: var(--font-size-chargemnt-Mobil);
@@ -761,7 +759,6 @@ form{
         top: 130px;
         height: 200px;
     }
-       
     /* --------------------------------Liens travail--------------------------- */
     #liensTravail{
         padding-bottom: 20px;
@@ -822,7 +819,6 @@ form{
         border-radius: 15px;
         font-size: 1.25rem;
     }
-    
 }
 @media (max-width: 250px){
     .inputBox{
