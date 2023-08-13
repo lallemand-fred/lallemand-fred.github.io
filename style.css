@@ -479,6 +479,41 @@ p.TitreV{
     background: #221c17;
     height: auto ;
 }
+.liens{
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.liens ul{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.liens ul li{
+    position: relative;
+    padding: 10px 0;
+    text-align: center;
+}
+.liens ul li a {
+    color: #fffae1
+}
+.liens ul li a span{
+    position: relative;
+    font-size: 1.6rem;
+    letter-spacing: 0.05em;
+    transition: 0.25S;
+}
+.liens ul li:hover a span{
+    color: #fff0e1;
+    text-shadow: 0 0 5px #fff0e1,
+    0 0 15px #fff0e1,
+    0 0 30px #fff0e1,
+    0 0 60px #fff0e1,
+    0 0 100px #fff0e1;
+}
 .LIEN{
     font-size: 1.6rem;
     color: #fffae1
@@ -486,11 +521,6 @@ p.TitreV{
 .LIEN:hover{
     transition: 0.2s ease-in-out;
     color: #b8b08d   
-}
-.liens{
-    padding-top: 30px;
-    text-align: center;
-    color: #fffae1 ;
 }
 /* --------------------Transition Video => Footer------------------- */
 #svgSec1{
