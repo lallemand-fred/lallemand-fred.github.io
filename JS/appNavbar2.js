@@ -73,8 +73,7 @@ window.addEventListener("scroll", () => {
 
   lastScroll = currentScroll;
 });
-// --------------------------Hover wave liens traveaux--------------------------
-
+// --------------------------Hover wave links work--------------------------
 let text = document.querySelectorAll("ul li a").forEach((text) => {
   text.innerHTML = text.innerText
     .split("")
@@ -84,7 +83,6 @@ let text = document.querySelectorAll("ul li a").forEach((text) => {
     )
     .join("");
 });
-
 // ------------------------------Form wave text---------------------------------
 let label1 = document.querySelector(".lab1");
 label1.innerHTML = label1.innerText
