@@ -108,4 +108,5 @@ label3.innerHTML = label3.innerText
     (letters, i) =>
       `<span style="transition-delay: ${i * 30}ms;">${letters}</span>`
   )
+
   .join("");
