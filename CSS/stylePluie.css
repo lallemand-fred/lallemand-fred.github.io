@@ -39,10 +39,13 @@ body:hover #cursor{
     transform: translate(-1px, 5px) rotate(15deg) scale(1);
 }
 .element{
+    font-size:2em;
     position: absolute;
-    background: #fff;
+    transform: translate(-50%,-50%);
+    color: #fff;
     pointer-events: none;
     width: 10px;
     height: 10px;
     transition: 1s;
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 25px #fff) hue-rotate(60deg);
 }
