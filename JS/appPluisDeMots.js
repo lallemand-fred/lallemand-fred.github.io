@@ -16,7 +16,7 @@ document.onmousemove = function (e) {
 
   //mouvement aléatoire sur l'axe y & x
   element.style.left = cursor.getBoundingClientRect().x + "px";
-  element.style.top = cursor.getBoundingClientRect().y + "px";
+  element.style.top = cursor.getBoundingClientRect().y - 10 + "px";
 
   setTimeout(function () {
     let text = document.querySelectorAll(".element")[0],

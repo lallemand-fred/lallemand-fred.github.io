@@ -17,10 +17,10 @@ body{
     position: fixed;
     width: 25px;
     height: 25px;
-    border-top: 5px solid #fff;
-    border-left: 5px solid #fff;
+    border-top: 4px solid #000;
+    border-left: 4px solid #000;
     transform-origin: top;
-    transform: translate(-1px, 5px) rotate(15deg) scale(0);
+    transform: translate(-1px, 4px) rotate(15deg) scale(0);
     transition: transform 0.1s;
     
     filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff) hue-rotate(60deg);
@@ -29,14 +29,14 @@ body{
     content: '';
     position: absolute;
     left: -2.5px;
-    width: 5px;
-    height: 40px;
-    background: #fff;
+    width: 4px;
+    height: 35px;
+    background: #000;
     transform-origin: top;
     transform: rotate(315deg);
 }
 body:hover #cursor{
-    transform: translate(-1px, 5px) rotate(15deg) scale(1);
+    transform: translate(-1px, 5px) rotate(15deg) scale(0.7);
 }
 .element{
     font-size:2em;
