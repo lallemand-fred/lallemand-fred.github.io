@@ -24,12 +24,12 @@ document.onmousemove = function (e) {
       directionY = Math.random() < 0.5 ? -1 : 1;
 
     text.style.left =
-      parseInt(text.style.left) - directionX * (Math.random() * 200) + "px";
+      parseInt(text.style.left) - directionX * (Math.random() * 100) + "px";
     text.style.top =
-      parseInt(text.style.top) - directionY * (Math.random() * 200) + "px";
+      parseInt(text.style.top) - directionY * (Math.random() * 100) + "px";
     text.style.opacity = 0;
-    text.style.transform = "scale(0.25)";
-    text.innerHTML = "hi";
+    text.style.transform = "scale(0.15)";
+    text.innerHTML = randomText();
 
     //suppresion des éléments
     setTimeout(function () {
@@ -37,3 +37,10 @@ document.onmousemove = function (e) {
     }, 1000);
   }, 10);
 };
+
+//Ajout de text aléatoir de lettres et de nombres
+function randomText() {
+  var text = "abcdefghijklmnopqrstuvwxyz1234567890".split("");
+  letter = text[Math.floor(Math.random() * text.length)];
+  return letter;
+}
