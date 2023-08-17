@@ -23,5 +23,7 @@ document.onmousemove = function (e) {
       parseInt(text.style.left) - directionX * (Math.random() * 200) + "px";
     text.style.top =
       parseInt(text.style.top) - directionY * (Math.random() * 200) + "px";
+    text.style.opacity = 0;
+    text.style.transform = "scale(0.25)";
   });
 };
