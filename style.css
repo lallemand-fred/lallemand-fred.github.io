@@ -485,28 +485,30 @@ p.TitreV{
     justify-content: center;
     align-items: center;
 }
-.liens ul{
+.liens ol{
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
-.liens ul li{
+.liens ol li{
+    list-style: solid;
+    text-decoration: solid;
     position: relative;
     padding: 10px 0;
     text-align: center;
 }
-.liens ul li a {
+.liens ol li a {
     color: #fffae1
 }
-.liens ul li a span{
+.liens ol li a span{
     position: relative;
     font-size: 1.6rem;
     letter-spacing: 0.05em;
     transition: 0.25S;
 }
-.liens ul li:hover a span{
+.liens ol li:hover a span{
     color: #fff0e1;
     text-shadow: 0 0 5px #fff0e1,
     0 0 15px #fff0e1,
