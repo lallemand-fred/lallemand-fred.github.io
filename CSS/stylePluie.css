@@ -15,33 +15,39 @@ body{
 }
 #cursor{
     position: fixed;
-    width: 25px;
+    background: url(../media/imgCursor/livreOuvertPetit.png)  ;
+    object-fit: cover;
+    width:200px;
+    height: 153px;
+    transform-origin: center;
+    transform: scale(0.3);
+    /* width: 25px;
     height: 25px;
     border-top: 4px solid #000;
     border-left: 4px solid #000;
     transform-origin: top;
     transform: translate(-1px, 4px) rotate(15deg) scale(0);
     transition: transform 0.1s;
-    
-    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff) hue-rotate(60deg);
+    filter: drop-shadow(0 0 5px #fff) drop-shadow(0 0 15px #fff) drop-shadow(0 0 35px #fff) hue-rotate(60deg); */
 }
 #cursor::before{
     content: '';
-    position: absolute;
+    /* position: absolute;
     left: -2.5px;
     width: 4px;
     height: 35px;
     background: #000;
     transform-origin: top;
-    transform: rotate(315deg);
+    transform: rotate(315deg); */
 }
 body:hover #cursor{
-    transform: translate(-1px, 5px) rotate(15deg) scale(0.7);
+    /* transform: translate(-1px, 5px) rotate(15deg) scale(0.7); */
 }
 .element{
+    z-index: 10;
     font-size:2em;
     position: absolute;
-    transform: translate(-50%,-50%);
+    transform: translate(20px,5px);
     color: #fff;
     pointer-events: none;
     width: 10px;
