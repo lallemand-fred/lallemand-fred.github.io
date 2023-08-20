@@ -28,6 +28,11 @@ ul{
 /* -----------------------------Logo---------------------------- */
 .navbar__logo > a{
     color: var(--navbar-color);
+    transition: 0.3s ease-in-out;
+}
+.navbar__logo > a:hover{
+    color: var(--navbar-color);
+    border-bottom: solid 1px var(--navbar-color);
 }
 .navbar__logo{
     font-size: var(--font-size-navbar);
@@ -78,7 +83,7 @@ nav{
         position: absolute;
         top: 65px;
         right: 0;
-        background: var(--navbar-bg-trans-color);
+        background: #14110ecb;
         transition: all.5s ease-in-out;
     }
     .show-nav .navbar__links{
@@ -150,16 +155,16 @@ nav{
         transition: all 1s ease-in-out;
     }
     .show-nav .second{
-        transition: all 1.1s ease-in-out;
+        transition: all 1s ease-in-out;
     }
     .show-nav .third{
-        transition: all 1.2s ease-in-out;
+        transition: all 1s ease-in-out;
     }
     .show-nav .four{
-        transition: all 1.5s ease-in-out;
+        transition: all 1s ease-in-out;
     }
     .show-nav .five{
-        transition: all 1.7s ease-in-out;
+        transition: all 1s ease-in-out;
     }
 }
 
