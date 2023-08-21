@@ -71,6 +71,21 @@ nav{
 }
 /*--------------------------------- resposive ------------------------*/
 @media screen and (max-width:767.98px){
+    .navbar__logo > a:hover{
+        color: var(--navbar-color);
+        border-bottom:  0px ;
+        letter-spacing:2px;
+        transition: 0.4s;
+    }
+    .navbar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        height: 65px;
+        background: #14110ecb;
+        backdrop-filter: blur(0px);
+    }
     .navbar__links{
         z-index: 100;
         overflow: hidden;
@@ -99,11 +114,11 @@ nav{
         display: block;
         padding: 1rem;
         font-size: var(--font-size-navbar);
-        transition: all .4s ease-in-out;
+        transition: all .15s ease-in-out;
     }
     .navbar__link > a:hover {
-        padding-left: 2rem;
-        letter-spacing:5px;
+        /* padding-left: 2rem; */
+        letter-spacing:4px;
     }
     /*-------------------------- toglle menu ----------------------*/
     .burger {
