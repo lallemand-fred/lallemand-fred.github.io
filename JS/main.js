@@ -9,11 +9,11 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
-// ----------------------------------Carousel-------------------------------
 const slideElements = document.querySelectorAll(
   ".slidG, .slidD, .slidB, .slidH, .slidO"
 );
 slideElements.forEach((el) => observer.observe(el));
+// ----------------------------------Carousel-------------------------------
 
 /**
  * Permet de rajouter la navigation tactile pour le carousel
