@@ -338,6 +338,7 @@ h1 {
     background: linear-gradient(to top,#dd7c3b, #c4a426);
     transition: 0.1s ease-in-out;
 }
+
 .cardre:nth-child(1){
     transition-delay: 200ms;
 }
