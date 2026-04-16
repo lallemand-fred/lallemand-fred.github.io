@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Advent+Pro&family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 html{
@@ -15,8 +15,9 @@ html{
     --font-size-H3:3em;
     --font-size-H4:2em;
     --font-size-P:1rem;
-    --font-family-Advent:'Advent Pro',sans-serif;
+    /* --font-family-Advent:'Advent Pro',sans-serif; */
     --font-family-Dancing:'Dancing Script',sans-serif;
+    --font-family-Inter:'Inter Tight', sans-serif;
     /* -----------------white mode-------------------- */
     --text-white: #000000;
     --bg-white: #f0f0f0;
@@ -35,8 +36,8 @@ html{
     --bg-chargement:  #000;
 }
 body {
+    font-family: var(--font-family-Inter);
     letter-spacing: 1px;
-    font-family: var(--font-family-Advent);
     padding: 0;
     margin: 0;
     color: var(--text-white);
@@ -351,7 +352,7 @@ h1 {
 /* ------------------------VIDEOS---------------------- */
 .moyenMetrage{
     margin-top: 0;
-    font-family: 'Advent Pro',sans-serif;
+    /* font-family: 'Advent Pro',sans-serif; */
     padding: 0px 50px;
     background: linear-gradient(1deg, #221c17, #16120f) center center no-repeat;
     line-height: 1.4;
