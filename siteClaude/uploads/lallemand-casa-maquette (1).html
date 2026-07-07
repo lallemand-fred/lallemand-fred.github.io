@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>lallemand.casa — Maquette</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #14161a;
+    --bg-raise: #1b1e23;
+    --ink: #ece7dc;
+    --ink-dim: #9a9689;
+    --amber: #c98a3f;
+    --slate: #6d95a0;
+    --line: rgba(236,231,220,0.12);
+    --grain-op: 0.05;
+    --radius: 2px;
+  }
+
+  [data-theme="light"] {
+    --bg: #ece9e2;
+    --bg-raise: #e2ded4;
+    --ink: #191b1e;
+    --ink-dim: #6b675c;
+    --amber: #9c5f1e;
+    --slate: #395c66;
+    --line: rgba(25,27,30,0.12);
+    --grain-op: 0.035;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  html { scroll-behavior:smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 300;
+    transition: background .4s ease, color .4s ease;
+    overflow-x:hidden;
+    position:relative;
+  }
+
+  body::before {
+    content:"";
+    position:fixed; inset:0;
+    pointer-events:none;
+    background-image: radial-gradient(var(--ink) 0.5px, transparent 0.5px);
+    background-size: 3px 3px;
+    opacity: var(--grain-op);
+    z-index: 1;
+    mix-blend-mode: overlay;
+  }
+
+  .display { font-family:'Instrument Serif', serif; font-style:italic; font-weight:400; }
+  .mono { font-family:'JetBrains Mono', monospace; }
+
+  a { color:inherit; text-decoration:none; }
+
+  /* ---------- layout shell ---------- */
+  .wrap { max-width: 1180px; margin:0 auto; padding: 0 40px; }
+  @media (max-width:640px){ .wrap{ padding:0 22px; } }
+
+  /* ---------- top bar ---------- */
+  header.top {
+    position: fixed; top:0; left:0; right:0; z-index: 40;
+    backdrop-filter: blur(10px);
+    background: color-mix(in srgb, var(--bg) 78%, transparent);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-inner {
+    max-width:1180px; margin:0 auto; padding: 18px 40px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  @media (max-width:640px){ .topbar-inner{ padding:16px 22px; } }
+  .brand { font-family:'JetBrains Mono', monospace; font-size:13px; letter-spacing:0.12em; text-transform:uppercase; }
+  .brand b { color: var(--amber); font-weight:600; }
+  nav.top-links { display:flex; gap:28px; font-size:13px; letter-spacing:.03em; }
+  nav.top-links a { color: var(--ink-dim); transition: color .25s; position:relative; }
+  nav.top-links a:hover { color: var(--ink); }
+  @media (max-width:780px){ nav.top-links{ display:none; } }
+
+  .theme-toggle {
+    width:34px; height:34px; border-radius:50%;
+    border:1px solid var(--line); background:transparent;
+    color:var(--ink); cursor:pointer;
+    display:flex; align-items:center; justify-content:center;
+    transition: border-color .25s, transform .3s;
+  }
+  .theme-toggle:hover { border-color: var(--amber); transform: rotate(20deg); }
+  .theme-toggle svg { width:16px; height:16px; }
+
+  /* ---------- sprocket divider (signature motif) ---------- */
+  .sprocket {
+    height: 26px;
+    background-image: repeating-linear-gradient(to right, var(--line) 0, var(--line) 2px, transparent 2px, transparent 22px);
+    background-position: center;
+    background-size: 22px 2px;
+    background-repeat: repeat-x;
+    position: relative;
+    margin: 0;
+  }
+  .sprocket::before, .sprocket::after {
+    content:"";
+    position:absolute; left:0; right:0;
+    height:1px; background: var(--line);
+  }
+  .sprocket::before{ top:4px; }
+  .sprocket::after{ bottom:4px; }
+
+  /* ---------- hero ---------- */
+  .hero {
+    min-height: 100vh;
+    display:flex; flex-direction:column; justify-content:center;
+    position:relative; padding-top: 90px;
+  }
+  .hero .eyebrow {
+    display:flex; align-items:center; gap:12px;
+    font-family:'JetBrains Mono', monospace; font-size:12px;
+    color: var(--ink-dim); letter-spacing:.1em; text-transform:uppercase;
+    margin-bottom: 26px;
+  }
+  .rec-dot {
+    width:7px; height:7px; border-radius:50%; background:#c94f3f;
+    animation: blink 1.6s infinite;
+  }
+  @keyframes blink { 0%,100%{opacity:1;} 50%{opacity:.25;} }
+
+  .hero h1 {
+    font-size: clamp(52px, 9vw, 118px);
+    line-height: 0.96;
+    font-weight: 400;
+    max-width: 900px;
+  }
+  .hero h1 em { color: var(--amber); font-style:italic; }
+
+  .hero-sub {
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-top: 46px; gap: 30px; flex-wrap:wrap;
+  }
+  .hero-tag {
+    max-width: 420px; color: var(--ink-dim); font-size:16px; line-height:1.6; font-weight:300;
+  }
+  .timecode {
+    font-family:'JetBrains Mono', monospace;
+    font-size: 15px; letter-spacing:.05em;
+    color: var(--slate);
+    text-align:right;
+  }
+  .timecode .label { display:block; font-size:11px; color:var(--ink-dim); text-transform:uppercase; letter-spacing:.15em; margin-bottom:6px; }
+  .timecode .code { font-size:22px; color: var(--ink); }
+
+  /* ---------- section shell ---------- */
+  section { padding: 110px 0; position:relative; }
+  .section-head {
+    display:flex; justify-content:space-between; align-items:flex-end;
+    margin-bottom: 56px; gap:20px; flex-wrap:wrap;
+  }
+  .section-num { font-family:'JetBrains Mono', monospace; font-size:12px; color:var(--amber); letter-spacing:.15em; margin-bottom:10px; display:block; text-transform:uppercase; }
+  .section-head h2 { font-family:'Instrument Serif', serif; font-style:italic; font-size: clamp(34px,4vw,52px); font-weight:400; }
+  .section-head p { max-width:340px; color:var(--ink-dim); font-size:14px; line-height:1.6; }
+
+  /* ---------- about (split) ---------- */
+  .about-grid {
+    display:grid; grid-template-columns: 1fr 1px 1fr; gap: 50px;
+  }
+  .about-grid .divider { background: var(--line); }
+  @media (max-width:780px){ .about-grid{ grid-template-columns:1fr; } .about-grid .divider{ display:none; } }
+  .about-col .role {
+    font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--amber);
+    text-transform:uppercase; letter-spacing:.15em; margin-bottom:14px; display:block;
+  }
+  .about-col h3 { font-size:24px; font-weight:400; margin-bottom:16px; }
+  .about-col p { color: var(--ink-dim); font-size:15px; line-height:1.75; font-weight:300; }
+
+  /* ---------- gallery ---------- */
+  .gal-filters { display:flex; gap:10px; flex-wrap:wrap; margin-bottom: 34px; }
+  .gal-filters span {
+    font-family:'JetBrains Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em;
+    padding: 7px 14px; border:1px solid var(--line); border-radius: 999px; color: var(--ink-dim);
+    cursor:default; transition: all .25s;
+  }
+  .gal-filters span.active { border-color: var(--amber); color: var(--amber); }
+
+  .gallery-grid {
+    display:grid; grid-template-columns: repeat(6, 1fr); grid-auto-rows: 90px; gap: 10px;
+  }
+  @media (max-width:780px){ .gallery-grid{ grid-template-columns: repeat(2,1fr); grid-auto-rows:120px; } }
+  .photo {
+    border-radius: var(--radius); position:relative; overflow:hidden;
+    display:flex; align-items:flex-end; padding:14px;
+    background-size:cover;
+  }
+  .photo .tag { font-family:'JetBrains Mono', monospace; font-size:10.5px; color:#f2ede0; letter-spacing:.05em; text-transform:uppercase; position:relative; z-index:2; }
+  .photo::after { content:""; position:absolute; inset:0; background: linear-gradient(to top, rgba(0,0,0,.55), transparent 55%); }
+  .photo.p1 { grid-column:span 3; grid-row:span 3; background:linear-gradient(135deg,#3a4a52,#1c2529); }
+  .photo.p2 { grid-column:span 3; grid-row:span 2; background:linear-gradient(135deg,#4a3c2e,#241d16); }
+  .photo.p3 { grid-column:span 2; grid-row:span 2; background:linear-gradient(135deg,#2e3a3d,#161c1e); }
+  .photo.p4 { grid-column:span 4; grid-row:span 2; background:linear-gradient(135deg,#5a4630,#241c12); }
+  .photo.p5 { grid-column:span 3; grid-row:span 2; background:linear-gradient(135deg,#39434a,#181d21); }
+  .photo.p6 { grid-column:span 3; grid-row:span 2; background:linear-gradient(135deg,#463a2c,#201a12); }
+
+  /* ---------- films ---------- */
+  .film-list { display:flex; flex-direction:column; }
+  .film-row {
+    display:grid; grid-template-columns: 44px 1.1fr 1.3fr 56px; align-items:center; gap:20px;
+    padding: 20px 0; border-bottom:1px solid var(--line);
+    transition: padding-left .3s;
+  }
+  .film-row:hover { padding-left: 10px; }
+  .film-row:hover .film-title { color: var(--amber); }
+  .film-num { font-family:'JetBrains Mono', monospace; color:var(--ink-dim); font-size:13px; }
+  .film-title { font-size: 19px; font-weight:400; transition:color .25s; }
+  .film-meta { font-family:'JetBrains Mono', monospace; font-size:10.5px; color:var(--ink-dim); text-transform:uppercase; letter-spacing:.04em; line-height:1.5; }
+  .film-len { font-family:'JetBrains Mono', monospace; font-size:13px; color:var(--slate); text-align:right; }
+  @media (max-width:900px){ .film-row{ grid-template-columns: 34px 1fr 44px; } .film-meta{ display:none; } }
+  @media (max-width:640px){ .film-row{ grid-template-columns: 30px 1fr; row-gap:5px; } .film-len{ grid-column:2; text-align:left; color:var(--ink-dim); } }
+
+  /* ---------- credits / skills ---------- */
+  .credits-roll {
+    display:grid; grid-template-columns: repeat(2, 1fr); gap: 0 60px;
+  }
+  @media (max-width:640px){ .credits-roll{ grid-template-columns:1fr; } }
+  .credit-line {
+    display:flex; justify-content:space-between; padding:14px 0; border-bottom:1px dashed var(--line);
+    font-size:14px;
+  }
+  .credit-role { color: var(--ink-dim); font-family:'JetBrains Mono', monospace; font-size:11px; text-transform:uppercase; letter-spacing:.08em; align-self:center; }
+  .credit-name { font-weight:500; }
+
+  /* ---------- project showcase ---------- */
+  .project-card {
+    position: relative;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    padding: 56px;
+    background: var(--bg-raise);
+    overflow: hidden;
+  }
+  @media (max-width:640px){ .project-card{ padding: 34px 24px; } }
+  .project-card .role {
+    font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--amber);
+    text-transform:uppercase; letter-spacing:.15em; margin-bottom:14px; display:block;
+  }
+  .project-card h3 { font-family:'Instrument Serif', serif; font-style:italic; font-size: clamp(28px,3.4vw,40px); font-weight:400; margin-bottom:18px; }
+  .project-card p { max-width: 620px; color:var(--ink-dim); font-size:15px; line-height:1.75; font-weight:300; margin-bottom:28px; }
+  .project-link {
+    display:inline-block; font-family:'JetBrains Mono', monospace; font-size:12px;
+    text-transform:uppercase; letter-spacing:.1em; border:1px solid var(--amber); color:var(--amber);
+    padding: 12px 22px; border-radius: 999px; transition: background .25s, color .25s;
+  }
+  .project-link:hover { background: var(--amber); color: var(--bg); }
+
+  .stamp {
+    position: absolute; top: 34px; right: -46px;
+    transform: rotate(9deg);
+    border: 3px solid #c94f3f;
+    color: #c94f3f;
+    font-family:'JetBrains Mono', monospace;
+    font-weight: 700; font-size: 15px; text-transform:uppercase; letter-spacing:.08em;
+    text-align:center; line-height:1.4;
+    padding: 10px 46px;
+    opacity: 0.9;
+    mix-blend-mode: normal;
+  }
+  @media (max-width:640px){ .stamp{ position:static; transform:rotate(-2deg); display:inline-block; margin-bottom:20px; padding:8px 20px; font-size:13px; } }
+
+
+  .fin {
+    text-align:center; padding: 70px 0 70px;
+  }
+  .fin p { color:var(--ink-dim); font-size:15px; }
+  .fin-links { display:flex; gap:26px; justify-content:center; margin-top:34px; flex-wrap:wrap; }
+  .fin-links a { font-family:'JetBrains Mono', monospace; font-size:12px; text-transform:uppercase; letter-spacing:.1em; border-bottom:1px solid var(--line); padding-bottom:4px; transition:border-color .25s, color .25s; }
+  .fin-links a:hover { color:var(--amber); border-color:var(--amber); }
+
+  footer.bottom {
+    border-top:1px solid var(--line); padding: 26px 0;
+    font-family:'JetBrains Mono', monospace; font-size:11px; color:var(--ink-dim);
+    display:flex; justify-content:space-between; letter-spacing:.05em;
+  }
+  @media (max-width:640px){ footer.bottom{ flex-direction:column; gap:8px; } }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+  }
+</style>
+</head>
+<body data-theme="dark">
+
+<header class="top">
+  <div class="topbar-inner">
+    <div class="brand">lallemand<b>.casa</b></div>
+    <nav class="top-links">
+      <a href="#about">à propos</a>
+      <a href="#gallery">photos</a>
+      <a href="#films">films</a>
+      <a href="#credits">compétences</a>
+      <a href="#project">projet</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+      <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+        <circle cx="12" cy="12" r="4.2"/>
+        <path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="eyebrow"><span class="rec-dot"></span> RÉGISSEUR DE FORMATION — DÉVELOPPEUR PAR CHOIX</div>
+    <h1>Je cadre des <em>histoires</em>,<br>je construis des <em>interfaces</em>.</h1>
+    <div class="hero-sub">
+      <p class="hero-tag">Photographe de Liège, réalisateur de courts et moyens métrages, aujourd'hui développeur front-end. Ce site, c'est le plan de coupe entre ces deux mondes.</p>
+      <div class="timecode">
+        <span class="label">Temps sur site</span>
+        <span class="code mono" id="tc">00:00:00:00</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="sprocket"></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="section-head">
+      <div>
+        <span class="section-num">01 — À propos</span>
+        <h2>Deux métiers, un seul regard.</h2>
+      </div>
+      <p>De la régie de plateau (Dardenne, GSARA) à la régie de code. Même exigence, autre matière.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-col">
+        <span class="role">2004 — 2015 · Plateau</span>
+        <h3>Régisseur, cadreur, monteur</h3>
+        <p>Formé à l'audiovisuel au GSARA, j'ai travaillé plus de dix ans sur des tournages de long, moyen et court métrage — régie, cadre, montage, graphisme 2D/3D. Une dizaine de productions, dont "La Fille inconnue" des frères Dardenne et "Pilgrimage" de Wrong Men. La rigueur du plateau, la lecture d'un cadre, le sens du détail : ce sont ces réflexes que j'ai emmenés avec moi.</p>
+      </div>
+      <div class="divider"></div>
+      <div class="about-col">
+        <span class="role">Depuis 2023 · Écran</span>
+        <h3>Développeur front-end, futur UI/UX</h3>
+        <p>Reconversion vers le développement web : Angular, NestJS, TypeScript. Étudiant en dernière année à l'IPEFA Verviers, TFE en préparation. L'objectif : concevoir des interfaces avec la même exigence qu'un cadre bien composé.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="sprocket"></div>
+
+  <!-- GALLERY -->
+  <section id="gallery">
+    <div class="section-head">
+      <div>
+        <span class="section-num">02 — Photographie</span>
+        <h2>Liège, en négatif et en lumière.</h2>
+      </div>
+      <p>Une sélection à connecter plus tard à une vraie source (dossier ou CMS léger).</p>
+    </div>
+    <div class="gal-filters">
+      <span class="active">Toutes</span><span>Meuse</span><span>Outremeuse</span><span>Citadelle</span><span>Noir & blanc</span>
+    </div>
+    <div class="gallery-grid">
+      <div class="photo p1"><span class="tag">Passerelle — Meuse</span></div>
+      <div class="photo p2"><span class="tag">Coteaux de la Citadelle</span></div>
+      <div class="photo p3"><span class="tag">Outremeuse, nuit</span></div>
+      <div class="photo p4"><span class="tag">Marché de la Batte</span></div>
+      <div class="photo p5"><span class="tag">Cathédrale Saint-Paul</span></div>
+      <div class="photo p6"><span class="tag">Quai de Rome</span></div>
+    </div>
+  </section>
+
+  <div class="sprocket"></div>
+
+  <!-- FILMS -->
+  <section id="films">
+    <div class="section-head">
+      <div>
+        <span class="section-num">03 — Films</span>
+        <h2>Courts et moyens métrages.</h2>
+      </div>
+      <p>Chaque ligne renvoie vers l'embed YouTube correspondant.</p>
+    </div>
+    <div class="film-list">
+      <div class="film-row">
+        <span class="film-num mono">01</span>
+        <span class="film-title">La Fille inconnue</span>
+        <span class="film-meta">Long métrage · Régisseur — Dardenne</span>
+        <span class="film-len">2015</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">02</span>
+        <span class="film-title">Pilgrimage</span>
+        <span class="film-meta">Long métrage · Décorateur & régisseur — Wrong Men</span>
+        <span class="film-len">2015</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">03</span>
+        <span class="film-title">A Maze In Hell</span>
+        <span class="film-meta">Jeu vidéo Android · Graphiste 2D/3D — Henders Software</span>
+        <span class="film-len">2015</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">04</span>
+        <span class="film-title">La Volante</span>
+        <span class="film-meta">Long métrage · Régisseur — Artebis</span>
+        <span class="film-len">2014</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">05</span>
+        <span class="film-title">L'hiver noir</span>
+        <span class="film-meta">Moyen métrage · Chef opérateur & monteur — CSEF Verviers</span>
+        <span class="film-len">2013</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">06</span>
+        <span class="film-title">Le couloir</span>
+        <span class="film-meta">Court métrage · Monteur son & image, étalonneur</span>
+        <span class="film-len">2012</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">07</span>
+        <span class="film-title">Hors contrôle</span>
+        <span class="film-meta">Court métrage · Monteur, étalonneur</span>
+        <span class="film-len">2012</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">08</span>
+        <span class="film-title">Sœur sourire</span>
+        <span class="film-meta">Long métrage · Régisseur — Les films de la passerelle</span>
+        <span class="film-len">2008</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">09</span>
+        <span class="film-title">Carré blanc</span>
+        <span class="film-meta">Long métrage · Régisseur — Tarantula</span>
+        <span class="film-len">2007</span>
+      </div>
+      <div class="film-row">
+        <span class="film-num mono">10</span>
+        <span class="film-title">Angel</span>
+        <span class="film-meta">Long métrage · Régisseur — Scope Pictures</span>
+        <span class="film-len">2006</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="sprocket"></div>
+
+  <!-- CREDITS / SKILLS as generic role list -->
+  <section id="credits">
+    <div class="section-head">
+      <div>
+        <span class="section-num">04 — Générique technique</span>
+        <h2>Ce que je sais faire.</h2>
+      </div>
+      <p>Présenté comme un générique de fin — cohérent avec le reste du site.</p>
+    </div>
+    <div class="credits-roll">
+      <div class="credit-line"><span class="credit-role">Front-end</span><span class="credit-name">Angular, TypeScript, RxJS</span></div>
+      <div class="credit-line"><span class="credit-role">Back-end</span><span class="credit-name">NestJS, PostgreSQL</span></div>
+      <div class="credit-line"><span class="credit-role">Interface</span><span class="credit-name">UI/UX, design system, CSS avancé</span></div>
+      <div class="credit-line"><span class="credit-role">Image</span><span class="credit-name">Adobe Photoshop, Figma</span></div>
+    </div>
+  </section>
+
+  <div class="sprocket"></div>
+
+  <!-- PROJECT SHOWCASE -->
+  <section id="project">
+    <div class="section-head">
+      <div>
+        <span class="section-num">05 — Projet phare</span>
+        <h2>MotoShop.</h2>
+      </div>
+      <p>Application complète, déployée pour la démonstration avec un compte et des données fictifs.</p>
+    </div>
+    <div class="project-card">
+      <div class="stamp">Démo<br>données fictives</div>
+      <span class="role">Angular · NestJS · PostgreSQL</span>
+      <h3>Marketplace de motos d'occasion</h3>
+      <p>SaaS complet et fonctionnel : upload d'images, likes, commentaires, authentification JWT, dashboard vendeur avec sparklines. Le compte et les annonces visibles sur la démo sont entièrement fictifs — l'application, elle, est bien réelle et opérationnelle.</p>
+      <a class="project-link" href="#">Voir la démo →</a>
+    </div>
+  </section>
+
+  <div class="sprocket"></div>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="fin">
+      <p>Un projet en tête ? Une collaboration ? On en discute.</p>
+      <div class="fin-links">
+        <a href="#">Email</a>
+        <a href="#">GitHub</a>
+        <a href="#">YouTube</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="bottom">
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%;">
+    <span>© lallemand.casa</span>
+    <span>Dison, Belgique — 4820</span>
+  </div>
+</footer>
+
+<script>
+  // theme toggle
+  const root = document.body;
+  const toggle = document.getElementById('themeToggle');
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  root.setAttribute('data-theme', prefersLight ? 'light' : 'dark');
+
+  toggle.addEventListener('click', () => {
+    const current = root.getAttribute('data-theme');
+    root.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+  });
+
+  // running timecode since page load (signature element)
+  const tcEl = document.getElementById('tc');
+  const start = Date.now();
+  function pad(n){ return String(n).padStart(2,'0'); }
+  function tick(){
+    const elapsed = Date.now() - start;
+    const h = Math.floor(elapsed / 3600000);
+    const m = Math.floor((elapsed % 3600000) / 60000);
+    const s = Math.floor((elapsed % 60000) / 1000);
+    const f = Math.floor((elapsed % 1000) / 42); // ~24fps
+    tcEl.textContent = `${pad(h)}:${pad(m)}:${pad(s)}:${pad(f)}`;
+    requestAnimationFrame(tick);
+  }
+  tick();
+</script>
+
+</body>
+</html>

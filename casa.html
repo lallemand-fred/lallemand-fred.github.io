@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lallemand Frédéric — Cinéma × Parallax (test statique)</title>
+  <link rel="icon" href="logo_LF.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Work+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;600&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="CSS/styleCasa.css" />
+  <script src="JS/appCasa.js" defer></script>
+</head>
+<body data-theme="dark">
+
+  <header class="top">
+    <div class="topbar-inner">
+      <a class="brand" href="#top"><span class="rec-dot"></span>lallemand<b>.frédéric</b></a>
+      <nav class="top-links">
+        <a href="#about">à propos</a>
+        <a href="#gallery">photos</a>
+        <a href="#films">films</a>
+        <a href="#credits">compétences</a>
+        <a href="#project">projet</a>
+        <a href="#contact">contact</a>
+      </nav>
+      <div class="top-right">
+        <button class="theme-toggle" aria-label="Changer de thème">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4.2" />
+            <path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="parallax-shell">
+    <section id="imageParallax">
+      <img src="media/parallax/PNG/parallax05.png" alt="Arrière-plan parallax" id="background" />
+      <h1 id="lastName">Lallemand</h1>
+      <img src="media/parallax/PNG/parallax04.png" alt="Couche parallax arrière" id="middelEnd" />
+      <h1 id="firstName">Frédéric</h1>
+      <img src="media/parallax/PNG/parallax03.png" alt="Couche parallax centrale" id="middelStart" />
+      <img src="media/parallax/PNG/parallax02.png" alt="Couche parallax avant" id="frontEnd" />
+      <img src="media/parallax/PNG/parallax01.png" alt="Premier plan parallax" id="frontStart" />
+    </section>
+  </div>
+
+  <section class="titlecard" id="top-card">
+    <div class="wrap">
+      <div class="eyebrow reveal"><span class="rec-dot"></span>Régisseur de formation — développeur par choix</div>
+      <h1 class="reveal">Je cadre des <em>histoires</em>, je construis des <em>interfaces.</em></h1>
+      <div class="sub">
+        <p class="tag reveal">Photographe et réalisateur liégeois, aujourd'hui en route vers l'UI/UX engineering. Ce site est le plan de coupe entre ces deux mondes.</p>
+        <div class="timecode reveal">
+          <span class="label">Temps sur site</span>
+          <span class="code">00:00:00:00</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sprocket" aria-hidden="true">
+    <!--30 perforations--><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <section class="blk" id="about">
+    <div class="wrap about-layout">
+      <div class="about-left">
+        <span class="section-num reveal">01 — À propos</span>
+        <h2 class="reveal">Deux métiers, un seul regard.</h2>
+        <p class="about-lead reveal">De la régie de plateau (Dardenne, GSARA) à la régie de code. Même exigence, autre matière.</p>
+        <div class="about-col reveal">
+          <span class="role">1990 — 2016 · Plateau &amp; image</span>
+          <h3>Réalisateur, cadreur, monteur</h3>
+          <p>Formé à l'audiovisuel au GSARA, j'ai passé plus de vingt ans autour de l'image — régie, cadre, montage, animation 2D/3D. Premier plateau sur « L'Enfant » des Dardenne. La lecture d'un cadre, le sens du détail, la patience du montage : ce sont ces réflexes que j'emmène partout.</p>
+        </div>
+        <div class="about-col reveal">
+          <span class="role">Depuis 2022 · Écran &amp; code</span>
+          <h3>Futur UI / UX Engineer</h3>
+          <p>Reconversion vers le développement web depuis la découverte de GitHub. Étudiant à l'IPEFA de Verviers en gestion de données et programmation. L'objectif : concevoir des interfaces avec la même exigence qu'un cadre bien composé.</p>
+        </div>
+      </div>
+
+      <div class="about-right">
+        <div class="cv-head reveal">Générique · parcours</div>
+        <div class="timeline">
+          <div class="tl-row reveal">
+            <div class="tl-year">1990s</div>
+            <div><h3 class="tl-title">Jetable &amp; caméscope Hi-8</h3><p class="tl-desc">Premiers paysages, premiers courts métrages burlesques — décors en carton, inspirés par Les Inconnus.</p></div>
+          </div>
+          <div class="tl-row reveal">
+            <div class="tl-year">2004</div>
+            <div><h3 class="tl-title">L'Enfant · Frères Dardenne</h3><p class="tl-desc">Premiers pas sur un vrai plateau comme régisseur. L'expérience fondatrice.</p></div>
+          </div>
+          <div class="tl-row reveal">
+            <div class="tl-year">2005</div>
+            <div><h3 class="tl-title">Formation audiovisuelle · GSARA</h3><p class="tl-desc">Stage à La Bande Large sur « Je veux voir » — chef op, cadreur, monteur, formateur son.</p></div>
+          </div>
+          <div class="tl-row reveal">
+            <div class="tl-year">2008+</div>
+            <div><h3 class="tl-title">Films sociaux · La Bande Large &amp; EsquisseS</h3><p class="tl-desc">Moyens métrages co-écrits avec des participants de tout âge. Revaloriser, redonner confiance, projeter.</p></div>
+          </div>
+          <div class="tl-row reveal">
+            <div class="tl-year">2015+</div>
+            <div><h3 class="tl-title">Photo · Liège architecturale</h3><p class="tl-desc">Séries de photos, panoramiques 360° et mini-planètes stéréographiques des paysages liégeois.</p></div>
+          </div>
+          <div class="tl-row reveal">
+            <div class="tl-year">2022</div>
+            <div><h3 class="tl-title">GitHub · le déclic du code</h3><p class="tl-desc">Le même regard que pour une image — composition, détail, système. Mais en interface.</p></div>
+          </div>
+          <div class="tl-row reveal">
+            <div class="tl-year">2026</div>
+            <div><h3 class="tl-title">IPEFA Verviers · UI / UX Engineer</h3><p class="tl-desc">Là où le design, l'image et la technologie se rejoignent. Actuellement en études et en stage.</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sprocket" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <section class="blk" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num reveal">02 — Photographie</span>
+          <h2 class="reveal">Liège, en pleine lumière.</h2>
+        </div>
+        <p class="reveal">Architecture, panoramiques 360° et mini-planètes — trois manières de lire la même ville.</p>
+      </div>
+      <div class="reel-controls reveal">
+        <div class="gal-filters">
+          <button class="active" data-filter="Tout">Tout</button>
+          <button data-filter="Photos">Photos</button>
+          <button data-filter="Panoramiques">Panoramiques</button>
+          <button data-filter="Mini-planètes">Mini-planètes</button>
+        </div>
+        <div class="reel-arrows">
+          <button aria-label="Précédent"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M10 3L5 8l5 5" /></svg></button>
+          <button aria-label="Suivant"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 3l5 5-5 5" /></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="reel" data-step="560">
+      <div class="reel-pad"></div>
+      <figure class="plate reveal" data-type="Photos" style="width:620px"><div class="plate-frame"><img src="media/images/Tour_Kennedy01PETIT.jpg" alt="Tour Kennedy — Liège" loading="lazy" /></div><figcaption><span class="plate-type">Photos</span><span class="plate-tag">Tour Kennedy — Liège</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Pano_Parc_Boverie_PETIT02.jpg" alt="Parc de la Boverie — 360°" loading="lazy" /></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Parc de la Boverie — 360°</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete_Parc_BoveriePETIT.jpg" alt="Mini-planète · Boverie" loading="lazy" /></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Mini-planète · Boverie</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Photos" style="width:620px"><div class="plate-frame"><img src="media/images/Photo-1.jpg" alt="Tour des finances" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>50 x 35 cm</span></div><figcaption><span class="plate-type">Photos</span><span class="plate-tag">Tour des finances</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Photos" style="width:620px"><div class="plate-frame"><img src="media/images/Photo-2.jpg" alt="Chiroux" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>50 x 35 cm</span></div><figcaption><span class="plate-type">Photos</span><span class="plate-tag">Chiroux</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Photos" style="width:620px"><div class="plate-frame"><img src="media/images/Photo-3.jpg" alt="Fleurs" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>33 x 40 cm</span></div><figcaption><span class="plate-type">Photos</span><span class="plate-tag">Fleurs</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Photos" style="width:620px"><div class="plate-frame"><img src="media/images/Photo-4.jpg" alt="Fontaine Paradis" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>50 x 35 cm</span></div><figcaption><span class="plate-type">Photos</span><span class="plate-tag">Fontaine Paradis</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Photos" style="width:620px"><div class="plate-frame"><img src="media/images/Photo-5.jpg" alt="Passerelle" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>50 x 35 cm</span></div><figcaption><span class="plate-type">Photos</span><span class="plate-tag">Passerelle</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Photos" style="width:620px"><div class="plate-frame"><img src="media/images/Photo-6.jpg" alt="Piercot" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>50 x 35 cm</span></div><figcaption><span class="plate-type">Photos</span><span class="plate-tag">Piercot</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Photos" style="width:620px"><div class="plate-frame"><img src="media/images/Photo-7.jpg" alt="Kennedy" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>50 x 35 cm</span></div><figcaption><span class="plate-type">Photos</span><span class="plate-tag">Kennedy</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-1.jpg" alt="Bavière" loading="lazy" /><span class="plate-meta">Toile coton<br>150 x 40 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Bavière</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-2.jpg" alt="Quai de Rome" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>150 x 35 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Quai de Rome</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-3.jpg" alt="Pont de Fragnée" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>150 x 45 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Pont de Fragnée</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-4.jpg" alt="Place Pierre Clerdent" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>150 x 35 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Place Pierre Clerdent</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-5.jpg" alt="Sous la pluie" loading="lazy" /></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Sous la pluie</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-6.jpg" alt="Saucy" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>150 x 35 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Saucy</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-7.jpg" alt="Place Paradis" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>150 x 35 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Place Paradis</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-8.jpg" alt="Boverie" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>150 x 35 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Boverie</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-9.jpg" alt="Place St Lambert" loading="lazy" /><span class="plate-meta">Toile coton<br>150 x 35 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Place St Lambert</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-10.jpg" alt="Quai St Léonard" loading="lazy" /><span class="plate-meta">Toile coton<br>150 x 40 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Quai St Léonard</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Panoramiques" style="width:1040px"><div class="plate-frame"><img src="media/panoramiques/Galerie_Pano/pano-11.jpg" alt="Botanique" loading="lazy" /><span class="plate-meta">Toile coton<br>150 x 45 cm</span></div><figcaption><span class="plate-type">Panoramiques</span><span class="plate-tag">Botanique</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-1.jpg" alt="Planète Albert 1er" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Albert 1er</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-2.jpg" alt="Planète Fragnée" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Fragnée</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-3.jpg" alt="Planète Botanique" loading="lazy" /><span class="plate-meta">Toile coton<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Botanique</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-4.jpg" alt="Planète Guillemins" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Guillemins</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-5.jpg" alt="Planète Saucy" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Saucy</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-6.jpg" alt="Planète St Lambert — Flashy" loading="lazy" /></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète St Lambert — Flashy</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-7.jpg" alt="Planète St Lambert" loading="lazy" /><span class="plate-meta">Toile acrylique<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète St Lambert</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-8.jpg" alt="Planète Boverie" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Boverie</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-9.jpg" alt="Planète Maghin" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Maghin</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-10.jpg" alt="Planète Paradis" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Paradis</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-11.jpg" alt="Planète Pierre Clerdent" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Pierre Clerdent</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-12.jpg" alt="Planète St Léonard" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète St Léonard</span></figcaption></figure>
+      <figure class="plate reveal" data-type="Mini-planètes" style="width:460px"><div class="plate-frame"><img src="media/mini_planetes/Planete-13.jpg" alt="Planète Rome" loading="lazy" /><span class="plate-meta">Plaque aluminium<br>35 x 35 cm</span></div><figcaption><span class="plate-type">Mini-planètes</span><span class="plate-tag">Planète Rome</span></figcaption></figure>
+      <div class="reel-pad"></div>
+    </div>
+  </section>
+
+  <div class="sprocket" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <section class="blk" id="films">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num reveal">03 — Films</span>
+          <h2 class="reveal">Moyens &amp; courts métrages.</h2>
+        </div>
+        <p class="reveal">Vingt ans de réalisation — du documentaire social à la série comique et l'animation de logo.</p>
+      </div>
+      <div class="reel-controls reveal">
+        <div class="gal-filters">
+          <button class="active" data-filter="Tout">Tout</button>
+          <button data-filter="Moyen métrage">Moyen métrage</button>
+          <button data-filter="Court métrage">Court métrage</button>
+          <button data-filter="Série">Série</button>
+          <button data-filter="Animation logo">Animation logo</button>
+          <button data-filter="Captation">Captation</button>
+        </div>
+        <div class="reel-arrows">
+          <button aria-label="Précédent"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M10 3L5 8l5 5" /></svg></button>
+          <button aria-label="Suivant"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M6 3l5 5-5 5" /></svg></button>
+        </div>
+      </div>
+    </div>
+    <div class="reel" data-step="460">
+      <div class="reel-pad"></div>
+      <a class="vid reveal" data-cat="Moyen métrage" href="https://www.youtube.com/watch?v=ogPB_kxFN_8" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/ogPB_kxFN_8/hqdefault.jpg" alt="L'Hiver Noir" loading="lazy" /><span class="vid-cat">Moyen métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">L'Hiver Noir</span><span class="vid-sub">Bande-annonce</span></div></a>
+      <a class="vid reveal" data-cat="Moyen métrage" href="https://www.youtube.com/watch?v=9FbwLl1mf1g" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/9FbwLl1mf1g/hqdefault.jpg" alt="L'Hiver Noir" loading="lazy" /><span class="vid-cat">Moyen métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">L'Hiver Noir</span><span class="vid-sub">Film complet</span></div></a>
+      <a class="vid reveal" data-cat="Moyen métrage" href="https://www.youtube.com/watch?v=oTsjupcDRes" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/oTsjupcDRes/hqdefault.jpg" alt="Le tour du monde" loading="lazy" /><span class="vid-cat">Moyen métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Le tour du monde</span><span class="vid-sub">EsquisseS ASBL · Esneux</span></div></a>
+      <a class="vid reveal" data-cat="Moyen métrage" href="https://www.youtube.com/watch?v=Qun36tY-TO8" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/Qun36tY-TO8/hqdefault.jpg" alt="Starlettes" loading="lazy" /><span class="vid-cat">Moyen métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Starlettes</span><span class="vid-sub">La Bande Large · Esneux</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=ibcSq0qBmGs" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/ibcSq0qBmGs/hqdefault.jpg" alt="Dehors !" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Dehors !</span><span class="vid-sub">Animé par La Bande Large</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=mW6ZGUTK9QE" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/mW6ZGUTK9QE/hqdefault.jpg" alt="Deux gouttes d'eau" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Deux gouttes d'eau</span><span class="vid-sub">Animé par La Bande Large</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=lOxviEp6J58" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/lOxviEp6J58/hqdefault.jpg" alt="Cantate pour un cambrioleur" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Cantate pour un cambrioleur</span><span class="vid-sub">Animé par EsquisseS ASBL</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=LGpj8TReIQU" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/LGpj8TReIQU/hqdefault.jpg" alt="La rue Beauregard" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">La rue Beauregard</span><span class="vid-sub">Diffusé sur MCM</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=sDE2qk5qqbY" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/sDE2qk5qqbY/hqdefault.jpg" alt="Comme une ombre" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Comme une ombre</span><span class="vid-sub">Animé par La Bande Large</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=fTkKu6lHloU" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/fTkKu6lHloU/hqdefault.jpg" alt="Escale mortelle" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Escale mortelle</span><span class="vid-sub">Animé par EsquisseS ASBL</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=x-fwHP0Zptg" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/x-fwHP0Zptg/hqdefault.jpg" alt="2h chrono" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">2h chrono</span><span class="vid-sub">Animé par La Bande Large</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=7nq_m48i9rM" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/7nq_m48i9rM/hqdefault.jpg" alt="Thérapie de groupe" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Thérapie de groupe</span><span class="vid-sub">Animé par La Bande Large</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=dmnL9umeQvY" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/dmnL9umeQvY/hqdefault.jpg" alt="Amour & hasard" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Amour &amp; hasard</span><span class="vid-sub">Animé par EsquisseS ASBL</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=xQdUwQY0pkQ" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/xQdUwQY0pkQ/hqdefault.jpg" alt="Le Couloir" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Le Couloir</span><span class="vid-sub">Monteur — Adrien François</span></div></a>
+      <a class="vid reveal" data-cat="Court métrage" href="https://www.youtube.com/watch?v=NWuoYPswKgU" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/NWuoYPswKgU/hqdefault.jpg" alt="Hors contrôle" loading="lazy" /><span class="vid-cat">Court métrage</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Hors contrôle</span><span class="vid-sub">Monteur — Khalid Zahar &amp; Adrien François</span></div></a>
+      <a class="vid reveal" data-cat="Série" href="https://www.youtube.com/watch?v=XAu3OlbAMsI" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/XAu3OlbAMsI/hqdefault.jpg" alt="Joli-Bois · Ep 1" loading="lazy" /><span class="vid-cat">Série</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Joli-Bois · Ep 1</span><span class="vid-sub">Tous violents</span></div></a>
+      <a class="vid reveal" data-cat="Série" href="https://www.youtube.com/watch?v=vLMZqfXdlZE" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/vLMZqfXdlZE/hqdefault.jpg" alt="Joli-Bois · Ep 2" loading="lazy" /><span class="vid-cat">Série</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Joli-Bois · Ep 2</span><span class="vid-sub">Tous sales &amp; paresseux</span></div></a>
+      <a class="vid reveal" data-cat="Série" href="https://www.youtube.com/watch?v=LhXdct9h6e4" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/LhXdct9h6e4/hqdefault.jpg" alt="Joli-Bois · Ep 3" loading="lazy" /><span class="vid-cat">Série</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Joli-Bois · Ep 3</span><span class="vid-sub">Tous incultes</span></div></a>
+      <a class="vid reveal" data-cat="Série" href="https://www.youtube.com/watch?v=VMbSA5ZUYfw" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/VMbSA5ZUYfw/hqdefault.jpg" alt="Joli-Bois · Ep 4" loading="lazy" /><span class="vid-cat">Série</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Joli-Bois · Ep 4</span><span class="vid-sub">Tous des voyous</span></div></a>
+      <a class="vid reveal" data-cat="Série" href="https://www.youtube.com/watch?v=dIe6IsgVKXo" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/dIe6IsgVKXo/hqdefault.jpg" alt="Joli-Bois · Ep 5" loading="lazy" /><span class="vid-cat">Série</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Joli-Bois · Ep 5</span><span class="vid-sub">Tous alcooliques</span></div></a>
+      <a class="vid reveal" data-cat="Série" href="https://www.youtube.com/watch?v=MzPgO01mHqY" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/MzPgO01mHqY/hqdefault.jpg" alt="Joli-Bois · Ep 6" loading="lazy" /><span class="vid-cat">Série</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Joli-Bois · Ep 6</span><span class="vid-sub">Ne trouverais pas l'amour ici</span></div></a>
+      <a class="vid reveal" data-cat="Animation logo" href="https://www.youtube.com/watch?v=_Wh_ejt_s_o" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/_Wh_ejt_s_o/hqdefault.jpg" alt="BILDO" loading="lazy" /><span class="vid-cat">Animation logo</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">BILDO</span><span class="vid-sub">Animation du logo</span></div></a>
+      <a class="vid reveal" data-cat="Animation logo" href="https://www.youtube.com/watch?v=5JdCccmM1aA" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/5JdCccmM1aA/hqdefault.jpg" alt="PixL" loading="lazy" /><span class="vid-cat">Animation logo</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">PixL</span><span class="vid-sub">Animation du logo</span></div></a>
+      <a class="vid reveal" data-cat="Animation logo" href="https://www.youtube.com/watch?v=ry_d1xeSCSE" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/ry_d1xeSCSE/hqdefault.jpg" alt="SKO" loading="lazy" /><span class="vid-cat">Animation logo</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">SKO</span><span class="vid-sub">Animation du logo</span></div></a>
+      <a class="vid reveal" data-cat="Animation logo" href="https://www.youtube.com/watch?v=OeJ_oUZfB8Y" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/OeJ_oUZfB8Y/hqdefault.jpg" alt="BRK" loading="lazy" /><span class="vid-cat">Animation logo</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">BRK</span><span class="vid-sub">Animation du logo</span></div></a>
+      <a class="vid reveal" data-cat="Captation" href="https://www.youtube.com/watch?v=ETnX5sDwEwA" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/ETnX5sDwEwA/hqdefault.jpg" alt="Festival de Liège" loading="lazy" /><span class="vid-cat">Captation</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Festival de Liège</span><span class="vid-sub">2009 · Caserne Fonck</span></div></a>
+      <a class="vid reveal" data-cat="Captation" href="https://www.youtube.com/watch?v=HayedluDHys" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/HayedluDHys/hqdefault.jpg" alt="Trop en forme" loading="lazy" /><span class="vid-cat">Captation</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Trop en forme</span><span class="vid-sub">Clip vidéo · Dope Skwad + ADN76</span></div></a>
+      <a class="vid reveal" data-cat="Captation" href="https://www.youtube.com/watch?v=u0lPQkLFCiQ" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/u0lPQkLFCiQ/hqdefault.jpg" alt="Festival du film d'action sociale" loading="lazy" /><span class="vid-cat">Captation</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Festival du film d'action sociale</span><span class="vid-sub">2012 · Foyer Culturel de Sprimont</span></div></a>
+      <a class="vid reveal" data-cat="Captation" href="https://www.youtube.com/watch?v=oYfI_x2Z-dQ" target="_blank" rel="noopener"><div class="vid-poster"><img src="https://img.youtube.com/vi/oYfI_x2Z-dQ/hqdefault.jpg" alt="Place aux enfants" loading="lazy" /><span class="vid-cat">Captation</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div><div class="vid-body"><span class="vid-title">Place aux enfants</span><span class="vid-sub">2009 · Région de Sprimont</span></div></a>
+      <div class="reel-pad"></div>
+    </div>
+  </section>
+
+  <div class="sprocket" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <section class="blk" id="credits">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num reveal">04 — Générique technique</span>
+          <h2 class="reveal">Ce que je sais faire.</h2>
+        </div>
+        <p class="reveal">Présenté comme un générique de fin — cohérent avec le reste du plateau.</p>
+      </div>
+      <div class="credits-roll">
+        <div class="credit-line reveal"><span class="credit-role">Image</span><span class="credit-name">Photographie, cadre, étalonnage</span></div>
+        <div class="credit-line reveal"><span class="credit-role">Post-prod</span><span class="credit-name">Montage, motion, animation logo</span></div>
+        <div class="credit-line reveal"><span class="credit-role">Front-end</span><span class="credit-name">HTML, CSS avancé, JavaScript</span></div>
+        <div class="credit-line reveal"><span class="credit-role">Interface</span><span class="credit-name">UI / UX, design system, Figma</span></div>
+        <div class="credit-line reveal"><span class="credit-role">Outils</span><span class="credit-name">Photoshop, Premiere, After Effects</span></div>
+        <div class="credit-line reveal"><span class="credit-role">En cours</span><span class="credit-name">React, gestion de données · IPEFA</span></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="sprocket" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <section class="blk" id="project">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <span class="section-num reveal">05 — Web lab</span>
+          <h2 class="reveal">Le code, en tournage.</h2>
+        </div>
+        <p class="reveal">Onze petits ateliers front-end — la mécanique des interfaces : mouvement, état, chorégraphie.</p>
+      </div>
+      <div class="project-card reveal">
+        <div class="stamp">Démo<br />en ligne</div>
+        <span class="role">HTML · CSS avancé · JavaScript</span>
+        <h3>Dashboard Statistics</h3>
+        <p>Tableau de bord data-viz complet et déployé : graphiques, sparklines, thème sobre. Le premier vrai projet qui combine mon œil d'image et la rigueur du code — pensé comme on compose un cadre.</p>
+        <a class="project-link" href="https://lallemand-fred.github.io/Statistics-Dashboard/" target="_blank" rel="noopener">Voir la démo →</a>
+      </div>
+      <div class="lab-mini">
+        <a class="reveal" href="#"><span class="n">L01</span><span class="t">Page parallax</span><span class="d">Hero multi-couches, scroll GPU synchronisé.</span></a>
+        <a class="reveal" href="#"><span class="n">L02</span><span class="t">Dashboard stats</span><span class="d">Data-viz — Chart.js, design sobre.</span></a>
+        <a class="reveal" href="#"><span class="n">L03</span><span class="t">Navbars 3D &amp; burger</span><span class="d">Transitions, profondeur, interaction.</span></a>
+        <a class="reveal" href="#"><span class="n">L04</span><span class="t">Animations de cartes</span><span class="d">Flip, hover, révélation soignée.</span></a>
+        <a class="reveal" href="#"><span class="n">L05</span><span class="t">Page login liquide</span><span class="d">Glassmorphism, effet fluide.</span></a>
+        <a class="reveal" href="#"><span class="n">L06</span><span class="t">Pluie de mots</span><span class="d">Canvas particulaire, typo en mouvement.</span></a>
+      </div>
+    </div>
+  </section>
+
+  <div class="sprocket" aria-hidden="true">
+    <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+  </div>
+
+  <section class="blk contact" id="contact">
+    <div class="wrap">
+      <div class="contact-band reveal">
+        <div class="contact-lead">
+          <span class="section-num">06 — Contact</span>
+          <h2>On tourne <em>ensemble</em> ?</h2>
+          <p>Un projet photo, un film, une interface — écrivez-moi.</p>
+        </div>
+        <div class="contact-links">
+          <a href="mailto:lallemand_fred@hotmail.com"><span class="cl-label">Email</span><span class="cl-val">lallemand_fred@hotmail.com</span></a>
+          <a href="https://github.com/lallemand-fred" target="_blank" rel="noopener"><span class="cl-label">GitHub</span><span class="cl-val">@lallemand-fred</span></a>
+          <a href="https://www.youtube.com/@belgiumvision" target="_blank" rel="noopener"><span class="cl-label">YouTube</span><span class="cl-val">Chaîne de Fred</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bottom">
+    <div class="inner">
+      <span>© 2026 Frédéric Lallemand</span>
+      <span>Liège / Dison, Belgique</span>
+    </div>
+  </footer>
+
+  <div class="cursor-glow" aria-hidden="true"></div>
+
+</body>
+</html>

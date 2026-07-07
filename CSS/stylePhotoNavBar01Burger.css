@@ -98,12 +98,11 @@ nav a:hover{
     max-height: 200px;
 }
 /* ------------------- Scroll Stuff ------------------- */
-.scroll-down header {
+.scroll-down nav {
     transform: translateY(-100%);
 }
-.scroll-up header {
+.scroll-up nav {
     transform: translateY(0);
-    filter: drop-shadow(0 -10px 20px black);
 }
 
 /* ------------- Médié query ---------------- */
