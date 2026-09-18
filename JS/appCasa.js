@@ -205,6 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   setupReel("gallery", "data-type");
   setupReel("films", "data-cat");
+  setupReel("project", "data-title");
 
   /* ---------- Lightbox (galerie photo uniquement) ---------- */
   const lightbox = document.getElementById("lightbox");
@@ -279,7 +280,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   /* ---------- Fenêtre projet (Web lab) : hover desktop + clic mobile pour changer d'aperçu ---------- */
-  const labItems = document.querySelectorAll(".lab-mini .lab-item");
+  const labItems = document.querySelectorAll(".lab-mini .lab-item:not(.reel-clone)");
   const labWrap = document.querySelector(".lab-mini");
   if (labItems.length && labWrap) {
     const stampEl = document.getElementById("projectStamp");
@@ -321,17 +322,36 @@ document.addEventListener("DOMContentLoaded", () => {
     let pinned = document.querySelector(".lab-mini .lab-item.active") || labItems[0];
     render(pinned);
 
-    labItems.forEach(item => {
-      item.addEventListener("click", (e) => {
-        e.preventDefault();
-        labItems.forEach(i => i.classList.remove("active"));
-        item.classList.add("active");
-        pinned = item;
-        render(item);
-      });
-      if (hoverCapable) item.addEventListener("mouseenter", () => render(item));
+    const projectCard = document.querySelector("#project .project-card");
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    /* les clones de la boucle infinie ont pas de listener -> délégation sur la pellicule,
+       et j'retrouve la vraie carte via son data-title */
+    const realItem = (el) => {
+      const card = el && el.closest(".lab-item");
+      if (!card) return null;
+      return Array.from(labItems).find(i => i.dataset.title === card.dataset.title) || null;
+    };
+
+    labWrap.addEventListener("click", (e) => {
+      const item = realItem(e.target);
+      if (!item) return;
+      e.preventDefault();
+      labWrap.querySelectorAll(".lab-item").forEach(i => i.classList.toggle("active", i.dataset.title === item.dataset.title));
+      pinned = item;
+      render(item);
+      /* recentre l'écran sur la fenêtre projet seulement si elle dépasse en haut ou en bas */
+      const r = projectCard.getBoundingClientRect();
+      if (r.top < 0 || r.bottom > window.innerHeight) {
+        projectCard.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+      }
     });
-    if (hoverCapable) labWrap.addEventListener("mouseleave", () => render(pinned));
+    if (hoverCapable) {
+      labWrap.addEventListener("mouseover", (e) => {
+        const item = realItem(e.target);
+        if (item) render(item);
+      });
+      labWrap.addEventListener("mouseleave", () => render(pinned));
+    }
   }
 
   /* ---------- Curseur halo (désactivé sur tactile) ---------- */
