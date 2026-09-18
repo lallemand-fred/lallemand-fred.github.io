@@ -3,6 +3,33 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+  /* ---------- Cartes galerie + films construites depuis JS/donneesCasa.js ----------
+     faut que ça tourne EN PREMIER : le reveal, setupReel (clones) et la lightbox
+     cherchent les cartes dans le DOM juste après */
+  const echapper = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+  const remplirPellicule = (sectionId, cartes) => {
+    const premierPad = document.querySelector(`#${sectionId} .reel .reel-pad`);
+    if (premierPad) premierPad.insertAdjacentHTML("afterend", cartes.join(""));
+  };
+  if (typeof photosGalerie !== "undefined") {
+    remplirPellicule("gallery", photosGalerie.map(p => {
+      const nom = echapper(p.nom), type = echapper(p.type);
+      const format = p.support ? `<span class="plate-meta">${echapper(p.support)}<br />${echapper(p.taille)}</span>` : "";
+      return `<figure class="plate reveal" data-type="${type}"><div class="plate-frame">`
+        + `<img src="${echapper(p.src)}" alt="${nom}" decoding="async" />${format}</div>`
+        + `<figcaption><span class="plate-type">${type}</span><span class="plate-tag">${nom}</span></figcaption></figure>`;
+    }));
+  }
+  if (typeof videosFilms !== "undefined") {
+    remplirPellicule("films", videosFilms.map(v => {
+      const id = echapper(v.id), titre = echapper(v.titre), cat = echapper(v.cat);
+      return `<a class="vid reveal" data-cat="${cat}" href="https://www.youtube.com/watch?v=${id}" target="_blank" rel="noopener">`
+        + `<div class="vid-poster"><img src="https://img.youtube.com/vi/${id}/hqdefault.jpg" alt="${titre}" decoding="async" />`
+        + `<span class="vid-cat">${cat}</span><span class="vid-play"><svg viewBox="0 0 12 12" fill="currentColor"><path d="M3 1.5v9l7-4.5-7-4.5z" /></svg></span></div>`
+        + `<div class="vid-body"><span class="vid-title">${titre}</span><span class="vid-sub">${echapper(v.sous)}</span></div></a>`;
+    }));
+  }
+
   /* ---------- Thème clair/sombre ---------- */
   const themeToggle = document.querySelector(".theme-toggle");
   if (themeToggle) {
