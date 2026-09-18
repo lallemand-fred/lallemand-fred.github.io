@@ -23,7 +23,7 @@
         <a class="brand" href="#top"
           ><span class="rec-dot"></span>lallemand<b>.frédéric</b></a
         >
-        <nav class="top-links">
+        <nav class="top-links" id="menuNav">
           <a href="#about">à propos</a>
           <a href="#gallery">photos</a>
           <a href="#films">films</a>
@@ -57,6 +57,15 @@
             >
               <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
             </svg>
+          </button>
+          <!-- burger : visible seulement quand le menu du haut est masqué (≤ 820px) -->
+          <button
+            class="burger"
+            aria-label="Ouvrir le menu"
+            aria-expanded="false"
+            aria-controls="menuNav"
+          >
+            <span></span><span></span>
           </button>
         </div>
       </div>

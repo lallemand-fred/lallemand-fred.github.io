@@ -47,6 +47,23 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", onTopbarScroll, { passive: true });
   }
 
+  /* ---------- Menu burger (≤ 820px) ---------- */
+  const burger = document.querySelector(".burger");
+  if (burger && topbar) {
+    const menuNav = document.getElementById("menuNav");
+    const basculerMenu = (ouvrir) => {
+      topbar.classList.toggle("menu-ouvert", ouvrir);
+      burger.setAttribute("aria-expanded", ouvrir);
+      burger.setAttribute("aria-label", ouvrir ? "Fermer le menu" : "Ouvrir le menu");
+    };
+    burger.addEventListener("click", () => basculerMenu(!topbar.classList.contains("menu-ouvert")));
+    // on ferme : clic sur un lien, Échap, clic à côté, ou retour en grand écran
+    menuNav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => basculerMenu(false)));
+    document.addEventListener("keydown", (e) => { if (e.key === "Escape") basculerMenu(false); });
+    document.addEventListener("click", (e) => { if (!topbar.contains(e.target)) basculerMenu(false); });
+    window.matchMedia("(max-width: 820px)").addEventListener("change", (e) => { if (!e.matches) basculerMenu(false); });
+  }
+
   /* ---------- Parallax hero (origine — inchangé) ---------- */
   const background  = document.getElementById("background");
   const middelEnd    = document.getElementById("middelEnd");
