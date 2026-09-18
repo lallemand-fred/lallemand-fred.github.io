@@ -392,9 +392,9 @@ section.blk { padding: 100px 0; position: relative; z-index: 4; background: var(
 .project-card {
   position: relative; border: 1px solid var(--line); border-radius: 2px;
   padding: 56px; background: var(--bg-raise); overflow: hidden;
-  min-height: 390px;
+  min-height: 660px; /* assez haut pour la desc la plus longue -> la pellicule en bas bouge pas */
 }
-@media (max-width: 640px) { .project-card { padding: 34px 24px; min-height: 510px; } }
+@media (max-width: 640px) { .project-card { padding: 34px 24px; min-height: 760px; } }
 .project-card .role { font-family: "JetBrains Mono", monospace; font-size: 11px; color: var(--amber); text-transform: uppercase; letter-spacing: .15em; margin-bottom: 14px; display: block; }
 .project-card h3 { font-family: "Instrument Serif", serif; font-style: italic; font-size: clamp(28px, 3.4vw, 42px); font-weight: 400; margin-bottom: 18px; }
 .project-card p { max-width: 620px; color: var(--ink-dim); font-size: 16px; line-height: 1.75; margin-bottom: 28px; }
@@ -418,9 +418,14 @@ section.blk { padding: 100px 0; position: relative; z-index: 4; background: var(
 }
 @media (max-width: 640px) { .stamp { position: static; transform: rotate(-2deg); display: inline-block; margin-bottom: 20px; padding: 8px 20px; font-size: 13px; } }
 
-/* cartes du lab en pellicule sous la fenêtre projet (même mécanique que galerie/films) */
-.lab-controls { justify-content: flex-end; margin: 34px 0 18px; }
+/* cartes du lab en pellicule DANS la fenêtre projet, sous le btn démo (même mécanique que galerie/films)
+   flex colonne + margin-top auto -> la pellicule reste collée en bas, elle saute pas quand la desc change */
+.project-card { display: flex; flex-direction: column; }
+@media (max-width: 640px) { .stamp { align-self: flex-start; } } /* sinon en flex le tampon s'étire sur toute la largeur */
+.project-card .project-links { margin-bottom: 36px; }
+.lab-controls { justify-content: flex-end; margin: auto 0 16px; padding-top: 20px; border-top: 1px dashed var(--line); }
 .lab-mini { padding-top: 6px; } /* sinon le translateY du hover se fait couper en haut */
+.lab-mini { position: relative; } /* offsetLeft des cartes calculé depuis la pellicule, pas depuis .project-card -> sinon 1ère carte coupée */
 .lab-mini a {
   flex: 0 0 280px; background: var(--bg); border: 1px solid var(--line); border-radius: 2px;
   padding: 22px 20px; display: flex; flex-direction: column; gap: 8px;

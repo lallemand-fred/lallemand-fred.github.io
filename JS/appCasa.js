@@ -339,10 +339,15 @@ document.addEventListener("DOMContentLoaded", () => {
       labWrap.querySelectorAll(".lab-item").forEach(i => i.classList.toggle("active", i.dataset.title === item.dataset.title));
       pinned = item;
       render(item);
-      /* recentre l'écran sur la fenêtre projet seulement si elle dépasse en haut ou en bas */
+      /* recentre l'écran sur la fenêtre projet seulement si elle dépasse en haut ou en bas
+         si elle rentre pas dans l'écran (GSM) -> j'cale le haut sous la navbar pour voir le btn démo */
       const r = projectCard.getBoundingClientRect();
-      if (r.top < 0 || r.bottom > window.innerHeight) {
-        projectCard.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "center" });
+      const barre = topbar ? topbar.offsetHeight : 0;
+      if (r.top < barre || r.bottom > window.innerHeight) {
+        const top = r.height + barre < window.innerHeight
+          ? r.top + window.scrollY - barre - (window.innerHeight - barre - r.height) / 2
+          : r.top + window.scrollY - barre - 12;
+        window.scrollTo({ top, behavior: reduceMotion ? "auto" : "smooth" });
       }
     });
     if (hoverCapable) {
